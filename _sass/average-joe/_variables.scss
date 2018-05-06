@@ -1,0 +1,19 @@
+// Fonts
+$sans-serif: 'Cerebri Sans';
+$serif: 'Lora';
+
+// Colours
+$black: #353535;
+$grey: #999;
+$grey-light: #D7D7D7;
+$white: #FFF;
+$gold-light: #FFF8ED;
+$gold: #CAA065;
+$brown: #AA5631;
+
+// Mixins
+@mixin box-sizing($type: border-box) {
+  -webkit-box-sizing: $type;
+     -moz-box-sizing: $type;
+          box-sizing: $type;
+}
