@@ -11,9 +11,26 @@ $gold-light: #FFF8ED;
 $gold: #CAA065;
 $brown: #AA5631;
 
+// Sizes
+$max-width: 1000px;
+$width: 80%;
+
 // Mixins
 @mixin box-sizing($type: border-box) {
   -webkit-box-sizing: $type;
      -moz-box-sizing: $type;
           box-sizing: $type;
+}
+
+// Extends
+%page-max-width {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+%content-max-width {
+  width: 90%;
+  max-width: 33em;
+  margin: 0 auto;
 }

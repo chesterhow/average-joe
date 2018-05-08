@@ -2,8 +2,19 @@
 <html>
   {% include head.html %}
   <body>
+    <header class="header">
+      <div class="header--container">
+        <img class="header--logo" src="/assets/images/logo.svg" alt="Average Joe Coffeehouse Reviews">
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="">REVIEWS</a></li>
+          <li><a href="">ABOUT</a></li>
+          <li><a href="">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
     <main>
-      <h1>Average Joe</h1>
       {{ content }}
     </main>
   </body>
