@@ -8,13 +8,20 @@
   &--logo {
     display: inline-block;
     height: 4rem;
-    margin: 2.5rem 0 1.5rem;
+    margin-top: 2.5rem;
+
+    @media (max-width: $break-medium) {
+      height: 3rem;
+      margin-top: 1.8rem;
+    }
   }
 }
 
 .nav {
   @extend %page-max-width;
   display: inline-block;
+  margin-top: 1rem;
+  padding-top: 0.5rem;
   border-top: 1px solid $grey-light;
 
   ul {
@@ -25,14 +32,15 @@
 
   li {
     display: inline-block;
-    margin: 20px;
+    margin: 0 0.7rem;
+    line-height: 1.8;
   }
 
   a {
     color: $grey;
     font-family: $sans-serif;
-    font-size: 16px;
-    letter-spacing: 0.2rem;
+    font-size: 14px;
+    letter-spacing: 0.15rem;
     text-decoration: none;
   }
 }

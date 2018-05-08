@@ -15,6 +15,9 @@ $brown: #AA5631;
 $max-width: 1000px;
 $width: 80%;
 
+$break-medium: 768px;
+$break-large: 1024px;
+
 // Mixins
 @mixin box-sizing($type: border-box) {
   -webkit-box-sizing: $type;
@@ -25,7 +28,7 @@ $width: 80%;
 // Extends
 %page-max-width {
   width: 90%;
-  max-width: 1000px;
+  max-width: 66rem;
   margin: 0 auto;
 }
 
