@@ -1,9 +1,6 @@
 .header {
   text-align: center;
-
-  &--container {
-    @extend %page-max-width;
-  }
+  @extend %page-max-width;
 
   &--logo {
     display: inline-block;
@@ -11,18 +8,20 @@
     margin-top: 2.5rem;
 
     @media (max-width: $break-medium) {
-      height: 3rem;
+      height: 3.5rem;
       margin-top: 1.8rem;
     }
   }
 }
 
 .nav {
-  @extend %page-max-width;
-  display: inline-block;
-  margin-top: 1rem;
+  margin-top: 2rem;
   padding-top: 0.5rem;
   border-top: 1px solid $grey-light;
+
+  @media (max-width: $break-medium) {
+    margin-top: 1.4rem;
+  }
 
   ul {
     margin: 0;
