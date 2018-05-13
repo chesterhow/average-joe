@@ -15,6 +15,7 @@ $brown: #AA5631;
 $max-width: 1000px;
 $width: 80%;
 
+$break-small: 320px;
 $break-medium: 768px;
 $break-large: 1024px;
 
@@ -27,13 +28,13 @@ $break-large: 1024px;
 
 // Extends
 %page-max-width {
-  width: 90%;
-  max-width: 50rem;
+  max-width: 60rem;
   margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
 %content-max-width {
-  width: 90%;
-  max-width: 33em;
+  max-width: 33rem;
   margin: 0 auto;
+  padding: 0 1.5rem;
 }

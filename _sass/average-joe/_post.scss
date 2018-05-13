@@ -1,5 +1,3 @@
 .post {
-  &--container {
-    @extend %content-max-width;
-  }
+  @extend %content-max-width;
 }
