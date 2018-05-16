@@ -20,16 +20,16 @@
 }
 
 .nav {
-  margin-top: 1rem;
-  padding-top: 0.5rem;
+  margin-top: 1.5rem;
+  padding-top: 0.75rem;
   border-top: 1px solid $grey-light;
 
   @media (max-width: $break-medium) {
-    margin-top: 0.8rem;
+    margin-top: 1.2rem;
   }
 
   @media (max-width: $break-small) {
-    margin-top: 0.6rem;
+    margin-top: 0.9rem;
   }
 
   ul {
