@@ -2,9 +2,24 @@
   @extend %page-max-width;
   margin-top: 3rem;
 
-  &--posts { 
-    li:first-child {
-      background: $gold;
-    }
+  &--posts {
+    list-style-type: none;
+  }
+}
+
+.post {
+  background: $gold;
+
+  &:first-child {
+    background: $black;
+  }
+
+  &--container {
+    color: $white;
+    text-decoration: none;
+  }
+
+  h4 {
+    color: $gold;
   }
 }
