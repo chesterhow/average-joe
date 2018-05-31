@@ -7,9 +7,9 @@ layout: default
     {% for post in site.posts %}
       {% if post == site.posts.first %}
         <li class="first_item">
-          <a href="{{ post.url }}" class="first_item--container">
+          <a href="{{ post.url | prepend: site.baseurl }}" class="first_item--container">
             <img
-              src="{{ site.baseurl }}/{{ post.thumbnail }}"
+              src="{{ post.thumbnail | prepend: site.baseurl }}"
               alt="{{ post.title }}"
               class="first_item--thumbnail"
             >
@@ -20,7 +20,7 @@ layout: default
         </li>
       {% else %}
         <li class="item">
-          <a href="{{ post.url }}" class="item--container">
+          <a href="{{ post.url | prepend: site.baseurl  }}" class="item--container">
             <h4 class="item--title">{{ post.title }}</h4>
           </a>
         </li>

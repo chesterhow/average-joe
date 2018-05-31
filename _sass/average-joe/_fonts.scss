@@ -2,20 +2,20 @@
 	font-family: 'Cerebri Sans';
 	font-style: normal;
 	font-weight: normal;
-	src: url('../../assets/fonts/cerebri-sans-regular.eot');
-	src: url('../../assets/fonts/cerebri-sans-regular.eot?#iefix') format('embedded-opentype'),
-       url('../../assets/fonts/cerebri-sans-regular.woff2') format('woff2'),
-	     url('../../assets/fonts/cerebri-sans-regular.woff') format('woff'),
-	     url('../../assets/fonts/cerebri-sans-regular.ttf') format('truetype');
+	src: url($baseurl + '/assets/fonts/cerebri-sans-regular.eot');
+	src: url($baseurl + '/assets/fonts/cerebri-sans-regular.eot?#iefix') format('embedded-opentype'),
+       url($baseurl + '/assets/fonts/cerebri-sans-regular.woff2') format('woff2'),
+	     url($baseurl + '/assets/fonts/cerebri-sans-regular.woff') format('woff'),
+	     url($baseurl + '/assets/fonts/cerebri-sans-regular.ttf') format('truetype');
 }
 
 @font-face {
 	font-family: 'Cerebri Sans';
 	font-style: normal;
 	font-weight: bold;
-	src: url('../../assets/fonts/cerebri-sans-bold.eot');
-	src: url('../../assets/fonts/cerebri-sans-bold.eot?#iefix') format('embedded-opentype'),
-       url('../../assets/fonts/cerebri-sans-bold.woff2') format('woff2'),
-	     url('../../assets/fonts/cerebri-sans-bold.woff') format('woff'),
-	     url('../../assets/fonts/cerebri-sans-bold.ttf') format('truetype');
+	src: url($baseurl + '/assets/fonts/cerebri-sans-bold.eot');
+	src: url($baseurl + '/assets/fonts/cerebri-sans-bold.eot?#iefix') format('embedded-opentype'),
+       url($baseurl + '/assets/fonts/cerebri-sans-bold.woff2') format('woff2'),
+	     url($baseurl + '/assets/fonts/cerebri-sans-bold.woff') format('woff'),
+	     url($baseurl + '/assets/fonts/cerebri-sans-bold.ttf') format('truetype');
 }

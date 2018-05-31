@@ -3,13 +3,13 @@
   {% include head.html %}
   <body>
     <header class="header">
-      <a href="/">
-        <img class="header--logo" src="/assets/images/logo.svg" alt="Average Joe Coffeehouse Reviews">
+      <a href="{{ site.baseurl }}/">
+        <img class="header--logo" src="{{ "/assets/images/logo.svg" | relative_url }}" alt="Average Joe Coffeehouse Reviews">
       </a>
       <nav class="nav">
         <ul>
           <li><a href="">REVIEWS</a></li>
-          <li><a href="/about">ABOUT</a></li>
+          <li><a href="{{ "/about" | prepend: site.baseurl }}">ABOUT</a></li>
           <li><a href="">CONTACT</a></li>
         </ul>
       </nav>
