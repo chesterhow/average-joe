@@ -20,15 +20,22 @@ $break-medium: 768px;
 $break-large: 1024px;
 
 // Mixins
-@mixin box-sizing($type: border-box) {
+@mixin box-sizing($type) {
   -webkit-box-sizing: $type;
      -moz-box-sizing: $type;
           box-sizing: $type;
 }
 
+@mixin transition($args...) {
+  -webkit-transition: $args;
+     -moz-transition: $args;
+          transition: $args;
+}
+
 // Extends
 %page-max-width {
-  max-width: 60rem;
+  @include box-sizing(content-box);
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
@@ -36,4 +43,15 @@ $break-large: 1024px;
 %content-max-width {
   max-width: 33rem;
   margin: 0 auto;
+}
+
+%break-long-words {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
