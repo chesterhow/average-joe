@@ -7,21 +7,21 @@ layout: default
     {% for post in site.posts %}
       {% if post == site.posts.first %}
         <li class="first_item">
-          <a href="{{ post.url | prepend: site.baseurl }}" class="first_item--container">
+          <a href="{{ post.url | relative_url }}" class="first_item--container">
             <img
-              src="{{ post.thumbnail | prepend: site.baseurl }}"
+              src="{{ post.thumbnail | relative_url }}"
               alt="{{ post.title }}"
               class="first_item--thumbnail"
             >
-            <h4 class="first_item--title">{{ post.title }}</h4>
+            <h1 class="first_item--title">{{ post.title }}</h1>
             <p class="first_item--body">{{ post.content | strip_html | truncatewords: 20 }}</p>
-            <p class="first_item--more">READ MORE</p>
+            <h6 class="first_item--more">READ MORE</h6>
           </a>
         </li>
       {% else %}
         <li class="item">
-          <a href="{{ post.url | prepend: site.baseurl  }}" class="item--container">
-            <h4 class="item--title">{{ post.title }}</h4>
+          <a href="{{ post.url | relative_url }}" class="item--container">
+            <h1 class="item--title">{{ post.title }}</h1>
           </a>
         </li>
       {% endif %}

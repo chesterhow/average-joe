@@ -13,6 +13,10 @@ html {
   color: $black;
   font-family: $serif;
   font-size: 20px;
+
+  @media (max-width: $break-small) {
+    font-size: 18px;
+  }
 }
 
 h1,
@@ -25,25 +29,22 @@ h6 {
 }
 
 h1 {
-  font-size: 3.815em;
-}
-
-h2 {
-  font-size: 3.052em;
-}
-
-h3 {
-  font-size: 2.441em;
-}
-
-h4 {
   font-size: 1.953em;
 }
 
-h5 {
+h2 {
   font-size: 1.563em;
 }
 
-h6 {
+h3 {
   font-size: 1.25em;
+}
+
+h4,
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.8rem;
 }

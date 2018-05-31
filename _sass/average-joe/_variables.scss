@@ -34,24 +34,13 @@ $break-large: 1024px;
 
 // Extends
 %page-max-width {
-  @include box-sizing(content-box);
-  max-width: 1000px;
+  width: 1000px;
+  max-width: 90%;
   margin: 0 auto;
-  padding: 0 1.5rem;
 }
 
 %content-max-width {
-  max-width: 33rem;
+  width: 33rem;
+  max-width: 90%;
   margin: 0 auto;
-}
-
-%break-long-words {
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  -ms-word-break: break-all;
-  word-break: break-word;
-  -ms-hyphens: auto;
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto;
 }
