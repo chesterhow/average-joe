@@ -13,7 +13,7 @@
       margin-top: 2rem;
     }
 
-    @media (max-width: $break-small) {
+    @media (max-width: $break-smaller) {
       margin-top: 1.5rem;
     }
   }
@@ -28,7 +28,7 @@
     margin-top: 1.2rem;
   }
 
-  @media (max-width: $break-small) {
+  @media (max-width: $break-smaller) {
     margin-top: 0.9rem;
   }
 
@@ -51,7 +51,7 @@
     letter-spacing: 0.15rem;
     text-decoration: none;
 
-    @media (max-width: $break-small) {
+    @media (max-width: $break-smaller) {
       font-size: 0.7rem;
     }
   }

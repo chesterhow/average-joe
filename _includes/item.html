@@ -1,0 +1,13 @@
+<a
+  href="{{ post.url | relative_url }}"
+  class="item--container"
+>
+  <img
+    src="{{ post.thumbnail | relative_url }}"
+    alt="{{ post.title }}"
+    class="item--thumbnail"
+  >
+  <h1 class="item--title">{{ post.title }}</h1>
+  <p class="item--body">{{ post.content | strip_html | truncatewords: 15 }}</p>
+  <h6 class="item--more">READ MORE</h6>
+</a>

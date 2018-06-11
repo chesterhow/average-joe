@@ -3,25 +3,18 @@ layout: default
 ---
 
 <div class="home">
-  {% for post in site.posts %}
-    {% assign first_item = "" %}
-    {% if post == site.posts.first %}
-      {% assign first_item = "first_item" %}
-    {% endif %}
-    <div class="{{ first_item }} item">
-      <a
-        href="{{ post.url | relative_url }}"
-        class="item--container"
-      >
-        <img
-          src="{{ post.thumbnail | relative_url }}"
-          alt="{{ post.title }}"
-          class="item--thumbnail"
-        >
-        <h1 class="item--title">{{ post.title }}</h1>
-        <p class="item--body">{{ post.content | strip_html | truncatewords: 20 }}</p>
-        <h6 class="item--more">READ MORE</h6>
-      </a>
-    </div>
-  {% endfor %}
+  {% assign post = site.posts.first %}
+  <div class="first_item item">
+    {% include item.html %}
+  </div>
+
+  <div class="items">
+    {% for post in site.posts %}
+      {% if post != site.posts.first %}
+        <div class="item">
+          {% include item.html %}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
 </div>

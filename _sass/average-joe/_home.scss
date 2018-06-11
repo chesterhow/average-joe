@@ -1,11 +1,16 @@
 .home {
   @extend %page-max-width;
-  margin-top: 1rem;
+  margin: 1rem auto;
+}
+
+.items {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 }
 
 .item {
   display: inline-block;
-  width: 33.3%;
   background: $gold;
   vertical-align: top;
 
@@ -20,6 +25,10 @@
     padding: 0.5rem;
     color: $white;
     text-decoration: none;
+
+    @media (max-width: $break-small) {
+      height: auto;
+    }
   }
 
   &--thumbnail {
@@ -58,33 +67,6 @@
       opacity: 0.6;
     }
   }
-
-  // @media (max-width: $break-medium) {
-  //   &--container {
-  //     grid-template:
-  //     "thumbnail"
-  //     "title"
-  //     "body"
-  //     "more";
-  //   }
-
-  //   &--thumbnail {
-  //     width: 100%;
-  //     height: auto;
-  //   }
-
-  //   &--title {
-  //     padding: 10px 20px;
-  //   }
-
-  //   &--body {
-  //     padding: 0px 20px 20px;
-  //   }
-
-  //   &--more {
-  //     margin: 0 20px 20px;
-  //   }
-  // }
 }
 
 .first_item {
@@ -93,19 +75,9 @@
   background: $black;
 
   .item--container {
-    grid-column-gap: 0.5rem;
-    grid-template:
-      "thumbnail title" auto
-      "thumbnail body" 1fr
-      "thumbnail more" auto
-      / 1fr minmax(15rem, 30%);
-    height: 20rem;
+    height: auto;
   }
 
-  .item--thumbnail {
-    height: 100%;
-  }
-  
   .item--title {
     color: $gold;
     white-space: normal;
@@ -113,5 +85,21 @@
 
   .item--more {
     color: $gold;
+  }
+
+  @media (min-width: $break-medium) {
+    .item--container {
+      grid-column-gap: 0.5rem;
+      grid-template:
+        "thumbnail title" auto
+        "thumbnail body" 1fr
+        "thumbnail more" auto
+        / 1fr minmax(15rem, 30%);
+      height: 20rem;
+    }
+
+    .item--thumbnail {
+      height: 100%;
+    }
   }
 }
