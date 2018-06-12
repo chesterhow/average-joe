@@ -7,7 +7,12 @@
     alt="{{ post.title }}"
     class="item--thumbnail"
   >
-  <h1 class="item--title">{{ post.title }}</h1>
-  <p class="item--body">{{ post.content | strip_html | truncatewords: 15 }}</p>
-  <h6 class="item--more">READ MORE</h6>
+  {% if post == site.posts.first %}
+    <h1 class="item--title">{{ post.title }}</h1>
+    <p class="item--body">{{ post.content | strip_html | truncatewords: 30 }}</p>
+    <h6 class="item--more">READ MORE</h6>
+  {% else %}
+    <h2 class="item--title">{{ post.title }}</h2>
+    <h6 class="item--date">{{ post.date | date: "%B %d, %Y" }}</h6>
+  {% endif %}
 </a>

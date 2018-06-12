@@ -45,3 +45,8 @@ $break-large: 1024px;
   max-width: 90%;
   margin: 0 auto;
 }
+
+%light-on-dark-text {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

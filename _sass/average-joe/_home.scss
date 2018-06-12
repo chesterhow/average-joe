@@ -3,32 +3,28 @@
   margin: 1rem auto;
 }
 
-.items {
+.items_grid {
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 }
 
 .item {
-  display: inline-block;
+  @include transition(all 0.2s ease-out);
   background: $gold;
-  vertical-align: top;
+
+  &:hover {
+    opacity: 0.8;
+  }
 
   &--container {
     display: grid;
     grid-template:
       "thumbnail" auto
-      "title" auto
-      "body" 1fr
-      "more" auto;
-    height: 25rem;
+      "title" 1fr
+      "date" auto;
     padding: 0.5rem;
-    color: $white;
     text-decoration: none;
-
-    @media (max-width: $break-small) {
-      height: auto;
-    }
   }
 
   &--thumbnail {
@@ -48,34 +44,29 @@
     white-space: nowrap;
   }
 
-  &--body {
-    grid-area: body;
-    margin: 0;
-    padding: 0 1rem 1rem;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  &--more {
-    @include transition(all 0.2s ease-out);
-    grid-area: more;
+  &--date {
+    @extend %light-on-dark-text;
+    grid-area: date;
     margin: 0 1rem 1rem;
-    color: $black;
-    letter-spacing: 0.15rem;
-
-    &:hover {
-      opacity: 0.6;
-    }
+    color: $gold-light;
+    text-transform: uppercase;
   }
 }
 
 .first_item {
-  width: 100%;
   margin-bottom: 1rem;
   background: $black;
 
+  &:hover {
+    opacity: 1;
+  }
+
   .item--container {
-    height: auto;
+    grid-template:
+      "thumbnail" auto
+      "title" auto
+      "body" 1fr
+      "more" auto;
   }
 
   .item--title {
@@ -83,8 +74,24 @@
     white-space: normal;
   }
 
+  .item--body {
+    @extend %light-on-dark-text;
+    grid-area: body;
+    margin: 0;
+    padding: 0 1rem 1rem;
+    color: $white;
+  }
+
   .item--more {
+    @include transition(all 0.2s ease-out);
+    grid-area: more;
+    margin: 0 1rem 1rem;
     color: $gold;
+    letter-spacing: 0.15rem;
+
+    &:hover {
+      opacity: 0.6;
+    }
   }
 
   @media (min-width: $break-medium) {
@@ -95,9 +102,9 @@
         "thumbnail body" 1fr
         "thumbnail more" auto
         / 1fr minmax(15rem, 30%);
-      height: 20rem;
+      min-height: 20rem;
     }
-
+  
     .item--thumbnail {
       height: 100%;
     }
