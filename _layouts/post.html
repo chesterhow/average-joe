@@ -3,7 +3,29 @@ layout: default
 ---
 
 <div class="post">
-  <h1>{{ page.title }}</h1>
-  <h6>{{ page.date }}</h6>
+  <img
+    src="{{ page.thumbnail | relative_url }}"
+    alt="{{ page.title }}"
+    class="post--image"
+  >
+  <h1 class="post--title">{{ page.title }}</h1>
+  <h6 class="post--date">{{ page.date | date: "%B %d, %Y" }}</h6>
+  <div class="post--review">
+    <h3>Overall Score</h3>
+    <h1>{{ page.review.overall }}/5</h1>
+
+    <span>Coffee</span>
+    <span>{{ page.review.coffee }}/5</span>
+    <span>Aesthetic</span>
+    <span>{{ page.review.aesthetic }}/5</span>
+    <span>Seating</span>
+    <span>{{ page.review.seating }}/5</span>
+    <span>Price</span>
+    <span>{{ page.review.price }}</span>
+    <span>Wi-fi</span>
+    <span>{{ page.review.wifi }}</span>
+    <span>Charging</span>
+    <span>{{ page.review.charging }}</span>
+  </div>
   {{ content }}
 </div>

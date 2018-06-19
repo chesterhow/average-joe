@@ -3,6 +3,14 @@ layout: post
 title:  "Tiong Hoe Speciality Coffee"
 date:   2018-06-11
 thumbnail: /assets/images/tionghoe.jpg
+review:
+  overall: 4
+  coffee: 5
+  aesthetic: 4
+  seating: 3
+  price: $
+  wifi: "Yes"
+  charging: "No"
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

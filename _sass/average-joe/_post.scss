@@ -1,3 +1,26 @@
 .post {
   @extend %content-max-width;
+  margin-top: 1rem;
+
+  &--image {
+    width: 100%;
+  }
+
+  &--title {
+    margin: 1.5rem 0 0.5rem;
+    text-align: center;
+  }
+
+  &--date {
+    margin: 0 0 1.5rem;
+    color: $gold;
+    font-family: $serif;
+    font-weight: normal;
+    text-align: center;
+  }
+
+  &--review {
+    background: $black;
+    color: $white;
+  }
 }
