@@ -1,9 +1,15 @@
 .post {
-  @extend %content-max-width;
+  @extend %page-max-width;
   margin-top: 1rem;
 
   &--image {
     width: 100%;
+    height: 45vh;
+    object-fit: cover;
+  }
+
+  &--content {
+    @extend %content-max-width;
   }
 
   &--title {
@@ -18,9 +24,38 @@
     font-weight: normal;
     text-align: center;
   }
+}
 
-  &--review {
-    background: $black;
-    color: $white;
+.review {
+  display: grid;
+  grid-template:
+    "overall breakdown"
+    / auto 1fr;
+  border-radius: 5px;
+  background: $black;
+  color: $gold-light;
+  font-family: $sans-serif;
+
+  &--overall {
+    grid-area: overall;
+    margin: 1rem 2rem;
+    text-align: center;
+  }
+
+  &--breakdown {
+    grid-area: breakdown;
+    margin: 1rem 0;
+    padding: 0 1rem;
+    border-left: 3px $grey solid;
+  }
+
+  &--title {
+    margin: 0;
+  }
+
+  &--score {
+    margin: 0;
+    color: $gold;
+    font-size: 3.815rem;
   }
 }

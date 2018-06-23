@@ -8,24 +8,31 @@ layout: default
     alt="{{ page.title }}"
     class="post--image"
   >
-  <h1 class="post--title">{{ page.title }}</h1>
-  <h6 class="post--date">{{ page.date | date: "%B %d, %Y" }}</h6>
-  <div class="post--review">
-    <h3>Overall Score</h3>
-    <h1>{{ page.review.overall }}/5</h1>
-
-    <span>Coffee</span>
-    <span>{{ page.review.coffee }}/5</span>
-    <span>Aesthetic</span>
-    <span>{{ page.review.aesthetic }}/5</span>
-    <span>Seating</span>
-    <span>{{ page.review.seating }}/5</span>
-    <span>Price</span>
-    <span>{{ page.review.price }}</span>
-    <span>Wi-fi</span>
-    <span>{{ page.review.wifi }}</span>
-    <span>Charging</span>
-    <span>{{ page.review.charging }}</span>
+  <div class="post--content">
+    <h1 class="post--title">{{ page.title }}</h1>
+    <h5 class="post--date">{{ page.date | date: "%B %d, %Y" }}</h5>
+    <div class="review">
+      <div class="review--overall">
+        <h3 class="review--title">Overall Score</h3>
+        <h1 class="review--score">{{ page.review.overall }}/5</h1>
+      </div>
+      
+      <div class="review--breakdown">
+        <span>Coffee</span>
+        <span>{{ page.review.coffee }}/5</span>
+        <span>Aesthetic</span>
+        <span>{{ page.review.aesthetic }}/5</span>
+        <span>Seating</span>
+        <span>{{ page.review.seating }}/5</span>
+        <span>Price</span>
+        <span>{{ page.review.price }}</span>
+        <span>Wi-fi</span>
+        <span>{{ page.review.wifi }}</span>
+        <span>Charging</span>
+        <span>{{ page.review.charging }}</span>
+      </div>
+    </div>
+    {{ content }}
   </div>
-  {{ content }}
+  
 </div>
