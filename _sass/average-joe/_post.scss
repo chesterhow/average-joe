@@ -50,7 +50,7 @@
     grid-area: breakdown;
     margin: 1rem 0;
     padding: 0 2rem;
-    border-left: 3px $grey solid;
+    border-left: 2px $grey solid;
   }
 
   &--title {
@@ -62,21 +62,45 @@
     color: $gold;
     font-size: 3.815rem;
   }
+
+  @media (max-width: $break-medium) {
+    grid-template:
+      "overall"
+      "breakdown";
+    max-width: 20rem;
+    margin: 0 auto;
+
+    .review--breakdown {
+      margin: 0 2rem;
+      padding: 1rem 0;
+      border-top: 2px $grey solid;
+      border-left: 0;
+    }
+  }
+
+  @media (max-width: $break-small) {
+    max-width: 14rem;
+  }
 }
 
 .breakdown {
   display: grid;
-  grid-column-gap: 3rem;
+  grid-column-gap: 2rem;
   grid-template-columns: 1fr 1fr;
   align-items: center;
 
   &--category {
     position: relative;
+    line-height: 1.7;
   }
 
   &--score {
     position: absolute;
     right: 0;
     color: $gold;
+  }
+
+  @media (max-width: $break-small) {
+    grid-template-columns: 1fr;
   }
 }
