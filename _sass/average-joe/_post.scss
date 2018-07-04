@@ -1,8 +1,13 @@
 .post {
-  @extend %page-max-width;
   margin-top: 1rem;
 
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
   &--image {
+    @extend %page-max-width;
     width: 100%;
     height: 45vh;
     object-fit: cover;
@@ -18,7 +23,7 @@
   }
 
   &--date {
-    margin: 0 0 1.5rem;
+    margin: 0;
     color: $gold;
     font-family: $serif;
     font-weight: normal;
@@ -31,6 +36,7 @@
   grid-template:
     "overall breakdown"
     / auto 1fr;
+  margin: 1.5rem 0;
   border-radius: 5px;
   background: $black;
   color: $gold-light;
@@ -68,7 +74,7 @@
       "overall"
       "breakdown";
     max-width: 20rem;
-    margin: 0 auto;
+    margin: 1.5rem auto;
 
     .review--breakdown {
       margin: 0 2rem;

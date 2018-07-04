@@ -12,22 +12,38 @@ review:
   wifi: "Yes"
   charging: "No"
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+# Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+Lorem ipsum dolor sit amet, ei sea nullam platonem, per nominati inciderint cu, ad mentitum praesent efficiantur his. Numquam invidunt ei vim. Ignota aeterno ut sea. Ea admodum menandri deseruisse vim. His integre percipit in.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+- **Bold**
+- _Italics_
+- ~~Strikethrough~~
+- <ins>Underline</ins>
+- <sup>Superscript</sup>
+- <sub>Subscript</sub>
+- Abbreviation <abbr title="HyperText Markup Language">HTML</abbr>
+- Citation: <cite>&mdash; Chester</cite>
 
-Jekyll also offers powerful support for code snippets:
+1. Apples
+2. Oranges
+3. Pears
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+[Link](https://google.com)
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+![Placeholder image](https://placehold.it/600x400 "Placeholder image")
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+![Image with caption](https://placehold.it/400x200 "Image with caption")
+_This is an image with a caption_
+
+> Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.
+
+Graece tempor pro te. Doming assueverit est ex, sed in cibo laudem pericula. Debet tamquam nec ad, vis no cetero mediocrem, vide definitiones sed eu. Vis eu ferri constituam, dico solet iudico ut sea, comprehensam conclusionemque sit ei. Vero ancillae adipisci at est, invidunt similique scripserit has in. At eam nullam lucilius, aliquip fuisset luptatum ius ut. Eum legimus cotidieque no, sed ad nulla habemus conceptam, his at quis erant fabellas.
+
+<hr>
+
+Meis integre quo ex, ei ius magna harum nusquam. At iriure volutpat cotidieque mei, est errem dissentiunt te. Modo vituperatoribus ea ius, at duo tation iriure blandit. Qui ea malorum insolens, vocibus posidonium vix ea. Ornatus vituperata no vix.
