@@ -28,10 +28,24 @@
   }
 
   &--thumbnail {
+    position: relative;
     grid-area: thumbnail;
-    width: 100%;
-    height: 10rem;
-    object-fit: cover;
+    overflow: hidden;
+
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      padding-top: (9 / 16) * 100%;
+    }
+
+    > img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      transform: translate(-50%, -50%);
+    }
   }
   
   &--title {
@@ -102,7 +116,7 @@
         "thumbnail body" 1fr
         "thumbnail more" auto
         / 1fr minmax(15rem, 30%);
-      min-height: 20rem;
+      // min-height: 20rem;
     }
   
     .item--thumbnail {

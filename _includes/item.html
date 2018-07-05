@@ -1,12 +1,13 @@
 <a href="{{ post.url | relative_url }}" class="item--container">
-  <img
-    src="{{ post.thumbnail | relative_url }}"
-    alt="{{ post.title }}"
-    class="item--thumbnail"
-  >
+  <div class="item--thumbnail">
+    <img
+      src="{{ post.thumbnail | relative_url }}"
+      alt="{{ post.title }}"
+    >
+  </div>
   {% if post == site.posts.first %}
     <h1 class="item--title">{{ post.title }}</h1>
-    <p class="item--body">{{ post.content | strip_html | truncatewords: 30 }}</p>
+    <p class="item--body">{{ post.content | strip_html | truncatewords: 10 }}</p>
     <h6 class="item--more">READ MORE</h6>
   {% else %}
     <h2 class="item--title">{{ post.title }}</h2>

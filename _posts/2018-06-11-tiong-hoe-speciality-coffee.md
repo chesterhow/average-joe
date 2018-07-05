@@ -12,13 +12,15 @@ review:
   wifi: "Yes"
   charging: "No"
 ---
+Lorem ipsum dolor sit amet, ei sea nullam platonem, per nominati inciderint cu, ad mentitum praesent efficiantur his. Numquam invidunt ei vim. Ignota aeterno ut sea. Ea admodum menandri deseruisse vim. His integre percipit in.
+
 # Heading 1
 ## Heading 2
 ### Heading 3
 #### Heading 4
 ##### Heading 5
 ###### Heading 6
-Lorem ipsum dolor sit amet, ei sea nullam platonem, per nominati inciderint cu, ad mentitum praesent efficiantur his. Numquam invidunt ei vim. Ignota aeterno ut sea. Ea admodum menandri deseruisse vim. His integre percipit in.
+
 
 - **Bold**
 - _Italics_
@@ -36,14 +38,14 @@ Lorem ipsum dolor sit amet, ei sea nullam platonem, per nominati inciderint cu, 
 [Link](https://google.com)
 
 ![Placeholder image](https://placehold.it/600x400 "Placeholder image")
-
+![Placeholder image](https://placehold.it/600x400 "Placeholder image")
 ![Image with caption](https://placehold.it/400x200 "Image with caption")
 _This is an image with a caption_
-
-> Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.
 
 Graece tempor pro te. Doming assueverit est ex, sed in cibo laudem pericula. Debet tamquam nec ad, vis no cetero mediocrem, vide definitiones sed eu. Vis eu ferri constituam, dico solet iudico ut sea, comprehensam conclusionemque sit ei. Vero ancillae adipisci at est, invidunt similique scripserit has in. At eam nullam lucilius, aliquip fuisset luptatum ius ut. Eum legimus cotidieque no, sed ad nulla habemus conceptam, his at quis erant fabellas.
 
 <hr>
 
 Meis integre quo ex, ei ius magna harum nusquam. At iriure volutpat cotidieque mei, est errem dissentiunt te. Modo vituperatoribus ea ius, at duo tation iriure blandit. Qui ea malorum insolens, vocibus posidonium vix ea. Ornatus vituperata no vix.
+
+> Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.
