@@ -60,6 +60,13 @@
     font-weight: normal;
     text-align: center;
   }
+
+  h6 {
+    margin: 1rem 0;
+    color: $gold;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+  }
 }
 
 .review {

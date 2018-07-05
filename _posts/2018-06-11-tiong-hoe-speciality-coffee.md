@@ -44,8 +44,31 @@ _This is an image with a caption_
 
 Graece tempor pro te. Doming assueverit est ex, sed in cibo laudem pericula. Debet tamquam nec ad, vis no cetero mediocrem, vide definitiones sed eu. Vis eu ferri constituam, dico solet iudico ut sea, comprehensam conclusionemque sit ei. Vero ancillae adipisci at est, invidunt similique scripserit has in. At eam nullam lucilius, aliquip fuisset luptatum ius ut. Eum legimus cotidieque no, sed ad nulla habemus conceptam, his at quis erant fabellas.
 
-<hr>
+> Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.
 
 Meis integre quo ex, ei ius magna harum nusquam. At iriure volutpat cotidieque mei, est errem dissentiunt te. Modo vituperatoribus ea ius, at duo tation iriure blandit. Qui ea malorum insolens, vocibus posidonium vix ea. Ornatus vituperata no vix.
 
-> Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.
+<hr>
+
+<div>
+  <div>
+    <h6>Address</h6>
+    <p>
+      170 Stirling Road
+      <br>
+      #01-1133
+      <br>
+      Singapore 140170
+    </p>
+  </div>
+  <div>
+    <h6>Opening Hours</h6>
+    Mon - Fri
+    <br>
+    8.30am - 5.30pm
+    <br><br>
+    Sat - Sun
+    <br>
+    9.00am - 4.00pm
+  </div>
+</div>
