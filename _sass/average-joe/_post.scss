@@ -51,6 +51,14 @@
   &--title {
     margin: 1.5rem 0 0.5rem;
     text-align: center;
+
+    @media (min-width: $break-small) {
+      font-size: 2.441rem;
+    }
+
+    @media (min-width: $break-medium) {
+      font-size: 3.052rem;
+    }
   }
 
   &--date {
@@ -59,13 +67,6 @@
     font-family: $serif;
     font-weight: normal;
     text-align: center;
-  }
-
-  h6 {
-    margin: 1rem 0;
-    color: $gold;
-    letter-spacing: 0.2rem;
-    text-transform: uppercase;
   }
 }
 
@@ -114,7 +115,7 @@
     max-width: 20rem;
     margin: 1.5rem auto;
 
-    .review--breakdown {
+    &--breakdown {
       margin: 0 2rem;
       padding: 1rem 0;
       border-top: 2px $grey solid;
@@ -146,5 +147,34 @@
 
   @media (max-width: $break-small) {
     grid-template-columns: 1fr;
+  }
+}
+
+.info {
+  display: grid;
+  grid-template:
+    "address opening"
+    / 1fr 1fr;
+  margin-top: 0.5rem;
+  text-align: center;
+    
+  &--address {
+    grid-area: address;
+  }
+
+  &--opening {
+    grid-area: opening;
+  }
+
+  @media (max-width: $break-small) {
+    grid-template:
+      "address"
+      "opening";
+  }
+
+  h6 {
+    color: $gold;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
   }
 }

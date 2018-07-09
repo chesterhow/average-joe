@@ -68,6 +68,7 @@
 }
 
 .first_item {
+  @extend %light-on-dark-text;
   margin-bottom: 0.5rem;
   background: $black;
 
@@ -89,7 +90,6 @@
   }
 
   .item--body {
-    @extend %light-on-dark-text;
     grid-area: body;
     margin: 0;
     padding: 0 1rem 1rem;
