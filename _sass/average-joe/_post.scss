@@ -157,7 +157,7 @@
     / 1fr 1fr;
   margin-top: 0.5rem;
   text-align: center;
-    
+
   &--address {
     grid-area: address;
   }
@@ -177,4 +177,8 @@
     letter-spacing: 0.2rem;
     text-transform: uppercase;
   }
+}
+
+.center {
+  text-align: center;
 }

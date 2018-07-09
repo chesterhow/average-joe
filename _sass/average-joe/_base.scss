@@ -25,7 +25,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 1rem 0;
+  margin: 1em 0 0;
   font-family: $sans-serif;
 }
 
@@ -43,11 +43,11 @@ h3 {
 
 h4,
 h5 {
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 h6 {
-  font-size: 0.8rem;
+  font-size: 0.8em;
 }
 
 p {
@@ -59,8 +59,12 @@ a {
 }
 
 blockquote {
-  margin: 0.8rem 0;
-  padding: 0 1rem;
-  border-left: 0.25rem solid $grey-light;
-  color: $grey;
+  margin: 0.8em 0;
+  padding: 0.15em 0 0.15em 1em;
+  border-left: 0.15em solid $black;
+  font-style: italic;
+}
+
+blockquote > p {
+  margin: 0;
 }

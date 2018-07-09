@@ -1,0 +1,13 @@
+.footer {
+  @extend %page-max-width;
+  display: block;
+  padding: 2rem 0;
+  border-top: 1px solid $grey-light;
+  text-align: center;
+
+  &--copyright {
+    color: $grey;
+    font-family: $sans-serif;
+    font-size: 0.8rem;
+  }
+}

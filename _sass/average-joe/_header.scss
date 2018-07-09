@@ -1,6 +1,6 @@
 .header {
-  text-align: center;
   @extend %page-max-width;
+  text-align: center;
 
   &--logo {
     display: inline-block;
