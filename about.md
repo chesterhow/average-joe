@@ -13,7 +13,7 @@ review:
   charging: "No"
 ---
 
-This isn't yet another cafe review blog. At Average Joe Coffeehouse Reviews, we score cafes not just based on coffee. Below is an example review and the factors we take into consideration.
+This isn't yet another cafe review blog. At Average Joe Coffeehouse Reviews, cafes are scored not just based on coffee alone, but also on various other factors as well. Below is an example of a review and the factors taken into consideration.
 
 {% include review.html %}
 
@@ -22,14 +22,14 @@ The average cafe-goer in Singapore is no _coffee connoisseur_. We are average jo
 
 Instead, here is what we're really more concerned about.
 
-> Is there wi-fi? Will this look good on my Instagram? Can I get seats easily? Are there charging points?
+> Is there wi-fi? Will this look good on my Instagram? Will I be able to get seats? Are there charging points?
 
 Hands up if you have ever asked one of these questions before heading to a cafe. 🙋🏻‍♂️ I know I sure have.
 
 ## Something other than Starbucks
 When many Singaporeans crave their daily dose of caffeine, the first place that pops up in their mind is Starbucks. That is something I want to change.
 
-Great coffee and great coffeehouses are everywhere. That's why I started Average Joe. I want to help you discover amazing coffeehouses that your area that you never even knew existed. And maybe, with some luck, you might find your new favourite coffee haunt.
+Great coffee and great coffeehouses are everywhere. That's why I started Average Joe. I want to help you discover amazing coffeehouses in your area that you never even knew existed. And maybe, with some luck, you might just find your new favourite coffee haunt.
 
 Here's to more great coffee. ☕️
 
