@@ -3,6 +3,7 @@ layout: post
 title:  "Tiong Hoe Speciality Coffee"
 date:   2018-06-11
 thumbnail: /assets/images/tionghoe.jpg
+comments: true
 review:
   overall: 4
   coffee: 5

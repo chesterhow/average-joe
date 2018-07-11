@@ -1,5 +1,5 @@
 .post {
-  margin: 1rem 0 3rem;
+  margin: 1rem 0 0;
 
   // Cover image
   &--cover {
@@ -177,4 +177,9 @@
     letter-spacing: 0.2rem;
     text-transform: uppercase;
   }
+}
+
+#disqus_thread {
+  @extend %content-max-width;
+  margin: 2rem auto;
 }
