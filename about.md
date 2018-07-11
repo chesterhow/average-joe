@@ -2,6 +2,7 @@
 layout: post
 title: About
 permalink: /about/
+comments: true
 sample: true
 review:
   overall: 5
