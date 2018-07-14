@@ -1,7 +1,7 @@
 # Site settings
 title: Average Joe Coffeehouse Reviews
 description: "Coffeehouse reviews by an average joe, not a coffee expert."
-baseurl: "/average-joe" 
+baseurl: "/average-joe"
 url: "https://chesterhow.github.io"
 
 # Author

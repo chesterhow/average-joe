@@ -13,6 +13,7 @@ html {
   color: $black;
   font-family: $serif;
   font-size: 18px;
+  -webkit-text-size-adjust: 100%;
 
   @media (max-width: $break-small) {
     font-size: 16px;
