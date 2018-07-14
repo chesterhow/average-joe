@@ -130,8 +130,10 @@
 
 .breakdown {
   display: grid;
+  grid-auto-flow: column;
   grid-column-gap: 2rem;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
   align-items: center;
 
   &--category {
@@ -147,6 +149,7 @@
 
   @media (max-width: $break-small) {
     grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
   }
 }
 
