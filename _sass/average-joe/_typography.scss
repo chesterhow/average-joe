@@ -1,0 +1,61 @@
+html {
+  color: $black;
+  font-family: $serif;
+  font-size: 18px;
+  -webkit-text-size-adjust: 100%;
+
+  @media (max-width: $break-small) {
+    font-size: 16px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1rem 0 0;
+  font-family: $sans-serif;
+}
+
+h1 {
+  font-size: 1.953em;
+}
+
+h2 {
+  font-size: 1.563em;
+}
+
+h3 {
+  font-size: 1.25em;
+}
+
+h4,
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  font-size: 0.8em;
+}
+
+p {
+  margin: 1rem 0 0;
+  line-height: 1.5;
+}
+
+a {
+  color: $black;
+}
+
+blockquote {
+  margin: 0.8rem 0;
+  padding: 0.15rem 0 0.15rem 1rem;
+  border-left: 0.15rem solid $black;
+  font-style: italic;
+}
+
+blockquote > p {
+  margin: 0;
+}
