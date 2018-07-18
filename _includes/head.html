@@ -10,6 +10,8 @@
     {% endif %}
   </title>
 
+  <!-- <meta name="description" content="{{ site.description }}"> -->
+
   <!-- CSS -->
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
 
@@ -22,4 +24,21 @@
   <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/favicons/apple-touch-icon.png" | relative_url }}">
   <link rel="manifest" href="{{ "/assets/favicons/site.webmanifest" | relative_url }}">
   <link rel="mask-icon" href="{{ "/assets/favicons/safari-pinned-tab.svg" | relative_url }}" color="#7b7b7b">
+
+  {% assign title = page.title %}
+  {% if page.title == "Home" %}
+    {% assign title = "Average Joe Coffeehouse Reviews" %}
+  {% endif %}
+
+  <!-- Social Meta -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ site.description }}">
+  <meta property="og:site_name" content="Average Joe Coffeehouse Reviews">
+  <!-- <meta property="og:image" content="">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630"> -->
+  <meta name="twitter:card" content="summary">
 </head>
