@@ -1,6 +1,6 @@
 # Site settings
 title: Average Joe
-description: "Coffeehouse reviews by an average joe, not a coffee expert."
+description: "Everything you’ve ever wanted to know about coffeehouses in Singapore."
 baseurl: "/average-joe"
 url: "https://chesterhow.github.io"
 
@@ -20,9 +20,6 @@ sass:
   sass_dir: _sass
   style: compressed
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
 exclude:
   - Gemfile
   - Gemfile.lock

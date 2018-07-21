@@ -1,2 +1,2 @@
-# average-joe
-Repository for Average Joe Coffeehouse Reviews site
+# Average Joe Coffeehouse Reviews
+Everything you’ve ever wanted to know about coffeehouses in Singapore.
