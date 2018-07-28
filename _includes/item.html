@@ -5,12 +5,28 @@
       alt="{{ post.title }}"
     >
   </div>
-  {% if post == site.posts.first %}
-    <h1 class="item--title">{{ post.title }}</h1>
-    <p class="item--body">{{ post.content | strip_html | truncatewords: 20 }}</p>
-    <h6 class="item--more">READ MORE</h6>
-  {% else %}
-    <h2 class="item--title">{{ post.title }}</h2>
+  <div class="item--content">
     <h6 class="item--date">{{ post.date | date: "%B %d, %Y" }}</h6>
-  {% endif %}
+
+    {% if post == site.posts.first %}
+      <h1 class="item--title">{{ post.title }}</h1>
+    {% else %}
+      <h2 class="item--title">{{ post.title }}</h2>
+    {% endif %}
+
+    <div class="item--score">
+      {% for i in (1..5) %}
+        {% if i <= post.review.overall %}
+          <h5>&#x2605;</h5>
+        {% else %}
+          <h5 class="score--faded">&#x2605;</h5>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    {% if post == site.posts.first %}
+      <p class="item--body">{{ post.excerpt | strip_html }}...</p>
+      <h6 class="item--more">READ MORE</h6>
+    {% endif %}
+  </div>
 </a>

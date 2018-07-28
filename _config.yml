@@ -31,3 +31,5 @@ exclude:
 
 # Permalinks
 permalink: /:year-:month-:day/:title
+
+excerpt_separator: <!--more-->

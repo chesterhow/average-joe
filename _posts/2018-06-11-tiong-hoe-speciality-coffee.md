@@ -13,7 +13,7 @@ review:
   wifi: "Yes"
   charging: "No"
 ---
-Lorem ipsum dolor sit amet, ei sea nullam platonem, per nominati inciderint cu, ad mentitum praesent efficiantur his. Numquam invidunt ei vim. Ignota aeterno ut sea. Ea admodum menandri deseruisse vim. His integre percipit in.
+Lorem ipsum dolor sit amet, ei sea nullam platonem, per nominati inciderint cu<!--more-->, ad mentitum praesent efficiantur his. Numquam invidunt ei vim. Ignota aeterno ut sea. Ea admodum menandri deseruisse vim. His integre percipit in.
 
 # Heading 1
 ## Heading 2
