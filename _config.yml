@@ -1,8 +1,7 @@
 # Site settings
 title: Average Joe
 description: "Everything you’ve ever wanted to know about coffeehouses in Singapore."
-baseurl: "/average-joe"
-url: "https://chesterhow.github.io"
+url: "https://averagejoe.reviews"
 
 # Author
 author:
