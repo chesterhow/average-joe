@@ -2,11 +2,11 @@
   @extend %page-max-width;
   display: block;
   padding: 2rem 0;
-  border-top: 1px solid $grey-light;
+  border-top: 1px solid $grey;
   text-align: center;
 
   &--copyright {
-    color: $grey;
+    color: $grey-dark;
     font-family: $sans-serif;
     font-size: 0.8rem;
   }

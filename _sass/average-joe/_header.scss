@@ -22,7 +22,7 @@
 .nav {
   margin-top: 1.5rem;
   padding-top: 0.75rem;
-  border-top: 1px solid $grey-light;
+  border-top: 1px solid $grey;
 
   @media (max-width: $break-medium) {
     margin-top: 1.2rem;
@@ -40,16 +40,17 @@
 
   li {
     display: inline-block;
-    margin: 0 0.7rem;
+    margin: 0 1rem;
     line-height: 1.5;
   }
 
   a {
-    color: $grey;
+    color: $grey-dark;
     font-family: $sans-serif;
-    font-size: 0.8rem;
-    letter-spacing: 0.15rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
     text-decoration: none;
+    text-transform: uppercase;
 
     @media (max-width: $break-smaller) {
       font-size: 0.7rem;
