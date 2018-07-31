@@ -29,6 +29,7 @@
 
   &--content {
     @extend %content-max-width;
+    margin-bottom: 2rem;
 
     // image in post
     img {
@@ -52,6 +53,10 @@
     margin: 1.5rem 0 0.5rem;
     text-align: center;
 
+    &_left {
+      text-align: left;
+    }
+
     @media (min-width: $break-small) {
       font-size: 2.441rem;
     }
@@ -67,6 +72,16 @@
     font-family: $serif;
     font-weight: normal;
     text-align: center;
+  }
+
+  a {
+    @include transition(all 0.2s ease-out);
+    box-shadow: inset 0 -2px 0 $gold;
+    text-decoration: none;
+
+    &:hover {
+      color: $gold;
+    }
   }
 }
 
@@ -101,5 +116,5 @@
 
 #disqus_thread {
   @extend %content-max-width;
-  margin: 2rem auto;
+  margin: 0 auto 2rem;
 }
