@@ -1,6 +1,6 @@
 ---
 layout: post
-title: About Average Joe
+title: About us
 permalink: /about/
 comments: true
 sample: true
