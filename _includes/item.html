@@ -8,7 +8,7 @@
   <div class="item--content">
     <h6 class="item--date">{{ post.date | date: "%B %d, %Y" }}</h6>
 
-    {% if post == site.posts.first %}
+    {% if post == paginator.posts.first %}
       <h1 class="item--title">{{ post.title }}</h1>
     {% else %}
       <h2 class="item--title">{{ post.title }}</h2>
@@ -24,7 +24,7 @@
       {% endfor %}
     </div>
 
-    {% if post == site.posts.first %}
+    {% if post == paginator.posts.first %}
       <p class="item--body">{{ post.excerpt | strip_html }}...</p>
       <h6 class="item--more">READ MORE</h6>
     {% endif %}

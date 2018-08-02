@@ -5,12 +5,17 @@
 
 .items_grid {
   display: grid;
-  grid-gap: 0.5rem;
+  grid-column-gap: 0.5rem;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+
+  .spacer {
+    height: 0;
+  }
 }
 
 .item {
   @include transition(all 0.2s ease-out);
+  margin-top: 0.5rem;
   background: $gold;
 
   &:hover {
@@ -89,7 +94,6 @@
 
 .first_item {
   @extend %light-on-dark-text;
-  margin-bottom: 0.5rem;
   background: $black;
 
   &:hover {
