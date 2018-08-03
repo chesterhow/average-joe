@@ -14,6 +14,7 @@ author:
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-paginate-v2
 
 sass:
   sass_dir: _sass
@@ -31,4 +32,14 @@ exclude:
 # Permalinks
 permalink: /:year-:month-:day/:title
 
+# Post excerpt
 excerpt_separator: <!--more-->
+
+# Pagination
+pagination:
+  enabled: true
+  debug: true
+  per_page: 7
+  sort_reverse: true
+  title: ':title'
+  permalink: '/page/:num/'

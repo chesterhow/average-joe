@@ -3,18 +3,45 @@ layout: default
 ---
 
 <div class="home">
-  {% assign post = site.posts.first %}
+  {% assign post = paginator.posts.first %}
   <div class="first_item item">
     {% include item.html %}
   </div>
 
   <div class="items_grid">
-    {% for post in site.posts %}
-      {% if post != site.posts.first %}
+    {% for post in paginator.posts %}
+      {% if post != paginator.posts.first %}
         <div class="item">
           {% include item.html %}
         </div>
       {% endif %}
     {% endfor %}
+
+    {% assign spacers = paginator.per_page | minus: paginator.posts.size %}
+    {% for i in (1..spacers) %}
+      <div class="spacer"></div>
+    {% endfor %}
   </div>
+
+  {% if paginator.total_pages > 1 %}
+    <div class="pagination">
+      {% unless paginator.previous_page %}
+        {% assign prevClass = 'pagination__button-disabled' %}
+      {% endunless %}
+      <a
+        href="{{ paginator.previous_page_path | prepend: site.baseurl }}"
+        class="pagination__button {{ prevClass }}"
+      >PREV</a>
+
+      <h6 class="pagination__page">{{ paginator.page }}</h6>
+
+      {% unless paginator.next_page %}
+        {% assign nextClass = 'pagination__button-disabled' %}
+      {% endunless %}
+      <a
+        href="{{ paginator.next_page_path | prepend: site.baseurl }}"
+        class="pagination__button {{ nextClass }}"
+      >NEXT</a>
+    </div>
+  {% endif %}
 </div>
