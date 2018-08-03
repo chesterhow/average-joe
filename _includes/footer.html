@@ -1,5 +1,11 @@
 <footer class="footer">
-  <span class="footer--copyright">
+  <span class="footer__copyright">
     &copy; <time datetime="{{ site.time }}">{{ site.time | date: '%Y' }}</time> {{ site.title }}
   </span>
+
+  <div class="footer__nav">
+      <a class="footer__link" href="{{ "/" | relative_url }}">Reviews</a>
+      <a class="footer__link" href="{{ "/about/" | relative_url }}">About</a>
+      <a class="footer__link" href="{{ "/contact/" | relative_url }}"}>Contact</a>
+    </div>
 </footer>

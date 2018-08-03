@@ -42,6 +42,10 @@
     display: inline-block;
     margin: 0 1rem;
     line-height: 1.5;
+
+    @media (max-width: $break-smaller) {
+      margin: 0 0.6rem;
+    }
   }
 
   a {
@@ -51,9 +55,5 @@
     letter-spacing: 0.05rem;
     text-decoration: none;
     text-transform: uppercase;
-
-    @media (max-width: $break-smaller) {
-      font-size: 0.7rem;
-    }
   }
 }

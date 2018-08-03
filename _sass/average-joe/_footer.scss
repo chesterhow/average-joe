@@ -1,13 +1,43 @@
 .footer {
   @extend %page-max-width;
   display: block;
-  padding: 2rem 0;
+  padding: 1rem 0;
   border-top: 1px solid $grey;
-  text-align: center;
 
-  &--copyright {
+  &__copyright {
+    display: inline-block;
+    margin: 1rem 2rem 1rem 0;
+    color: $grey;
+    font-family: $sans-serif;
+    font-size: 16px;
+    @media (max-width: $break-small) {
+      display: block;
+    }
+  }
+
+  &__nav {
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+
+  &__link {
+    display: inline-block;
+    margin-right: 2rem;
     color: $grey-dark;
     font-family: $sans-serif;
-    font-size: 0.8rem;
+    font-size: 16px;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: $break-small) {
+      display: block;
+
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+    }
   }
 }

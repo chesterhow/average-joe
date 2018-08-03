@@ -157,6 +157,10 @@
     letter-spacing: 0.15rem;
     text-decoration: none;
 
+    &:hover {
+      color: $grey;
+    }
+
     &-disabled {
       color: $grey-light;
       cursor: default;
