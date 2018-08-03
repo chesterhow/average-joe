@@ -4,6 +4,14 @@ title:  "Nylon Coffee Roasters"
 date:   2018-06-03
 thumbnail: /assets/images/thetinyroaster.jpg
 comments: true
+review:
+  overall: 5
+  coffee: 5
+  aesthetic: 4
+  seating: 3
+  price: $$
+  wifi: "Yes"
+  charging: "No"
 ---
 Lorem ipsum dolor sit amet, ei sea nullam platonem, per nominati inciderint cu<!--more-->, ad mentitum praesent efficiantur his. Numquam invidunt ei vim. Ignota aeterno ut sea. Ea admodum menandri deseruisse vim. His integre percipit in.
 

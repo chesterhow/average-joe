@@ -4,6 +4,14 @@ title:  "Rise and Grind"
 date:   2018-05-31
 thumbnail: /assets/images/thetinyroaster.jpg
 comments: true
+review:
+  overall: 3
+  coffee: 5
+  aesthetic: 4
+  seating: 3
+  price: $$
+  wifi: "Yes"
+  charging: "No"
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.<!--more--> You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
