@@ -13,24 +13,24 @@
     @extend %light-on-dark-text;
   }
 
-  &--overall {
+  &__overall {
     grid-area: overall;
     margin: 1rem 2rem;
     text-align: center;
   }
 
-  &--breakdown {
+  &__breakdown {
     grid-area: breakdown;
     margin: 1rem 0;
     padding: 0 2rem;
     border-left: 2px $grey solid;
   }
 
-  &--title {
+  &__title {
     margin: 0;
   }
 
-  &--score {
+  &__score {
     margin: 0;
     color: $gold;
     font-size: 3.815rem;
@@ -43,7 +43,7 @@
     max-width: 20rem;
     margin: 1.5rem auto;
 
-    &--breakdown {
+    &__breakdown {
       margin: 0 2rem;
       padding: 1rem 0;
       border-top: 2px $grey solid;
@@ -64,12 +64,12 @@
   grid-template-rows: repeat(3, 1fr);
   align-items: center;
 
-  &--category {
+  &__category {
     position: relative;
     line-height: 1.7;
   }
 
-  &--score {
+  &__score {
     position: absolute;
     right: 0;
     color: $gold;

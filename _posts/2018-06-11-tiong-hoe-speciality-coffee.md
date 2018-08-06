@@ -50,7 +50,7 @@ Graece tempor pro te. Doming assueverit est ex, sed in cibo laudem pericula. Deb
 Meis integre quo ex, ei ius magna harum nusquam. At iriure volutpat cotidieque mei, est errem dissentiunt te. Modo vituperatoribus ea ius, at duo tation iriure blandit. Qui ea malorum insolens, vocibus posidonium vix ea. Ornatus vituperata no vix.
 
 <div class="info">
-  <div class="info--address">
+  <div class="info__address">
     <h6>Address</h6>
     <p>
       170 Stirling Road
@@ -60,7 +60,7 @@ Meis integre quo ex, ei ius magna harum nusquam. At iriure volutpat cotidieque m
       Singapore 140170
     </p>
   </div>
-  <div class="info--opening">
+  <div class="info__opening">
     <h6>Opening Hours</h6>
     <p>
       Mon - Fri

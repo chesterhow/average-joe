@@ -1,32 +1,32 @@
-<a href="{{ post.url | relative_url }}" class="item--container">
-  <div class="item--thumbnail">
+<a href="{{ post.url | relative_url }}" class="item__container">
+  <div class="item__thumbnail">
     <img
       src="{{ post.thumbnail | relative_url }}"
       alt="{{ post.title }}"
     >
   </div>
-  <div class="item--content">
-    <h6 class="item--date">{{ post.date | date: "%B %d, %Y" }}</h6>
+  <div class="item__content">
+    <h6 class="item__date">{{ post.date | date: "%B %d, %Y" }}</h6>
 
     {% if post == paginator.posts.first %}
-      <h1 class="item--title">{{ post.title }}</h1>
+      <h1 class="item__title">{{ post.title }}</h1>
     {% else %}
-      <h2 class="item--title">{{ post.title }}</h2>
+      <h2 class="item__title">{{ post.title }}</h2>
     {% endif %}
 
-    <div class="item--score">
+    <div class="item__score">
       {% for i in (1..5) %}
         {% if i <= post.review.overall %}
           <h5>&#x2605;</h5>
         {% else %}
-          <h5 class="score--faded">&#x2605;</h5>
+          <h5 class="score__faded">&#x2605;</h5>
         {% endif %}
       {% endfor %}
     </div>
 
     {% if post == paginator.posts.first %}
-      <p class="item--body">{{ post.excerpt | strip_html }}...</p>
-      <h6 class="item--more">READ MORE</h6>
+      <p class="item__body">{{ post.excerpt | strip_html }}...</p>
+      <h6 class="item__more">READ MORE</h6>
     {% endif %}
   </div>
 </a>

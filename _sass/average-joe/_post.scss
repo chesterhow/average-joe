@@ -2,7 +2,7 @@
   margin: 1rem 0 0;
 
   // Cover image
-  &--cover {
+  &__cover {
     @extend %page-max-width;
     position: relative;
     overflow: hidden;
@@ -27,7 +27,7 @@
     }
   }
 
-  &--content {
+  &__content {
     @extend %content-max-width;
     margin-bottom: 2rem;
 
@@ -49,11 +49,11 @@
     }
   }
 
-  &--title {
+  &__title {
     margin: 1.5rem 0 0.5rem;
     text-align: center;
 
-    &_left {
+    &-left {
       text-align: left;
     }
 
@@ -66,7 +66,7 @@
     }
   }
 
-  &--date {
+  &__date {
     margin: 0;
     color: $gold;
     font-family: $serif;
@@ -93,11 +93,11 @@
   margin-top: 0.5rem;
   text-align: center;
 
-  &--address {
+  &__address {
     grid-area: address;
   }
 
-  &--opening {
+  &__opening {
     grid-area: opening;
   }
 

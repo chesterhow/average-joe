@@ -4,7 +4,7 @@ layout: default
 
 <div class="post">
   {% if page.thumbnail %}
-    <div class="post--cover">
+    <div class="post__cover">
       <img
         src="{{ page.thumbnail | relative_url }}"
         alt="{{ page.title }}"
@@ -12,14 +12,14 @@ layout: default
     </div>
   {% endif %}
 
-  <div class="post--content">
+  <div class="post__content">
     {% if page.review and page.sample != true %}
-      <h1 class="post--title">{{ page.title }}</h1>
+      <h1 class="post__title">{{ page.title }}</h1>
     {% else %}
-      <h1 class="post--title_left">{{ page.title }}</h1>
+      <h1 class="post__title-left">{{ page.title }}</h1>
     {% endif %}
     
-    <h5 class="post--date">{{ page.date | date: "%B %d, %Y" }}</h5>
+    <h5 class="post__date">{{ page.date | date: "%B %d, %Y" }}</h5>
 
     {% if page.review and page.sample != true %}
       {% include review.html %}
