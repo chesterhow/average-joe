@@ -45,8 +45,8 @@ layout: default
     </div>
   {% endif %}
   <!-- HTML elements for search -->
-  <input type="text" id="search-input" placeholder="Search blog posts..">
-  <ul id="results-container"></ul>
+  <input type="text" id="search-input" placeholder="Search coffeehouses..">
+  <div id="results-container" class="items_grid"></div>
 
   <script src="https://cdn.rawgit.com/christian-fei/Simple-Jekyll-Search/master/dest/simple-jekyll-search.min.js"></script>
 
@@ -55,11 +55,24 @@ layout: default
       searchInput: document.getElementById('search-input'),
       resultsContainer: document.getElementById('results-container'),
       json: '{{ site.baseurl }}/search.json',
-      searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
-      noResultsText: 'No results found',
+      searchResultTemplate:
+        `<div class="item">
+          <a href="{url}" class="item__container">
+            <div class="item__thumbnail">
+              <img
+                src="{thumbnail}"
+                alt="{title}"
+              >
+            </div>
+            <div class="item__content">
+              <h6 class="item__date">{date}</h6>
+              <h2 class="item__title">{title}</h2>
+            </div>
+          </a>
+        </div>`,
       limit: 10,
-      fuzzy: false,
-      exclude: ['Welcome']
+      noResultsText: '',
+      fuzzy: false
     })
   </script>
 </div>
