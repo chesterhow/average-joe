@@ -14,6 +14,8 @@
       <h2 class="item__title">{{ post.title }}</h2>
     {% endif %}
 
+    <h6 class="item__estate">{{ post.estate }}</h6>
+
     <div class="item__score">
       {% for i in (1..5) %}
         {% if i <= post.review.overall %}

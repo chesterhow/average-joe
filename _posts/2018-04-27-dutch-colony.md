@@ -3,6 +3,7 @@ layout: post
 title:  "Dutch Colony"
 date:   2018-04-27
 thumbnail: /assets/images/thetinyroaster.jpg
+estate: "Sixth Avenue"
 comments: true
 review:
   overall: 3

@@ -3,6 +3,7 @@ layout: post
 title:  "Nylon Coffee Roasters"
 date:   2018-06-03
 thumbnail: /assets/images/thetinyroaster.jpg
+estate: "Outram Park"
 comments: true
 review:
   overall: 5

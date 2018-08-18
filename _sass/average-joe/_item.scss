@@ -47,7 +47,7 @@
   &__date {
     @extend %light-on-dark-text;
     margin: 0;
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
     color: $gold-light;
     text-transform: uppercase;
   }
@@ -60,9 +60,16 @@
     white-space: nowrap;
   }
 
+  &__estate {
+    margin-top: 0.5rem;
+    opacity: 0.7;
+    color: $black;
+    font-weight: normal;
+  }
+
   &__score {
     @extend %light-on-dark-text;
-    padding-top: 1rem;
+    padding-top: 0.5rem;
     
     h5 {
       display: inline-block;
@@ -88,6 +95,10 @@
   .item__title {
     color: $gold;
     white-space: normal;
+  }
+
+  .item__estate {
+    color: $white;
   }
 
   .item__body {

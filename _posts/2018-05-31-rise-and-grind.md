@@ -3,6 +3,7 @@ layout: post
 title:  "Rise and Grind"
 date:   2018-05-31
 thumbnail: /assets/images/thetinyroaster.jpg
+estate: "Beauty World"
 comments: true
 review:
   overall: 3
