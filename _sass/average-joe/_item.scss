@@ -47,13 +47,13 @@
   &__date {
     @extend %light-on-dark-text;
     margin: 0;
-    padding-bottom: 1rem;
+    // padding-bottom: 0.5rem;
     color: $gold-light;
     text-transform: uppercase;
   }
   
   &__title {
-    margin: 0;
+    margin: 1rem 0 0;
     overflow: hidden;
     color: $black;
     text-overflow: ellipsis;
@@ -62,18 +62,23 @@
 
   &__score {
     @extend %light-on-dark-text;
-    padding-top: 1rem;
-    
-    h5 {
-      display: inline-block;
-      margin: 0;
-      color: $white;
-      line-height: 1;
-    }
+    display: inline-block;
+    margin: 0.3rem 0 0;
+    color: $white;
+    font-weight: normal;
 
-    .score__faded {
+    &--faded {
+      @extend .item__score;
       opacity: 0.3;
     }
+  }
+
+  &__estate {
+    @extend %light-on-dark-text;
+    display: inline-block;
+    margin: 0.3rem 0 0;
+    color: $white;
+    font-weight: normal;
   }
 }
 
@@ -91,8 +96,7 @@
   }
 
   .item__body {
-    margin: 0;
-    padding-top: 1rem;
+    margin: 1rem 0 0;
     color: $white;
   }
 

@@ -3,6 +3,7 @@ layout: post
 title:  "Glasshouse"
 date:   2018-04-28
 thumbnail: /assets/images/thetinyroaster.jpg
+estate: "City Hall"
 comments: true
 review:
   overall: 3
