@@ -47,13 +47,12 @@
   &__date {
     @extend %light-on-dark-text;
     margin: 0;
-    // padding-bottom: 0.5rem;
     color: $gold-light;
     text-transform: uppercase;
   }
   
   &__title {
-    margin: 1rem 0 0;
+    margin: 0.5rem 0 0;
     overflow: hidden;
     color: $black;
     text-overflow: ellipsis;
@@ -82,22 +81,30 @@
   }
 }
 
-.first_item {
+.item-black {
   @extend %light-on-dark-text;
   background: $black;
 
+  .item__title {
+    color: $gold;
+  }
+
+  .item__body {
+    color: $white;
+  }
+}
+
+.item-first {
   &:hover {
     opacity: 1;
   }
 
   .item__title {
-    color: $gold;
     white-space: normal;
   }
 
   .item__body {
     margin: 1rem 0 0;
-    color: $white;
   }
 
   .item__more {
