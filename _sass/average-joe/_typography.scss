@@ -63,3 +63,11 @@ blockquote {
 blockquote > p {
   margin: 0;
 }
+
+.divider {
+  @extend %content-max-width;
+  height: 1px;
+  margin: 2rem auto;
+  border: 0;
+  background: $grey-light;
+}

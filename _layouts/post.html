@@ -27,5 +27,29 @@ layout: default
 
     {{ content }}
   </div>
+
+  {% if page.review and page.sample != true %}
+    <hr class="divider">
+    <div class="related">
+      {% if page.next %}
+        {% assign post = page.next %}
+      {% else %}
+        {% assign post = page.previous.previous %}
+      {% endif %}
+      <div class="item item-black">
+        {% include item.html %}
+      </div>
+
+      {% if page.previous %}
+        {% assign post = page.previous %}
+      {% else %}
+        {% assign post = page.next.next %}
+      {% endif %}
+      <div class="item item-black">
+        {% include item.html %}
+      </div>
+    </div>
+  {% endif %}
+
   {% include disqus_comments.html %}
 </div>
