@@ -10,8 +10,8 @@ review:
   aesthetic: 3
   seating: 2
   price: $$
+  food: "No"
   wifi: "Yes"
-  charging: "No"
 ---
 
 This isn’t your usual cafe review blog, so stay put.

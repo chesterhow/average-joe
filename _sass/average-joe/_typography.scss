@@ -71,3 +71,19 @@ blockquote > p {
   border: 0;
   background: $grey-light;
 }
+
+.text-divider {
+  display: block;
+  margin: 1.5rem 0;
+  border: 0;
+  text-align: center;
+
+
+  &:before {
+    content: '\00b7\00b7\00b7';
+    display: inline-block;
+    margin-left: 1rem;
+    font-size: 1.5em;
+    letter-spacing: 1rem;
+  }
+}
