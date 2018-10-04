@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Tiong Hoe Speciality Coffee"
-date:   2018-10-02
+date:   2018-10-05
 thumbnail: /assets/thumbnails/tionghoe-thumb.jpg
 cover: /assets/images/tionghoe-cover.jpg
 estate: "Queenstown"
