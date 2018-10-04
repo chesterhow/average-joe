@@ -11,6 +11,7 @@ author:
   github_username: chesterhow
 
 # Build settings
+future: true
 markdown: kramdown
 plugins:
   - jekyll-feed
