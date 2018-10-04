@@ -3,10 +3,10 @@ layout: default
 ---
 
 <div class="post">
-  {% if page.thumbnail %}
+  {% if page.cover %}
     <div class="post__cover">
       <img
-        src="{{ page.thumbnail | relative_url }}"
+        src="{{ page.cover | relative_url }}"
         alt="{{ page.title }}"
       >
     </div>
