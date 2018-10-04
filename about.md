@@ -29,16 +29,16 @@ All we know is that, as long as the coffee is good, so are we.
 
 So then, what else are the majority of us humble cafe patrons concerned about? Here’s what.
 
-> Is there wi-fi? Will this look good on Instagram? Will I be able to get seats? Are there accessible charging points?
+> Is there wi-fi? Will this look good on Instagram? Will I be able to get seats? Do they serve food or just coffee?
 
-Hands up if you have ever asked one of these questions before heading to a cafe. &#x1f64b;&#x1f3fb;&#x200d;&#x2642;&#xfe0f; I know I sure have.
+Hands up if you have ever asked one of these questions before heading to a cafe. I know I sure have.
 
 ## Something other than Starbucks
 For most Singaporeans who seek to satisfy their daily caffeine cravings, the first place that pops into their minds, is Starbucks. That is something that I want to change.
 
 Great coffee and great coffeehouses do exist on our little island. That’s why I started Average Joe. I want to help you discover amazing coffeehouses in your area that you may have never even known about. And my hope is that maybe, you’ll be able to find your new favourite coffee haunt.
 
-Here's to more great coffee. &#x2615;
+Here's to more great coffee.
 
 _Cheers,<br>
 **Average Joe**_
