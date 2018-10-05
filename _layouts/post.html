@@ -3,10 +3,10 @@ layout: default
 ---
 
 <div class="post">
-  {% if page.thumbnail %}
+  {% if page.cover %}
     <div class="post__cover">
       <img
-        src="{{ page.thumbnail | relative_url }}"
+        src="{{ page.cover | relative_url }}"
         alt="{{ page.title }}"
       >
     </div>
@@ -29,26 +29,28 @@ layout: default
   </div>
 
   {% if page.review and page.sample != true %}
-    <hr class="divider">
-    <div class="related">
-      {% if page.next %}
-        {% assign post = page.next %}
-      {% else %}
-        {% assign post = page.previous.previous %}
-      {% endif %}
-      <div class="item item-black">
-        {% include item.html %}
-      </div>
+    {% if page.next or page.previous %}
+      <hr class="divider">
+      <div class="related">
+        {% if page.next %}
+          {% assign post = page.next %}
+        {% else %}
+          {% assign post = page.previous.previous %}
+        {% endif %}
+        <div class="item item-black">
+          {% include item.html %}
+        </div>
 
-      {% if page.previous %}
-        {% assign post = page.previous %}
-      {% else %}
-        {% assign post = page.next.next %}
-      {% endif %}
-      <div class="item item-black">
-        {% include item.html %}
+        {% if page.previous %}
+          {% assign post = page.previous %}
+        {% else %}
+          {% assign post = page.next.next %}
+        {% endif %}
+        <div class="item item-black">
+          {% include item.html %}
+        </div>
       </div>
-    </div>
+    {% endif %}
   {% endif %}
 
   {% include disqus_comments.html %}
