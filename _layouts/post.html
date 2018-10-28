@@ -28,6 +28,25 @@ layout: default
     {{ content }}
   </div>
 
+  <script>
+    var addressP = document.querySelector('.info__address p');
+    addressP.addEventListener('click', function (event) {
+      const isAppleOS = navigator.platform.match(/(iPhone|iPod|iPad)/i)?true:false;
+
+      const address = addressP.textContent.trim()
+        .replace(/\s{2,}/gm, ' ');
+
+      // Open Apple Maps if OS is iOS
+      if (isAppleOS) {
+        window.open(`maps:?daddr=${address}`, '_self');
+        return;
+      }
+
+      // Open Google Maps app/web on other platforms
+      window.open(`https://www.google.com/maps/dir/?api=1&destination=${address}`, '_self');
+    });
+  </script>
+
   <!-- {% if page.review and page.sample != true %}
     {% if page.next or page.previous %}
       <hr class="divider">
