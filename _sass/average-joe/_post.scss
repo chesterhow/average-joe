@@ -95,6 +95,11 @@
 
   &__address {
     grid-area: address;
+
+    p:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
   }
 
   &__opening {
