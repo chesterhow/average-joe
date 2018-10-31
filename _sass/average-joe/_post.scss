@@ -96,8 +96,11 @@
   &__address {
     grid-area: address;
 
-    p:hover {
+    p {
       text-decoration: underline;
+    }
+
+    p:hover {
       cursor: pointer;
     }
   }
