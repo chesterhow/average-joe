@@ -51,12 +51,12 @@ On the right, you’ll notice a wall with a cheeky quote on it, which I believe 
 Their dishes were very nicely presented. I particularly loved the wooden plate they used to serve the Coffee Flight (as shown above) and the Coffee Mayo fries (as shown below later).
 
 ## Seating
-Prodigal Cafe is cozy little space, which also translates to, it does not have many seats available. There are about 20 odd seats inside, with different sized tables and countertop seats. Though seating is limited, they can accommodate varying group sizes of up to 6 people. There are benches outside as well for waiting or customers who simply prefer some fresh outdoor air.
+Prodigal Cafe is cozy little space, which also translates to, it does not have many seats available. There are about 20 odd seats inside, with different sized tables and countertop seats. Though seating is limited, they can accommodate varying group sizes of up to 6 people. There are benches outside as well for waiting or for customers who simply prefer some fresh outdoor air.
 
-We had to wait a short while before we could get a table for 6. The staff were very helpful in easing the wait, by helping to shift 2 customers who were occupying a 6 seater table.
+We had to wait a short while before we could get a table for 6. The staff did a great job in easing the wait, by helping to shift 2 customers who were occupying a 6 seater table.
 
 ## Price
-At $5 for a cappuccino and $6 for an affogato, their coffees prices are pretty standard. On the other hand, ranging from $8 - $18, their food menu is slightly more on the pricey side. While they do not have service charge and GST, the service exceptional nonetheless. When I inquired about their beans, the staff were more than happy to answer my questions and even allowed me behind the counter to find out more about the beans!
+At $5 for a cappuccino and $6 for an affogato, their coffees prices are pretty standard. On the other hand, ranging from $8 - $18, their food menu is slightly more on the pricey side. While they do not have service charge and GST, the service was exceptional nonetheless. When I inquired about their beans, the staff were more than happy to answer my questions and even allowed me behind the counter to find out more about the beans!
 
 ![Prodigal Cafe](/assets/images/prodigal/prodigal-7.jpg)
 _Fresh Cut Fries with Coffee Mayo_
@@ -70,7 +70,7 @@ I’m very keen on trying out their other brunch options on my subsequent visits
 
 ![Prodigal Cafe](/assets/images/prodigal/prodigal-8.jpg)
 
-Situated in a quiet, peaceful housing estate, Prodigal Cafe makes the perfect place to slow things down and enjoy a moment of calm amid a hectic week. Their wonderful service also goes a long way in making customers feel welcomed.
+Situated in a quiet, peaceful housing estate, Prodigal Cafe makes the perfect place to slow things down and enjoy a moment of calm amid a hectic week. Their wonderful service also goes a long way in making their customers feel welcomed.
 
 <div class="info">
   <div class="info__address">
