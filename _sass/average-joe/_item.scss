@@ -64,7 +64,6 @@
     display: inline-block;
     margin: 0.3rem 0 0;
     color: $white;
-    font-weight: normal;
 
     &--faded {
       @extend .item__score;

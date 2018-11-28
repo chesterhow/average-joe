@@ -5,12 +5,12 @@ permalink: /about/
 comments: true
 sample: true
 review:
-  overall: 5
-  coffee: 4
-  aesthetic: 3
-  seating: 2
-  price: $$
-  food: "No"
+  overall: 100
+  coffee: 5
+  aesthetic: 5
+  seating: 5
+  price: $
+  food: "Yes"
   wifi: "Yes"
 ---
 
@@ -18,7 +18,7 @@ This isn’t your usual cafe review blog, so stay put.
 
 Average Joe Coffeehouse Reviews was created to describe the complete cafe experience that the typical local latte-lover cares about. Cafes are scored not just by the taste of the coffee they serve, but also based on other factors that the average Singaporean may consider essential.
 
-Below is an example of the scoring system you will find on this blog, and all the factors taken into consideration.
+Below is an example of the scoring system you will find on this blog, and all the factors taken into consideration. Read more about our scoring system [here](/scoring/)!
 
 {% include review.html %}
 
