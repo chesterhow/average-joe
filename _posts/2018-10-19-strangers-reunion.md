@@ -7,7 +7,7 @@ cover: /assets/images/strangers/strangers-cover.jpg
 estate: "Outram Park"
 comments: true
 review:
-  overall: 4
+  overall: 76
   coffee: 4
   aesthetic: 4
   seating: 4
