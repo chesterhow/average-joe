@@ -37,7 +37,7 @@ And for those who live on caffeine straight, the café sells bottled cold coffee
 
 ![Prodigal Cafe](/assets/images/prodigal/prodigal-4.jpg)
 
-## Aesthetics
+## Aesthetic
 Prodigal Cafe’s logo, a cute cartoon depiction of the owner, is sure to make you smile. The huge backlit logo on the storefront is undoubtedly the first thing you’d notice when approaching the cafe.
 
 ![Prodigal Cafe](/assets/images/prodigal/prodigal-5.jpg)
