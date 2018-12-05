@@ -73,8 +73,8 @@ Though their coffee isn’t fantastic, everything else about Breko Cafe sure is.
   <div class="info__address">
     <h6>Address</h6>
     <p>
-      38 Lor Mambong
-      <br>
+      38 Lor Mambong<!--
+      --><br>
       Singapore 277694
     </p>
   </div>

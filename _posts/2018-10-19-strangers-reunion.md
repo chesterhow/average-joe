@@ -69,8 +69,8 @@ Although slightly pricey, Strangers’ Reunion proves that you get what you pay 
   <div class="info__address">
     <h6>Address</h6>
     <p>
-      33-35 Kampong Bahru Road
-      <br>
+      33-35 Kampong Bahru Road<!--
+      --><br>
       Singapore 169355
     </p>
   </div>
