@@ -42,7 +42,7 @@ Pale brick walls and wooden panelling details imbue the café with a rustic feel
 From the outside, Bread Yard might not look very big, but it can seat up to 72 people (according to its website). But it does get somewhat squeezy when it’s crowded due to how close the rows of tables are to each other. On the plus side, since the tables are arranged in rows and can be moved, you can easily rearrange them to seat any group size. In my visits thus far, Bread Yard has not been overly crowded; yet another reason why I really like this café!
 
 ## Price
-At $x for a white coffee and $x for filter coffee, Bread Yard’s coffees are quite reasonably priced. From $x - $x, their food prices are also pretty much what you’d expect for café food in Singapore. Bread Yard does not have a service charge and GST, so the prices you see are what you get. Still, I experienced lovely service from the friendly staff serving me.
+At $4.50 for a white coffee and $5.50 for filter coffee, Bread Yard’s coffees are quite reasonably priced. From $10 - $16, their food prices are also pretty much what you’d expect for café food in Singapore. Bread Yard does not have a service charge and GST, so the prices you see are what you get. Still, I experienced lovely service from the friendly staff serving me.
 
 ![Bread Yard](/assets/images/breadyard/breadyard-6.jpg)
 
