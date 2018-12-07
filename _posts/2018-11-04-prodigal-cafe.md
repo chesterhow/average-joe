@@ -76,10 +76,10 @@ Prodigal Cafe’s location in the quiet estate of Tai Seng makes it the perfect 
   <div class="info__address">
     <h6>Address</h6>
     <p>
-      81 MacPherson Lane
-      <br>
-      #01-55
-      <br>
+      81 MacPherson Lane<!--
+      --><br>
+      #01-55<!--
+      --><br>
       Singapore 169355
     </p>
   </div>

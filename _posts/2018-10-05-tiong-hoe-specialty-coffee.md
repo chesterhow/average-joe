@@ -60,10 +60,10 @@ A hidden gem in a quiet corner of Queenstown, Tiong Hoe Specialty Coffee is the 
   <div class="info__address">
     <h6>Address</h6>
     <p>
-      170 Stirling Road
-      <br>
-      #01-1133
-      <br>
+      170 Stirling Road<!--
+      --><br>
+      #01-1133<!--
+      --><br>
       Singapore 140170
     </p>
   </div>
