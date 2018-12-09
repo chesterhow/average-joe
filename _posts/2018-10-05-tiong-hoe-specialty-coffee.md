@@ -14,6 +14,8 @@ review:
   price: $
   food: "No"
   wifi: "Yes"
+image:
+  path: /assets/thumbnails/tionghoe-thumb.jpg
 ---
 
 Blending in seamlessly among the ground-level HDB shops of Stirling Road, Tiong Hoe Specialty Coffee can be an easy one to miss<!--more-->. However, its humble storefront belies some of the best coffee that I’ve tasted.

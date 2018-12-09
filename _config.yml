@@ -16,6 +16,7 @@ markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-paginate-v2
+  - jekyll-seo-tag
 
 sass:
   sass_dir: _sass
@@ -44,3 +45,13 @@ pagination:
   sort_reverse: true
   title: ':title'
   permalink: '/page/:num/'
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      image:
+        path: /assets/images/og.png
+        height: 630
+        width: 1200

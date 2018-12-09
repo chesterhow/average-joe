@@ -14,6 +14,8 @@ review:
   price: $$
   food: "Yes"
   wifi: "Yes"
+image:
+  path: /assets/thumbnails/breko-thumb.jpg
 ---
 
 
