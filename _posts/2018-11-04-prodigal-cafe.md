@@ -14,6 +14,8 @@ review:
   price: $$
   food: "Yes"
   wifi: "Yes"
+image:
+  path: /assets/thumbnails/prodigal-thumb.jpg
 ---
 
 Tucked away in a little corner of Tai Seng, Prodigal Cafe has been gaining popularity among many café enthusiasts<!--more-->. If you find that the name of this place rings a bell, it might be that you’ve already been acquainted with their sister outlet, Prodigal Roasters, which used to be in Ang Mo Kio. Unfortunately, Prodigal Roasters is no longer in operation as of earlier this year. But fret not! Prodigal Cafe serves the same great coffee, and features a revamped food menu!
