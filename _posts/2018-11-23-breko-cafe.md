@@ -7,9 +7,9 @@ cover: /assets/images/breko/breko-cover.jpg
 estate: "Holland Village"
 comments: true
 review:
-  overall: 79
+  overall: 75
   coffee: 3
-  aesthetic: 4
+  aesthetic: 3
   seating: 5
   price: $$
   food: "Yes"
