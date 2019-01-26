@@ -6,55 +6,59 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-
 <url>
   <loc>https://averagejoe.reviews/</loc>
-  <lastmod>2019-01-08T06:32:06+00:00</lastmod>
+  <lastmod>2019-01-26T01:00:29+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://averagejoe.reviews/about/</loc>
-  <lastmod>2019-01-08T06:32:06+00:00</lastmod>
+  <lastmod>2019-01-26T01:00:29+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://averagejoe.reviews/scoring/</loc>
-  <lastmod>2019-01-08T06:32:06+00:00</lastmod>
+  <lastmod>2019-01-26T01:00:29+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://averagejoe.reviews/contact/</loc>
-  <lastmod>2019-01-08T06:32:06+00:00</lastmod>
+  <lastmod>2019-01-26T01:00:29+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://averagejoe.reviews/2019-01-26/flagwhite</loc>
+  <lastmod>2019-01-26T01:00:29+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://averagejoe.reviews/2019-01-04/homeground-coffee-roasters</loc>
-  <lastmod>2019-01-08T06:32:06+00:00</lastmod>
+  <lastmod>2019-01-26T01:00:29+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://averagejoe.reviews/2018-12-07/bread-yard</loc>
-  <lastmod>2019-01-08T06:32:06+00:00</lastmod>
+  <lastmod>2019-01-26T01:00:29+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://averagejoe.reviews/2018-11-23/breko-cafe</loc>
-  <lastmod>2019-01-08T06:32:06+00:00</lastmod>
+  <lastmod>2019-01-26T01:00:29+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://averagejoe.reviews/2018-11-04/prodigal-cafe</loc>
-  <lastmod>2019-01-08T06:32:06+00:00</lastmod>
+  <lastmod>2019-01-26T01:00:29+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://averagejoe.reviews/2018-10-19/strangers-reunion</loc>
-  <lastmod>2019-01-08T06:32:06+00:00</lastmod>
+  <lastmod>2019-01-26T01:00:29+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://averagejoe.reviews/2018-10-05/tiong-hoe-specialty-coffee</loc>
-  <lastmod>2019-01-08T06:32:06+00:00</lastmod>
+  <lastmod>2019-01-26T01:00:29+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
