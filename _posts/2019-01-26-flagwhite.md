@@ -7,7 +7,7 @@ cover: /assets/images/flagwhite/flagwhite-cover.jpg
 estate: "Beauty World"
 comments: true
 review:
-  overall: 83
+  overall: 82
   coffee: 5
   aesthetic: 4
   seating: 3

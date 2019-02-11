@@ -7,7 +7,7 @@ cover: /assets/images/tionghoe/tionghoe-cover.jpg
 estate: "Queenstown"
 comments: true
 review:
-  overall: 74
+  overall: 75
   coffee: 5
   aesthetic: 4
   seating: 2

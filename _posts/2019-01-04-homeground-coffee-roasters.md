@@ -7,7 +7,7 @@ cover: /assets/images/homeground/homeground-cover.jpg
 estate: "Katong"
 comments: true
 review:
-  overall: 84
+  overall: 80
   coffee: 5
   aesthetic: 4
   seating: 2

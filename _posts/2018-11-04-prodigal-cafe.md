@@ -7,7 +7,7 @@ cover: /assets/images/prodigal/prodigal-cover.jpg
 estate: "Tai Seng"
 comments: true
 review:
-  overall: 77
+  overall: 76
   coffee: 4
   aesthetic: 4
   seating: 3
