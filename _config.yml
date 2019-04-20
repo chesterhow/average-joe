@@ -47,8 +47,7 @@ pagination:
   permalink: '/page/:num/'
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
     values:
       image:
