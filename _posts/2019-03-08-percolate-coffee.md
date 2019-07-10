@@ -2,7 +2,9 @@
 layout: post
 title:  "Percolate Coffee"
 date:   2019-03-08
-thumbnail: /assets/thumbnails/percolate-thumb.jpg
+thumbnail:
+  lqip: /assets/images/percolate/percolate-thumb_42.jpg
+  full: /assets/images/percolate/percolate-thumb.jpg
 cover: /assets/images/percolate/percolate-cover.jpg
 estate: "Bedok"
 comments: true
@@ -15,7 +17,7 @@ review:
   food: "Yes"
   wifi: "Yes"
 image:
-  path: /assets/thumbnails/percolate-thumb.jpg
+  path: /assets/images/percolate/percolate-thumb.jpg
 ---
 
 Tucked away in the heartlands of Bedok, in the far east of our little island, is Percolate Coffee<!--more-->. Along the ground-level units of Block 136, its unassuming storefront speaks little of what one can expect inside — a café-oasis offering respite, chill vibes and a quality cup of joe.

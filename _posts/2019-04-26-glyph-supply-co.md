@@ -2,7 +2,9 @@
 layout: post
 title:  "Glyph Supply Co."
 date:   2019-04-26
-thumbnail: /assets/thumbnails/glyph-thumb.jpg
+thumbnail:
+  lqip: /assets/images/glyph/glyph-thumb_42.jpg
+  full: /assets/images/glyph/glyph-thumb.jpg
 cover: /assets/images/glyph/glyph-cover.jpg
 estate: "Somerset"
 comments: true
@@ -15,7 +17,7 @@ review:
   food: "Yes"
   wifi: "No"
 image:
-  path: /assets/thumbnails/glyph-thumb.jpg
+  path: /assets/images/glyph/glyph-thumb.jpg
 ---
 
 In town, where the malls are huge and the crowds are thronging, shopping can feel like a sport<!--more-->. After an exhausting day for both us and our wallets, what we really long for is a good and affordable cup of coffee. For the longest time, that in itself has proven to be a huge challenge, but not any more! Among the slew of new shops in the recently remodelled TripleOne Somerset, is Glyph Supply Co. — the newest café and roaster in town.

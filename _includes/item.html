@@ -1,9 +1,11 @@
 <a href="{{ post.url | relative_url }}" class="item__container">
   <div class="item__thumbnail">
     <img
-      src="{{ post.thumbnail | relative_url }}"
+      src="{{ post.thumbnail.lqip | relative_url }}"
+      data-src="{{ post.thumbnail.full | relative_url }}"
       alt="{{ post.title }}"
-    >
+      class="lazyload blur-up"
+    />
   </div>
   <div class="item__content">
     <h6 class="item__date">{{ post.date | date: "%B %d, %Y" }}</h6>

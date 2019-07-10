@@ -2,7 +2,9 @@
 layout: post
 title:  "FlagWhite"
 date:   2019-01-26
-thumbnail: /assets/thumbnails/flagwhite-thumb.jpg
+thumbnail:
+  lqip: /assets/images/flagwhite/flagwhite-thumb_42.jpg
+  full: /assets/images/flagwhite/flagwhite-thumb.jpg
 cover: /assets/images/flagwhite/flagwhite-cover.jpg
 estate: "Beauty World"
 comments: true
@@ -15,7 +17,7 @@ review:
   food: "Yes"
   wifi: "Yes"
 image:
-  path: /assets/thumbnails/flagwhite-thumb.jpg
+  path: /assets/images/flagwhite/flagwhite-thumb.jpg
 ---
 
 When I heard that a new café had opened up in Beauty World, my very own neighbourhood, I couldnʼt wait to check it out<!--more-->. I rallied my gang, headed over, and we found ourselves absolutely wowed by what we saw. FlagWhite has everything you could ask for in a café: great coffee, plenty of food choices and itʼs not too crowded, even on weekends! For now, at least.

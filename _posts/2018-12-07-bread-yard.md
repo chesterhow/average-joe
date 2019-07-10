@@ -2,7 +2,9 @@
 layout: post
 title:  "Bread Yard"
 date:   2018-12-07
-thumbnail: /assets/thumbnails/breadyard-thumb.jpg
+thumbnail:
+  lqip: /assets/images/breadyard/breadyard-thumb_42.jpg
+  full: /assets/images/breadyard/breadyard-thumb.jpg
 cover: /assets/images/breadyard/breadyard-cover.jpg
 estate: "one-north"
 comments: true
@@ -15,7 +17,7 @@ review:
   food: "Yes"
   wifi: "Yes"
 image:
-  path: /assets/thumbnails/breadyard-thumb.jpg
+  path: /assets/images/breadyard/breadyard-thumb.jpg
 ---
 
 Many consider one-north as a business park of the future, of sorts; newly built office buildings dedicated to<!--more--> high-tech research and development cluster the area, and busy, brisk-walking individuals populate them. It might all sound slightly rigid and sterile, but one-north is also home to many great cafés. One of them is the well-known bakery-café, Bread Yard. Bread Yard has grown tremendously since their humble beginnings, when they first opened on campus at the Singapore University of Technology and Design. Now, Bread Yard occupies a respectable corner unit in the Galaxis building, and is a definite favourite of many in the area.

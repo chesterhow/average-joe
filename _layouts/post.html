@@ -6,9 +6,11 @@ layout: default
   {% if page.cover %}
     <div class="post__cover">
       <img
-        src="{{ page.cover | relative_url }}"
+        src="{{ page.cover.lqip | relative_url }}"
+        data-src="{{ page.cover.full | relative_url }}"
         alt="{{ page.title }}"
-      >
+        class="lazyload blur-up"        
+      />
     </div>
   {% endif %}
 

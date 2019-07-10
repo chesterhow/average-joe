@@ -2,7 +2,9 @@
 layout: post
 title:  "Strangers' Reunion"
 date:   2018-10-19
-thumbnail: /assets/thumbnails/strangers-thumb.jpg
+thumbnail:
+  lqip: /assets/images/strangers/strangers-thumb_42.jpg
+  full: /assets/images/strangers/strangers-thumb.jpg
 cover: /assets/images/strangers/strangers-cover.jpg
 estate: "Outram Park"
 comments: true
@@ -15,7 +17,7 @@ review:
   food: "Yes"
   wifi: "No"
 image:
-  path: /assets/thumbnails/strangers-thumb.jpg
+  path: /assets/images/strangers/strangers-thumb.jpg
 ---
 
 Just a stone’s throw away from Outram Park MRT station lies Strangers’ Reunion<!--more-->. The café was opened by Ryan Kieran Tan, who is well-known to have many national and international barista championship titles under his belt. With accolades like these, you know you’re in for some good coffee.

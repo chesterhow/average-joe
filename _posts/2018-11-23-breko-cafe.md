@@ -2,7 +2,9 @@
 layout: post
 title:  "Breko Cafe"
 date:   2018-11-23
-thumbnail: /assets/thumbnails/breko-thumb.jpg
+thumbnail:
+  lqip: /assets/images/breko/breko-thumb_42.jpg
+  full: /assets/images/breko/breko-thumb.jpg
 cover: /assets/images/breko/breko-cover.jpg
 estate: "Holland Village"
 comments: true
@@ -15,7 +17,7 @@ review:
   food: "Yes"
   wifi: "Yes"
 image:
-  path: /assets/thumbnails/breko-thumb.jpg
+  path: /assets/images/breko/breko-thumb.jpg
 ---
 
 
