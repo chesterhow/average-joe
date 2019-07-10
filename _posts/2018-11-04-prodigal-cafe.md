@@ -2,8 +2,12 @@
 layout: post
 title:  "Prodigal Cafe"
 date:   2018-11-04
-thumbnail: /assets/thumbnails/prodigal-thumb.jpg
-cover: /assets/images/prodigal/prodigal-cover.jpg
+thumbnail:
+  lqip: /assets/images/prodigal/prodigal-thumb_42.jpg
+  full: /assets/images/prodigal/prodigal-thumb.jpg
+cover:
+  lqip: /assets/images/prodigal/cover_42.jpg
+  full: /assets/images/prodigal/cover.jpg
 estate: "Tai Seng"
 comments: true
 review:
@@ -15,38 +19,62 @@ review:
   food: "Yes"
   wifi: "Yes"
 image:
-  path: /assets/thumbnails/prodigal-thumb.jpg
+  path: /assets/images/prodigal/prodigal-thumb.jpg
 ---
 
 Tucked away in a little corner of Tai Seng, Prodigal Cafe has been gaining popularity among many café enthusiasts<!--more-->. If you find that the name of this place rings a bell, it might be that you’ve already been acquainted with their sister outlet, Prodigal Roasters, which used to be in Ang Mo Kio. Unfortunately, Prodigal Roasters is no longer in operation as of earlier this year. But fret not! Prodigal Cafe serves the same great coffee, and features a revamped food menu!
 
-![Prodigal Cafe](/assets/images/prodigal/prodigal-1.jpg)
+{% include post_image.html
+  alt="Prodigal Cafe"
+  name="prodigal"
+  num="1"
+%}
 
 ## Coffee
 Prodigal Cafe uses their own roast for the coffee they make, and the coffees are marvellous.
 
-![Prodigal Cafe](/assets/images/prodigal/prodigal-2.jpg)
+{% include post_image.html
+  alt="Prodigal Cafe"
+  name="prodigal"
+  num="2"
+%}
 _Coffee Flight_
 
 In addition to the usual drink menu, the café offers some cleverly adapted coffee options. For the typical coffee lover wanting a not-so-typically presented coffee item, there is the Coffee Flight. The double shot of espresso is split, so you get served a short black and the other shot served white. This allows you to appreciate the taste of the espresso on its own and with milk.
 
 In sunny Singapore, any time is ice-cream time, and Prodigal Café caters to that need easily with its Affogato (a scoop of vanilla ice cream with a shot of espresso poured over it). The sweet icy dessert is enhanced by the delicious contrast of the coffee that the café produces. Personally, I feel like I could use more bittersweet experiences like these.
 
-![Prodigal Cafe](/assets/images/prodigal/prodigal-3.jpg)
+{% include post_image.html
+  alt="Prodigal Cafe"
+  name="prodigal"
+  num="3"
+%}
 _The Tragic_
 
 And for those who live on caffeine straight, the café sells bottled cold coffee containing a range of 2 to 4 shots of espresso. My friends and I tried the Tragic (3 shots + milk) and the effects were definitely felt in the later part of the day. (Friendly reminder: while caffeine works wonders in boosting energy levels, it’s not meant to be a replacement for sleep!)
 
-![Prodigal Cafe](/assets/images/prodigal/prodigal-4.jpg)
+{% include post_image.html
+  alt="Prodigal Cafe"
+  name="prodigal"
+  num="4"
+%}
 
 ## Aesthetic
 Prodigal Cafe’s logo, a cute cartoon depiction of the owner, is sure to make you smile. The huge backlit logo on the storefront is undoubtedly the first thing you’d notice when approaching the cafe.
 
-![Prodigal Cafe](/assets/images/prodigal/prodigal-5.jpg)
+{% include post_image.html
+  alt="Prodigal Cafe"
+  name="prodigal"
+  num="5"
+%}
 
 From the outside, Prodigal looked pretty small, but as I walked inside, I found that the interior felt spacious and not at all cramped like what I had been expecting. The white walls and bright lighting really helped to open up the space and the light-coloured wooden tables and stools complimented the casual modern feel to the place. And this theme was even evident in their white coloured coffee equipment!
 
-![Prodigal Cafe](/assets/images/prodigal/prodigal-6.jpg)
+{% include post_image.html
+  alt="Prodigal Cafe"
+  name="prodigal"
+  num="6"
+%}
 
 On one of the walls on the right, I noticed a cheeky quote that had been put up, and I believe they change it from time to time. It is a uniquely Prodigal Cafe piece of décor that would make a cute background for group photos or perhaps a selfie.
 
@@ -60,7 +88,11 @@ We had to wait a short while before we could get a table for 6. The staff were v
 ## Price
 At $5 for a cappuccino and $6 for an affogato, their coffee prices are pretty standard. On the other hand, ranging from $8 - $18, their food menu is on the slightly more pricey side, but the café does not have a service charge and GST. I found that the service was exceptional, even so – when I inquired about their coffee beans, the staff were more than happy to answer my questions and even allowed me behind the counter to find out more about the beans!
 
-![Prodigal Cafe](/assets/images/prodigal/prodigal-7.jpg)
+{% include post_image.html
+  alt="Prodigal Cafe"
+  name="prodigal"
+  num="7"
+%}
 _Fresh Cut Fries with Coffee Mayo_
 
 ## Food
@@ -70,7 +102,11 @@ I’m very keen on trying out their other brunch options on my subsequent visits
 
 <hr class="text-divider">
 
-![Prodigal Cafe](/assets/images/prodigal/prodigal-8.jpg)
+{% include post_image.html
+  alt="Prodigal Cafe"
+  name="prodigal"
+  num="8"
+%}
 
 Prodigal Cafe’s location in the quiet estate of Tai Seng makes it the perfect place to slow things down and enjoy a moment of sweetness during the hectic week. Their interesting coffee and food menu adds a pop of fun to things, and the wonderful service from the staff goes a long way in making customers feel welcomed.
 
