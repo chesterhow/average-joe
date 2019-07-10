@@ -25,19 +25,31 @@ image:
 
 Holland Village, with its street of bars and bistros, is known to come alive at night. In the day however, it is quiet and empty, with the exception of one storefront<!--more--> that is bustling with activity — Breko Cafe. Unlike the rest of its neighbours, Breko Cafe is up and running to serve their customers all morning and afternoon. Whether it be for a morning cuppa or a lovely brunch, Breko Cafe consistently draws a decent crowd.
 
-![Breko Cafe](/assets/images/breko/breko-1.jpg)
+{% include post_image.html
+  alt="Breko Cafe"
+  name="breko"
+  num="1"
+%}
 
 ## Coffee
 Breko Cafe offers the standard espresso-based drink menu, with minimal variations available. They use beans from _La Ristrettos_, another local café. As usual, I ordered a cappuccino. It was served to in a pretty teal cup and saucer. However the coffee itself was so dark, it could have passed off as a mocha. Disappointingly, it wasn’t very impressive taste-wise either. 
 
-![Breko Cafe](/assets/images/breko/breko-2.jpg)
+{% include post_image.html
+  alt="Breko Cafe"
+  name="breko"
+  num="2"
+%}
 
 ## Aesthetic
 Instead of the increasingly popular ‘white and bright’ aesthetic adopted by many cafés these days, Breko Cafe has gone with a dimmer, more cozy theme, with hanging lights that provide just enough warm lighting. Even so, Breko Cafe does not feel cramped or small. The café has a very high ceiling, and they have strategically used that space to build a roomy loft to seat more customers.
 
 Each table is decorated with dried flowers in a vase, which somehow doubles the aesthetic of every photo you take of your food order. Don’t believe me? Check out the photos below and judge for yourself!
 
-![Breko Cafe](/assets/images/breko/breko-3.jpg)
+{% include post_image.html
+  alt="Breko Cafe"
+  name="breko"
+  num="3"
+%}
 _View from the loft_
 
 ## Seating
@@ -50,19 +62,35 @@ Inside the café, further to the back, there’s a staircase leading up to the l
 ## Price
 At $5 for a cappuccino, the prices seem pretty standard at first, but after adding GST and service charge, you realise you end up paying an above average price for an average cup of coffee. Food wise, be ready to fork out somewhere between $8 - $18 for brunch items, $14 - $19 for main course items and $9 - $15 for desserts (not inclusive of GST and service charge). 
 
-![Breko Cafe](/assets/images/breko/breko-4.jpg)
+{% include post_image.html
+  alt="Breko Cafe"
+  name="breko"
+  num="4"
+%}
 _Miso Baked Salmon_
 
 ## Food
 When it comes to food, you’ll be spoiled for choice at Breko Cafe. Not only do they serve brunch daily till 5pm, they also boast a large variety of western dishes — pastas, burgers, salads and light bites.
 
-![Breko Cafe](/assets/images/breko/breko-5.jpg)
+{% include post_image.html
+  alt="Breko Cafe"
+  name="breko"
+  num="5"
+%}
 _Pulled Pork Burger_
 
-![Breko Cafe](/assets/images/breko/breko-6.jpg)
+{% include post_image.html
+  alt="Breko Cafe"
+  name="breko"
+  num="6"
+%}
 _Truffle Mushroom Pappardelle_
 
-![Breko Cafe](/assets/images/breko/breko-7.jpg)
+{% include post_image.html
+  alt="Breko Cafe"
+  name="breko"
+  num="7"
+%}
 _Matcha Pancakes_
 
 Dessert-hunters will not be disappointed, as Breko Cafe has a full page on the menu dedicated to desserts. I tried the Matcha Pancakes, one of their recommended dishes. Carefully arranged on a black plate, the dish was satisfying to both my eyes and my sweet tooth. 
@@ -71,7 +99,11 @@ On another note, non-coffee drinkers, rejoice! The drink menu has quite the spre
 
 <hr class="text-divider">
 
-![Breko Cafe](/assets/images/breko/breko-8.jpg)
+{% include post_image.html
+  alt="Breko Cafe"
+  name="breko"
+  num="8"
+%}
 
 Though their coffee isn’t fantastic, everything else about Breko Cafe sure is. With ample seating, lots of drinks, and even more food, this has been one of my favourite lunch destinations for a long time. Give Breko Cafe a shot and you might just find yourself returning again very soon!
 
