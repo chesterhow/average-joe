@@ -5,7 +5,9 @@ date:   2018-11-04
 thumbnail:
   lqip: /assets/images/prodigal/prodigal-thumb_42.jpg
   full: /assets/images/prodigal/prodigal-thumb.jpg
-cover: /assets/images/prodigal/prodigal-cover.jpg
+cover:
+  lqip: /assets/images/prodigal/cover_42.jpg
+  full: /assets/images/prodigal/cover.jpg
 estate: "Tai Seng"
 comments: true
 review:

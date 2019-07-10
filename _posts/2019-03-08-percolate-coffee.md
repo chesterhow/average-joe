@@ -5,7 +5,9 @@ date:   2019-03-08
 thumbnail:
   lqip: /assets/images/percolate/percolate-thumb_42.jpg
   full: /assets/images/percolate/percolate-thumb.jpg
-cover: /assets/images/percolate/percolate-cover.jpg
+cover:
+  lqip: /assets/images/percolate/cover_42.jpg
+  full: /assets/images/percolate/cover.jpg
 estate: "Bedok"
 comments: true
 review:

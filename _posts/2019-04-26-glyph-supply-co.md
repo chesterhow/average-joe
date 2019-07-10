@@ -5,7 +5,9 @@ date:   2019-04-26
 thumbnail:
   lqip: /assets/images/glyph/glyph-thumb_42.jpg
   full: /assets/images/glyph/glyph-thumb.jpg
-cover: /assets/images/glyph/glyph-cover.jpg
+cover:
+  lqip: /assets/images/glyph/cover_42.jpg
+  full: /assets/images/glyph/cover.jpg
 estate: "Somerset"
 comments: true
 review:

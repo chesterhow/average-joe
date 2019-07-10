@@ -5,7 +5,9 @@ date:   2019-01-26
 thumbnail:
   lqip: /assets/images/flagwhite/flagwhite-thumb_42.jpg
   full: /assets/images/flagwhite/flagwhite-thumb.jpg
-cover: /assets/images/flagwhite/flagwhite-cover.jpg
+cover:
+  lqip: /assets/images/flagwhite/cover_42.jpg
+  full: /assets/images/flagwhite/cover.jpg
 estate: "Beauty World"
 comments: true
 review:

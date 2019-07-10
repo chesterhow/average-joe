@@ -5,7 +5,9 @@ date:   2018-11-23
 thumbnail:
   lqip: /assets/images/breko/breko-thumb_42.jpg
   full: /assets/images/breko/breko-thumb.jpg
-cover: /assets/images/breko/breko-cover.jpg
+cover:
+  lqip: /assets/images/breko/cover_42.jpg
+  full: /assets/images/breko/cover.jpg
 estate: "Holland Village"
 comments: true
 review:

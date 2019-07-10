@@ -5,7 +5,9 @@ date:   2018-10-19
 thumbnail:
   lqip: /assets/images/strangers/strangers-thumb_42.jpg
   full: /assets/images/strangers/strangers-thumb.jpg
-cover: /assets/images/strangers/strangers-cover.jpg
+cover:
+  lqip: /assets/images/strangers/cover_42.jpg
+  full: /assets/images/strangers/cover.jpg
 estate: "Outram Park"
 comments: true
 review:

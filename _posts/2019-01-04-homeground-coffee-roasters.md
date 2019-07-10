@@ -5,7 +5,9 @@ date:   2019-01-04
 thumbnail:
   lqip: /assets/images/homeground/homeground-thumb_42.jpg
   full: /assets/images/homeground/homeground-thumb.jpg
-cover: /assets/images/homeground/homeground-cover.jpg
+cover:
+  lqip: /assets/images/homeground/cover_42.jpg
+  full: /assets/images/homeground/cover.jpg
 estate: "Katong"
 comments: true
 review:

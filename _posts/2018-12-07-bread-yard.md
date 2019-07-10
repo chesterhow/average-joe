@@ -5,7 +5,9 @@ date:   2018-12-07
 thumbnail:
   lqip: /assets/images/breadyard/breadyard-thumb_42.jpg
   full: /assets/images/breadyard/breadyard-thumb.jpg
-cover: /assets/images/breadyard/breadyard-cover.jpg
+cover:
+  lqip: /assets/images/breadyard/cover_42.jpg
+  full: /assets/images/breadyard/cover.jpg
 estate: "one-north"
 comments: true
 review:
