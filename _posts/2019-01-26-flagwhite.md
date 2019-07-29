@@ -11,8 +11,8 @@ cover:
 estate: "Beauty World"
 comments: true
 review:
-  overall: 82
-  coffee: 5
+  overall: 76
+  coffee: 4
   aesthetic: 4
   seating: 3
   price: $$

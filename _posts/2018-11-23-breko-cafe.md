@@ -11,10 +11,10 @@ cover:
 estate: "Holland Village"
 comments: true
 review:
-  overall: 75
-  coffee: 3
+  overall: 64
+  coffee: 2
   aesthetic: 3
-  seating: 5
+  seating: 4
   price: $$
   food: "Yes"
   wifi: "Yes"
