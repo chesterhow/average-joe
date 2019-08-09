@@ -5,7 +5,7 @@
   "author": "Chester How <chesterhow@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "bundle exec jekyll serve"
+    "start": "bundle exec jekyll serve --drafts"
   },
   "devDependencies": {
     "stylelint": "^9.2.0",
