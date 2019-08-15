@@ -80,7 +80,7 @@ Though the high ceiling can make the place feel big, Glyph is actually only medi
 As seating options go, there are high tables available and they’ve also set up counter seats around the bar, where you can be mesmerised by the baristas as they work their magic.
 
 ## Price
-Nowhere else in town will you be able to get a white at $5.50. Glyph’s coffees are the most affordable in town and ironically, perhaps the best as well. Their filters are priced seasonally based the bean they are using at the moment. As a rough gauge, I’ve tried 2 different filters and they were priced at $7 and $8. And it gets better, as there is no GST or service charge.
+Nowhere else in town will you be able to get a white at $5.50. Glyph’s coffees are the most affordable in town and ironically, perhaps the best as well. Their filters are priced seasonally based on the bean they are using at the moment. As a rough gauge, I’ve tried 2 different filters and they were priced at $7 and $8. And it gets better, as there is no GST or service charge.
 
 {% include post_image.html
   alt="Glyph Supply Co."
