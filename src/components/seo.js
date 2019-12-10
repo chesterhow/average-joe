@@ -68,7 +68,9 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" />
+    </Helmet>
   )
 }
 
