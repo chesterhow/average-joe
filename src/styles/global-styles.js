@@ -4,7 +4,7 @@ const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: 'Cerebri Sans';
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     src: url(${require('../assets/fonts/cerebri-sans-regular.eot')});
     src: url(${require('../assets/fonts/cerebri-sans-regular.eot?#iefix')}) format('embedded-opentype'),
         url(${require('../assets/fonts/cerebri-sans-regular.woff2')}) format('woff2'),
@@ -14,7 +14,17 @@ const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: 'Cerebri Sans';
     font-style: normal;
-    font-weight: bold;
+    font-weight: 500;
+    src: url(${require('../assets/fonts/cerebri-sans-medium.eot')});
+    src: url(${require('../assets/fonts/cerebri-sans-medium.eot?#iefix')}) format('embedded-opentype'),
+        url(${require('../assets/fonts/cerebri-sans-medium.woff2')}) format('woff2'),
+        url(${require('../assets/fonts/cerebri-sans-medium.woff')}) format('woff'),
+        url(${require('../assets/fonts/cerebri-sans-medium.ttf')}) format('truetype');
+  }
+  @font-face {
+    font-family: 'Cerebri Sans';
+    font-style: normal;
+    font-weight: 700;
     src: url(${require('../assets/fonts/cerebri-sans-bold.eot')});
     src: url(${require('../assets/fonts/cerebri-sans-bold.eot?#iefix')}) format('embedded-opentype'),
         url(${require('../assets/fonts/cerebri-sans-bold.woff2')}) format('woff2'),
@@ -24,6 +34,11 @@ const GlobalStyle = createGlobalStyle`
 
   * {
     box-sizing: border-box;
+    font-family: ${props => props.theme.sansSerif};
+    font-size: 20px;
+    ${'' /* @media (max-width: ${props => props.theme.breakSmall}) {
+      font-size: 16px;
+    } */}
   }
 
   html {
@@ -31,11 +46,6 @@ const GlobalStyle = createGlobalStyle`
     -webkit-text-size-adjust: 100%;
     background-color: ${props => props.theme.goldPale};
     color: ${props => props.theme.black};
-    font-family: ${props => props.theme.sansSerif};
-    font-size: 18px;
-    ${'' /* @media (max-width: ${props => props.theme.breakSmall}) {
-      font-size: 16px;
-    } */}
   }
 
   body {

@@ -17,12 +17,12 @@ import GlobalStyle from "../styles/global-styles";
 const Wrapper = styled.div`
   margin: 0 auto;
   maxWidth: 960;
-  padding: 0;
+  padding: 0 1rem;
 `;
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
+    query {
       site {
         siteMetadata {
           title
@@ -38,11 +38,7 @@ const Layout = ({ children }) => {
         <Header siteTitle={data.site.siteMetadata.title} />
         <Wrapper>
           <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
+          <footer></footer>
         </Wrapper>
       </ThemeProvider>
     </>

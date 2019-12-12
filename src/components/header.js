@@ -6,7 +6,7 @@ import logo from "../images/logo.svg";
 
 const StyledImg = styled.img`
   display: block;
-  height: 4rem;
+  height: 3rem;
   margin: 2rem auto 0;
   transition: all 0.2s ease-out;
 
