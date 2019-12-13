@@ -1,0 +1,6 @@
+[build]
+  command = "jekyll build"
+  publish = "_site/"
+[context.revamp]
+  command = "gatsby build"
+  publish = "public/"
