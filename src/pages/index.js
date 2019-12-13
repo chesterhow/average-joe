@@ -5,10 +5,11 @@ import styled from "styled-components";
 import SEO from "../components/seo";
 import Layout from "../components/layout";
 import Search from "../components/search";
+import Filters from "../components/filters";
 import blob from "../images/blob.svg";
 
 const StyledLanding = styled.div`
-  padding: 2rem 0;
+  padding: 2rem 1rem;
   text-align: center;
   background: url(${blob}) no-repeat center;
 
@@ -22,8 +23,11 @@ const StyledPara = styled.p`
   margin: 0.5rem auto 2.5rem;
 `;
 
-const StyledSearchDiv = styled.div`
+const StyledFinder = styled.div`
   text-align: center;
+  background: linear-gradient(
+    transparent 1.25rem,
+    ${props => props.theme.goldLight} 0);
 `;
 
 const IndexPage = () => (
@@ -33,10 +37,12 @@ const IndexPage = () => (
       <h1>Right cafe, right time.</h1>
       <StyledPara>Everything you need to know about local coffeehouses, to find that perfect one.</StyledPara>
     </StyledLanding>
-    <StyledSearchDiv>
+    <StyledFinder>
       <Search />
-    </StyledSearchDiv>
-    <Link to="/page-2/">Go to page 2</Link>
+      <Filters />
+      ...
+    </StyledFinder>
+    {/* <Link to="/page-2/">Go to page 2</Link> */}
   </Layout>
 );
 

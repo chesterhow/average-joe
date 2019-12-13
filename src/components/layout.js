@@ -17,7 +17,6 @@ import GlobalStyle from "../styles/global-styles";
 const Wrapper = styled.div`
   margin: 0 auto;
   maxWidth: 960;
-  padding: 0 1rem;
 `;
 
 const Layout = ({ children }) => {

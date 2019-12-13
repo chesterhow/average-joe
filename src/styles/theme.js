@@ -1,7 +1,7 @@
 const theme = {
   sansSerif: 'Cerebri Sans',
   serif: 'Lora',
-  gold: '#E1C9A7',
+  gold: '#CAA065',
   goldLight: '#E1C9A7',
   goldPale: '#FFFCF9',
   coral: '#FF7E6A',
