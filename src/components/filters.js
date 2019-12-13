@@ -72,7 +72,7 @@ const StyledCheckbox =styled.div`
   display: inline-block;
   cursor: pointer;
   user-select: none;
-  padding: 1rem 0 1rem 1rem;
+  padding: 0 1rem;
   
   input {
     display: inline-block;
@@ -92,11 +92,14 @@ const StyledCheckbox =styled.div`
   label {
     display: inline-block;
     cursor: pointer;
-    padding-left: 0.3rem;
+    padding: 1rem 0 1rem 0.3rem;
     vertical-align: middle;
   }
-`;
 
+  :last-child {
+    padding-left: 0;
+  }
+`;
 
 const Filters = () => (
   <StyledFilters>

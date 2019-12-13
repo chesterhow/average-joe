@@ -7,6 +7,7 @@ const StyledSelect = styled.div`
   display: inline-block;
   cursor: pointer;
   user-select: none;
+  vertical-align: top;
 
   span {
     display: block;
@@ -17,6 +18,7 @@ const StyledSelect = styled.div`
 
 const StyledDropDown = styled.div`
   position: absolute;
+  z-index: 3;
   background-color: ${props => props.theme.goldLight};
   box-shadow: inset 0 0 0 2px ${props => props.theme.goldPale};
   text-align: left;
