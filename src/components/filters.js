@@ -2,30 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 import Select from "./select";
-import arrow from "../images/arrow-down.svg";
-
-const StyledFilters = styled.div`
-  display: block;
-  width: 100%;
-  padding: 0 1rem;
-  border-bottom: 2px solid ${props => props.theme.goldPale};
-
-  * {
-    color: ${props => props.theme.goldPale};
-    font-size: 0.8rem;
-    font-weight: 500;
-  }
-
-  select {
-    background: none;
-    border: none;
-    appearance: none;
-    background:
-      url(${arrow}) no-repeat right 1rem center;
-    padding: 1rem 2rem 1rem 1rem;
-    cursor: pointer;
-  }
-`;
 
 const locationOptions = [
   {
@@ -79,14 +55,61 @@ const sortOptions = [
   }
 ];
 
+const StyledFilters = styled.div`
+  display: block;
+  width: 100%;
+  padding: 0 1rem;
+  border-bottom: 2px solid ${props => props.theme.goldPale};
+
+  * {
+    color: ${props => props.theme.goldPale};
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+`;
+
+const StyledCheckbox =styled.div`
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  padding: 1rem 0 1rem 1rem;
+  
+  input {
+    display: inline-block;
+    appearance: none;
+    margin: 0;
+    padding: 0.45rem;
+    background-color: ${props => props.theme.goldPale};
+    cursor: pointer;
+    vertical-align: middle;
+
+    :checked {
+      box-shadow: inset 0 0 0 3px ${props => props.theme.goldPale};
+      background-color: ${props => props.theme.goldLight};
+    }
+  }
+
+  label {
+    display: inline-block;
+    cursor: pointer;
+    padding-left: 0.3rem;
+    vertical-align: middle;
+  }
+`;
+
+
 const Filters = () => (
   <StyledFilters>
     <Select items={locationOptions} />
     <Select items={sortOptions} />
-    <input type="checkbox" id="wifi" name="wifi" />
-    <label htmlFor="wifi">Wi-fi</label>
-    <input type="checkbox" id="food" name="food" />
-    <label htmlFor="food">Food</label>
+    <StyledCheckbox>
+      <input type="checkbox" id="wifi" name="wifi" />
+      <label htmlFor="wifi">Wi-fi</label>
+    </StyledCheckbox>
+    <StyledCheckbox>
+      <input type="checkbox" id="food" name="food" />
+      <label htmlFor="food">Food</label>
+    </StyledCheckbox>
   </StyledFilters>
 );
 
