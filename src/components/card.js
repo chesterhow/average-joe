@@ -40,19 +40,28 @@ const StyledThumbnail = styled.div`
 const StyledContent = styled.div`
   grid-area: content;
   padding: 0.5rem;
+  color: ${props => props.theme.gold};
 
-  h4 {
+  h3 {
     margin-top: 0;
+    color: ${props => props.theme.black};
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
-  h5, h6 {
+  h4, h6 {
     display: inline-block;
-    margin: 0;
+    margin-top: 0.25rem;
   }
+`;
 
-  h6 {
-    font-weight: 400;
-  }
+const StyledTotalScore = styled.h6`
+  color: ${props => props.theme.goldLight};
+`;
+
+const StyledEstate = styled.h6`
+  font-weight: 500;
 `;
 
 const Card = ({ post }) => {
@@ -63,10 +72,10 @@ const Card = ({ post }) => {
           <img src="https://place-hold.it/350x250" />
         </StyledThumbnail>
         <StyledContent>
-          <h4>{post.title}</h4>
-          <h5>{post.score}</h5>
-          <h6>/100</h6>
-          <h6>•&nbsp;{post.estate}</h6>
+          <h3>{post.title}</h3>
+          <h4>{post.score}</h4>
+          <StyledTotalScore>/100&nbsp;</StyledTotalScore>
+          <StyledEstate>•&nbsp;{post.estate}</StyledEstate>
         </StyledContent>
       </StyledContainer>
     </StyledCard>

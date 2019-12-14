@@ -35,7 +35,7 @@ const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
     font-family: ${props => props.theme.sansSerif};
-    font-size: 20px;
+    font-size: 18px;
     ${'' /* @media (max-width: ${props => props.theme.breakSmall}) {
       font-size: 16px;
     } */}
