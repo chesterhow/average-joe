@@ -14,6 +14,17 @@ collections:
     fields:
       - { name: path, label: Path }
       - { name: title, label: Title }
-      - { name: score, label: Score, widget: number }
+      - { name: date, label: Date, widget: date }
+      - { name: review, label: Review, widget: object, fields: [
+          { name: overall, label: Overall, widget: number, valueType: int, min: 1, max: 100 },
+          { name: coffee, label: Coffee, widget: number, valueType: int, min: 1, max: 5 },
+          { name: aesthetic, label: Aesthetic, widget: number, valueType: int, min: 1, max: 5 },
+          { name: seating, label: Seating, widget: number, valueType: int, min: 1, max: 5 },
+          { name: price, label: Price, widget: select, options: ["$", "$$", "$$$"] },
+          { name: food, label: Food, widget: boolean },
+          { name: wifi, label: Wi-fi, widget: boolean }
+        ]}
       - { name: estate, label: Estate }
+      - { name: address, label: Address, widget: text }
+      - { name: thumbnail, label: Thumbnail, widget: image }
       - { name: body, label: Body, widget: markdown }
