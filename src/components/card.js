@@ -72,10 +72,10 @@ const Card = ({ post }) => {
           <img src="https://place-hold.it/350x250" />
         </StyledThumbnail>
         <StyledContent>
-          <h3>{post.title}</h3>
-          <h4>{post.score}</h4>
+          <h3>{post.frontmatter.title}</h3>
+          <h4>{post.frontmatter.score}</h4>
           <StyledTotalScore>/100&nbsp;</StyledTotalScore>
-          <StyledEstate>•&nbsp;{post.estate}</StyledEstate>
+          <StyledEstate>•&nbsp;{post.frontmatter.estate}</StyledEstate>
         </StyledContent>
       </StyledContainer>
     </StyledCard>

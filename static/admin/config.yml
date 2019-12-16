@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: chesterhow/average-joe
+  branch: revamp
+
+media_folder: static/assets
+public_folder: assets
+
+collections:
+  - name: blog
+    label: Blog
+    folder: blog
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: title, label: Title }
+      - { name: score, label: Score, widget: number }
+      - { name: estate, label: Estate }
+      - { name: body, label: Body, widget: markdown }
