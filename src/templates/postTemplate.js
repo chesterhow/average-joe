@@ -27,7 +27,6 @@ export const pageQuery = graphql`
       frontmatter {
         path
         title
-        score
         estate
       }
     }

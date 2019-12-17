@@ -45,49 +45,11 @@ const StyledCardGrid = styled.div`
   }
 `;
 
-// const posts = [
-//   {
-//     id: 1,
-//     frontmatter: {
-//       title: "Narrative Coffee",
-//       score: 70,
-//       estate: "Bugis"
-//     }
-//   }, {
-//     id: 2,
-//     frontmatter: {
-//       title: "Anteroom Coffee",
-//       score: 70,
-//       estate: "Farrer"
-//     }
-//   }, {
-//     id: 3,
-//     frontmatter: {
-//       title: "Glyph Supply Co.",
-//       score: 70,
-//       estate: "Farrer"
-//     }
-//   }, {
-//     id: 4,
-//     frontmatter: {
-//       title: "Apartment",
-//       score: 70,
-//       estate: "Farrer"
-//     }
-//   }
-// ];
-
 const IndexPage = ({
   data: {
     allMarkdownRemark: { edges },
   }
 }) => {
-  // const renderPosts = () => {
-  //   return posts.map(post => (
-  //     <Card key={post.id} post={post} />
-  //   ));
-  // };
-
   const renderLinks = () => {
     return edges.map(edge => <Card key={edge.node.id} post={edge.node} />);
   }
@@ -108,13 +70,10 @@ const IndexPage = ({
         <Search />
         <Filters />
         <StyledCardGrid>
-          {/* {renderPosts()} */}
           {renderLinks()}
           {renderSpacers()}
         </StyledCardGrid>
-        
       </StyledBrowser>
-      <Link to="/blog/test-post/">Go to test post</Link>
     </Layout>
   );
 };
@@ -123,15 +82,19 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___score] }) {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___review___overall] }) {
       edges {
         node {
           id
           frontmatter {
             path
             title
-            score
+            date
+            review {
+              overall
+            }
             estate
+            thumbnail
           }
         }
       }

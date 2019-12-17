@@ -1,9 +1,12 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
+import { Link } from "gatsby";
 
-const StyledCard = styled.div`
+const StyledCard = styled(Link)`
   background: ${props => props.theme.goldPale};
   margin-top: 0.5rem;
+  text-decoration: none;
 `;
 
 const StyledContainer = styled.div`
@@ -65,21 +68,34 @@ const StyledEstate = styled.h6`
 `;
 
 const Card = ({ post }) => {
+  const { path, title, estate, thumbnail, review } = post.frontmatter;
+
   return (
-    <StyledCard>
+    <StyledCard to={path}>
       <StyledContainer>
         <StyledThumbnail>
-          <img src="https://place-hold.it/350x250" />
+          <img src={thumbnail} alt={title} />
         </StyledThumbnail>
         <StyledContent>
-          <h3>{post.frontmatter.title}</h3>
-          <h4>{post.frontmatter.score}</h4>
+          <h3>{title}</h3>
+          <h4>{review.overall}</h4>
           <StyledTotalScore>/100&nbsp;</StyledTotalScore>
-          <StyledEstate>•&nbsp;{post.frontmatter.estate}</StyledEstate>
+          <StyledEstate>•&nbsp;{estate}</StyledEstate>
         </StyledContent>
       </StyledContainer>
     </StyledCard>
   );
+};
+
+Card.propTypes = {
+  post: PropTypes.shape({
+    path: PropTypes.string,
+    title: PropTypes.string,
+    date: PropTypes.string,
+    estate: PropTypes.string,
+    thumbnail: PropTypes.string,
+    review: PropTypes.objectOf(PropTypes.number)
+  }).isRequired
 };
 
 export default Card;

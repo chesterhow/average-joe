@@ -15,14 +15,14 @@ address: |-
   170 Stirling Road
   #01-1133
   Singapore 140170
-thumbnail: /assets/tionghoe-thumb.jpg
+thumbnail: /assets/tionghoe/tionghoe-thumb.jpg
 ---
 Blending in seamlessly among the ground-level HDB shops of Stirling Road, Tiong Hoe Specialty Coffee can be an easy one to miss. However, its humble storefront belies some of the best coffee that I’ve tasted.
 
 In the 1960s, Mr Tan Tiong Hoe founded Tiong Hoe Gim Kee Trading Co. It is now one of Singapore’s oldest coffee wholesalers. In 2014, Tiong Hoe Specialty Coffee was opened to serve their own freshly 
 roasted beans.
 
-![](/assets/1.jpg)
+![](/assets/tionghoe/1.jpg)
 
 ## Coffee
 
