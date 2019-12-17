@@ -96,6 +96,7 @@ const GlobalStyle = createGlobalStyle`
   p {
     margin: 0.5rem 0 1rem;
     line-height: 1.5;
+    font-family: ${props => props.theme.serif};
   }
 
   a {

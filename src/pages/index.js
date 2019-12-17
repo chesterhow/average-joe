@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import styled from "styled-components";
 
 import SEO from "../components/seo";
@@ -14,7 +14,7 @@ const StyledLanding = styled.div`
   text-align: center;
   background: url(${blob}) no-repeat center;
 
-  h1 {
+  .landing__title {
     font-feature-settings: "salt";
   }
 `;
@@ -50,7 +50,7 @@ const IndexPage = ({
     allMarkdownRemark: { edges },
   }
 }) => {
-  const renderLinks = () => {
+  const renderCards = () => {
     return edges.map(edge => <Card key={edge.node.id} post={edge.node} />);
   }
 
@@ -63,14 +63,14 @@ const IndexPage = ({
     <Layout>
       <SEO title="Average Joe Coffeehouse Reviews" />
       <StyledLanding>
-        <h1>Right cafe, right time.</h1>
+        <h1 className="landing__title">Right cafe, right time.</h1>
         <StyledPara>Everything you need to know about local coffeehouses, to find that perfect one.</StyledPara>
       </StyledLanding>
       <StyledBrowser>
         <Search />
         <Filters />
         <StyledCardGrid>
-          {renderLinks()}
+          {renderCards()}
           {renderSpacers()}
         </StyledCardGrid>
       </StyledBrowser>
