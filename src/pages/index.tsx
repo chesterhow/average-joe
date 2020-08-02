@@ -1,13 +1,13 @@
-import React from "react";
-import { graphql } from "gatsby";
-import styled from "styled-components";
+import React from 'react';
+import { graphql } from 'gatsby';
+import styled from 'styled-components';
 
-import SEO from "../components/seo";
-import Layout from "../components/layout";
-import Search from "../components/search";
-import Filters from "../components/filters";
-import Card from "../components/card";
-import blob from "../images/blob.svg";
+import SEO from '../components/seo';
+import Layout from '../components/Layout';
+import Search from '../components/search';
+import Filters from '../components/filters';
+import Card from '../components/card';
+import blob from '../assets/images/blob.svg';
 
 const StyledLanding = styled.div`
   padding: 2rem 1rem;
@@ -15,7 +15,7 @@ const StyledLanding = styled.div`
   background: url(${blob}) no-repeat center;
 
   .landing__title {
-    font-feature-settings: "salt";
+    font-feature-settings: 'salt';
   }
 `;
 
@@ -28,7 +28,8 @@ const StyledBrowser = styled.div`
   text-align: center;
   background: linear-gradient(
     transparent 1.25rem,
-    ${props => props.theme.goldLight} 0);
+    ${props => props.theme.goldLight} 0
+  );
 `;
 
 const StyledCardGrid = styled.div`
@@ -48,32 +49,30 @@ const StyledCardGrid = styled.div`
 const IndexPage = ({
   data: {
     allMarkdownRemark: { edges },
-  }
+  },
 }) => {
   const renderCards = () => {
     return edges.map(edge => <Card key={edge.node.id} post={edge.node} />);
-  }
+  };
 
   const renderSpacers = () => {
     let spacers = (3 - (edges.length % 3)) % 3; // gives either 0, 1 or 2.
-    return [...Array(spacers).keys()].map((i) => <div key={i} className="spacer" />);
-  }
+    return [...Array(spacers).keys()].map(i => (
+      <div key={i} className="spacer" />
+    ));
+  };
 
   return (
     <Layout>
       <SEO title="Average Joe Coffeehouse Reviews" />
       <StyledLanding>
         <h1 className="landing__title">Right cafe, right time.</h1>
-        <StyledPara>Everything you need to know about local coffeehouses, to find that perfect one.</StyledPara>
+        <StyledPara>
+          Everything you need to know about local coffeehouses, to find that
+          perfect one.
+        </StyledPara>
       </StyledLanding>
-      <StyledBrowser>
-        <Search />
-        <Filters />
-        <StyledCardGrid>
-          {renderCards()}
-          {renderSpacers()}
-        </StyledCardGrid>
-      </StyledBrowser>
+      <StyledBrowser></StyledBrowser>
     </Layout>
   );
 };
@@ -82,7 +81,9 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___review___overall] }) {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___review___overall] }
+    ) {
       edges {
         node {
           id

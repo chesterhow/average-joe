@@ -1,7 +1,7 @@
-import React, { useState, useRef, useEffect } from "react";
-import styled from "styled-components";
+import React, { useState, useRef, useEffect } from 'react';
+import styled from 'styled-components';
 
-import arrow from "../images/arrow-down.svg";
+import arrow from '../assets/images/arrow-down.svg';
 
 const StyledSelect = styled.div`
   display: inline-block;
@@ -41,54 +41,49 @@ const Select = ({ items }) => {
   const [open, toggleDropdown] = useState(false);
   const [selected, setSelected] = useState(items[0]);
 
-  const handleOutsideClick = (event) => {
+  const handleOutsideClick = event => {
     if (node.current.contains(event.target)) {
       return;
     }
 
     toggleDropdown(false);
-  }
+  };
 
   useEffect(() => {
     if (open) {
-      document.addEventListener("mousedown", handleOutsideClick);
+      document.addEventListener('mousedown', handleOutsideClick);
     } else {
-      document.removeEventListener("mousedown", handleOutsideClick);
+      document.removeEventListener('mousedown', handleOutsideClick);
     }
 
     // Cleanup
     return () => {
-      document.removeEventListener("mousedown", handleOutsideClick);
-    }
+      document.removeEventListener('mousedown', handleOutsideClick);
+    };
   }, [open]);
 
-  const updateSelection = (item) => {
+  const updateSelection = item => {
     setSelected(item);
     toggleDropdown(!open);
-  }
+  };
 
   const renderDropdown = () => {
     if (open) {
       return (
         <StyledDropDown>
           {items.map(item => (
-            <li
-              key={item.id}
-              onClick={() => updateSelection(item)}
-            >
+            <li key={item.id} onClick={() => updateSelection(item)}>
               {item.label}
             </li>
           ))}
         </StyledDropDown>
       );
     }
-  }
+  };
 
   return (
     <StyledSelect ref={node}>
-      <span onClick={() => toggleDropdown(!open)}>
-        {selected.label}
-      </span>
+      <span onClick={() => toggleDropdown(!open)}>{selected.label}</span>
       {renderDropdown()}
     </StyledSelect>
   );

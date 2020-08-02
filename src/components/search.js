@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import search from "../images/search.svg";
+import search from '../assets/images/search.svg';
 
 const StyledInput = styled.input`
   display: inline-block;
@@ -11,9 +11,8 @@ const StyledInput = styled.input`
   padding: 0.75rem;
   padding-right: 2rem;
   border: none;
-  background:
-    ${props => props.theme.coral}
-    url(${search}) no-repeat right 0.8rem center;
+  background: ${props => props.theme.coral} url(${search}) no-repeat right
+    0.8rem center;
   color: ${props => props.theme.goldPale};
   font-size: 0.8rem;
   font-weight: 500;
@@ -23,8 +22,6 @@ const StyledInput = styled.input`
   }
 `;
 
-const Search = () => (
-  <StyledInput type="text" placeholder="Search by name" />
-);
+const Search = () => <StyledInput type="text" placeholder="Search by name" />;
 
 export default Search;

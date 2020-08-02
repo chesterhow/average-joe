@@ -1,9 +1,9 @@
-import React from "react";
-import { graphql } from "gatsby";
-import styled from "styled-components";
+import React from 'react';
+import { graphql } from 'gatsby';
+import styled from 'styled-components';
 
-import Layout from "../components/layout";
-import Review from "../components/review";
+import Layout from '../components/Layout';
+import Review from '../components/review';
 
 const StyledPost = styled.div`
   margin: 1rem;
@@ -15,7 +15,7 @@ const StyledPostCover = styled.div`
   overflow: hidden;
 
   ::before {
-    content: "";
+    content: '';
     display: block;
     width: 100%;
     padding-top: calc((2 / 5) * 100%);
@@ -85,7 +85,7 @@ const StyledPostContent = styled.div`
       text-align: center;
 
       ::before {
-        content: "\\00b7\\00b7\\00b7";
+        content: '\\00b7\\00b7\\00b7';
         display: inline-block;
         margin-left: 1rem;
         font-size: 1.5rem;
@@ -95,7 +95,7 @@ const StyledPostContent = styled.div`
   }
 `;
 
-const Template =({ data }) => {
+const Template = ({ data }) => {
   console.log(data);
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
@@ -110,11 +110,14 @@ const Template =({ data }) => {
           <h1 className="post__title">{frontmatter.title}</h1>
           <h5 className="post__date">{frontmatter.date}</h5>
           <Review review={frontmatter.review} />
-          <div className="post__body" dangerouslySetInnerHTML={{ __html: html }} />
+          <div
+            className="post__body"
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
         </StyledPostContent>
       </StyledPost>
     </Layout>
-  )
+  );
 };
 
 export default Template;
