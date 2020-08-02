@@ -2,17 +2,35 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
+const StyledHeader = styled.header`
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 3em 0;
+  ${props => props.theme.pageMaxWidth};
+`;
+
+const StyledNav = styled.div`
+  justify-self: end;
+`;
+
+const StyledNavLink = styled(Link)`
+  margin-left: 2em;
+  text-decoration: none;
+`;
+
 import Logo from '../assets/images/logo.svg';
 
 const Header = () => (
-  <header>
+  <StyledHeader>
     <Link to="/">
       <Logo />
     </Link>
-    <span>reviews</span>
-    <span>about</span>
-    <span>contact</span>
-  </header>
+    <StyledNav>
+      <StyledNavLink to="/">reviews</StyledNavLink>
+      <StyledNavLink to="/">about</StyledNavLink>
+      <StyledNavLink to="/">contact</StyledNavLink>
+    </StyledNav>
+  </StyledHeader>
 );
 
 export default Header;

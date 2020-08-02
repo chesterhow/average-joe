@@ -14,9 +14,11 @@ import Header from './Header';
 import theme from '../styles/theme';
 import GlobalStyle from '../styles/global-styles';
 
-const Wrapper = styled.div`
-  margin: 0 auto;
-  max-width: 960px;
+const Parallax = styled.div`
+  min-height: 100vh;
+  perspective: 1px;
+  overflow-x: hidden;
+  overflow-y: auto;
 `;
 
 const Layout: React.FC = ({ children }) => {
@@ -34,11 +36,12 @@ const Layout: React.FC = ({ children }) => {
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Header />
-        <Wrapper>
-          <main>{children}</main>
+        <Parallax>
+          <Header />
+          {children}
+          {/* <main></main> */}
           <footer></footer>
-        </Wrapper>
+        </Parallax>
       </ThemeProvider>
     </>
   );

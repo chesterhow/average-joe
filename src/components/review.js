@@ -1,24 +1,25 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "styled-components";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 const StyledReview = styled.div`
   display: grid;
   grid-template:
-    "overall breakdown"
+    'overall breakdown'
     / auto 1fr;
   margin: 1.5rem 0;
   border-radius: 5px;
   background: ${props => props.theme.black};
   color: ${props => props.theme.goldPale};
-  font-famaily: ${props => props.theme.sansSerif};
+  font-family: ${props => props.theme.sansSerif};
 
   @media (max-width: ${props => props.theme.breakMedium}) {
     grid-template:
-      "overall"
-      "breakdown";
+      'overall'
+      'breakdown';
     max-width: 20rem;
     margin: 1.5rem auto;
+    text-align: center;
   }
 
   @media (max-width: ${props => props.theme.breakSmall}) {
@@ -65,7 +66,6 @@ const StyledReviewBreakdown = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
   }
-  
 
   .breakdown__category {
     position: relative;
@@ -79,37 +79,41 @@ const StyledReviewBreakdown = styled.div`
   }
 `;
 
-const Review = ({ review }) => (
-  <StyledReview>
+const Review = ({ review, className }) => (
+  <StyledReview className={className}>
     <StyledReviewOverall>
       <h4 className="review__title">Overall Score</h4>
-      <h1 className="review__score">{review.overall}</h1>
+      <h1 className="review__score">{review?.overall ?? 100}</h1>
     </StyledReviewOverall>
-    
+
     <StyledReviewBreakdown>
       <div className="breakdown__category">
         <span className="breakdown__label">Coffee</span>
-        <span className="breakdown__score">{review.coffee}/5</span>
+        <span className="breakdown__score">{review?.coffee ?? 5}/5</span>
       </div>
       <div className="breakdown__category">
         <span className="breakdown__label">Aesthetic</span>
-        <span className="breakdown__score">{review.aesthetic}/5</span>
+        <span className="breakdown__score">{review?.aesthetic ?? 5}/5</span>
       </div>
       <div className="breakdown__category">
         <span className="breakdown__label">Seating</span>
-        <span className="breakdown__score">{review.seating}/5</span>
+        <span className="breakdown__score">{review?.seating ?? 5}/5</span>
       </div>
       <div className="breakdown__category">
         <span className="breakdown__label">Price</span>
-        <span className="breakdown__score">{review.price}</span>
+        <span className="breakdown__score">{review?.price ?? '$'}</span>
       </div>
       <div className="breakdown__category">
         <span className="breakdown__label">Food</span>
-        <span className="breakdown__score">{review.food ? "Yes" : "No"}</span>
+        <span className="breakdown__score">
+          {review ? (review.food ? 'Yes' : 'No') : 'Yes'}
+        </span>
       </div>
       <div className="breakdown__category">
         <span className="breakdown__label">Wi-fi</span>
-        <span className="breakdown__score">{review.wifi ? "Yes" : "No"}</span>
+        <span className="breakdown__score">
+          {review ? (review.wifi ? 'Yes' : 'No') : 'Yes'}
+        </span>
       </div>
     </StyledReviewBreakdown>
   </StyledReview>
@@ -121,10 +125,11 @@ Review.propTypes = {
     coffee: PropTypes.number,
     aesthetic: PropTypes.number,
     seating: PropTypes.number,
-    price: PropTypes.oneOf(["$", "$$", "$$$"]),
+    price: PropTypes.oneOf(['$', '$$', '$$$']),
     food: PropTypes.bool,
-    wifi: PropTypes.bool
-  }).isRequired
+    wifi: PropTypes.bool,
+  }),
+  className: PropTypes.string,
 };
 
 export default Review;

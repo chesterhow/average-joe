@@ -35,10 +35,12 @@ const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
     font-family: ${props => props.theme.sansSerif};
-    font-size: 18px;
-    ${'' /* @media (max-width: ${props => props.theme.breakSmall}) {
+    font-size: 20px;
+    ${
+      '' /* @media (max-width: ${props => props.theme.breakSmall}) {
       font-size: 16px;
-    } */}
+    } */
+    }
   }
 
   html {
@@ -65,32 +67,33 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
+    margin-top: 3.125rem;
+    font-size: 3.052rem;
+  }
+
+  h2 {
     margin-top: 2.5rem;
     font-size: 2.441rem;
   }
 
-  h2 {
+  h3 {
     margin-top: 2rem;
     font-size: 1.953rem;
   }
 
-  h3 {
+  h4 {
     margin-top: 1.6rem;
     font-size: 1.563rem;
   }
 
-  h4 {
+  h5 {
     margin-top: 1.28rem;
     font-size: 1.25rem;
   }
 
-  h5 {
+  h6 {
     margin-top: 1.024rem;
     font-size: 1rem;
-  }
-
-  h6 {
-    font-size: 0.8rem;
   }
 
   p {

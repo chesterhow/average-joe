@@ -5,11 +5,11 @@ date: 2018-10-04T16:00:00.000Z
 review:
   aesthetic: 4
   coffee: 5
-  food: false
+  food: true
   overall: 80
   price: $
   seating: 2
-  wifi: true
+  wifi: false
 estate: Bugis
 address: |-
   170 Stirling Road

@@ -33,7 +33,7 @@ const theme = {
     width: 33rem;
     max-width: 90%;
     margin: 0 auto;
-  `
+  `,
 };
 
 export default theme;
