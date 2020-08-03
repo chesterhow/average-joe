@@ -7,6 +7,9 @@ const StyledHeader = styled.header`
   grid-template-columns: auto 1fr;
   padding: 3em 0;
   ${props => props.theme.pageMaxWidth};
+  position: relative;
+  height: 145px;
+  transform-style: preserve-3d;
 `;
 
 const StyledNav = styled.div`

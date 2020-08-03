@@ -52,13 +52,6 @@ const Card: React.FC<CardProps> = props => {
       frontmatter: { path, title, estate, thumbnail, review },
     },
   } = props;
-  // const { path, title, estate, thumbnail, review } = post.frontmatter;
-
-  const renderPrice = () => {
-    const pale = 3 - review.price.length;
-
-    return <Pale>{'$'.repeat(pale)}</Pale>;
-  };
 
   return (
     <StyledCard to={path}>
@@ -68,7 +61,7 @@ const Card: React.FC<CardProps> = props => {
         <StyledEstate>{estate}</StyledEstate>
         <StyledRating>
           {review.price}
-          {renderPrice()}
+          <Pale>{'$'.repeat(3 - review.price.length)}</Pale>
           {review.wifi && ' · Wi-Fi'}
           {review.food && ' · Food'}
           <br />

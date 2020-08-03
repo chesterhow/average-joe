@@ -104,7 +104,7 @@ const Template = ({ data }) => {
     <Layout>
       <StyledPost>
         <StyledPostCover>
-          <img src={`/assets/${frontmatter.path}/cover.jpg`} />
+          <img src={frontmatter.cover} />
         </StyledPostCover>
         <StyledPostContent>
           <h1 className="post__title">{frontmatter.title}</h1>
@@ -140,6 +140,7 @@ export const pageQuery = graphql`
           wifi
         }
         estate
+        cover
       }
     }
   }

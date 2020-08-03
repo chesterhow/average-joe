@@ -14,13 +14,6 @@ import Header from './Header';
 import theme from '../styles/theme';
 import GlobalStyle from '../styles/global-styles';
 
-const Parallax = styled.div`
-  min-height: 100vh;
-  perspective: 1px;
-  overflow-x: hidden;
-  overflow-y: auto;
-`;
-
 const Layout: React.FC = ({ children }) => {
   const data = useStaticQuery(graphql`
     query {
@@ -36,12 +29,9 @@ const Layout: React.FC = ({ children }) => {
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Parallax>
-          <Header />
-          {children}
-          {/* <main></main> */}
-          <footer></footer>
-        </Parallax>
+        <Header />
+        <div data-scroll-container>{children}</div>
+        <footer></footer>
       </ThemeProvider>
     </>
   );

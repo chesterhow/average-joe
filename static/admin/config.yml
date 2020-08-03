@@ -7,24 +7,64 @@ media_folder: static/assets
 public_folder: assets
 
 collections:
-  - name: blog
-    label: Blog
-    folder: blog
+  - name: cafes
+    label: cafes
+    folder: cafes
     create: true
     fields:
       - { name: path, label: Path }
       - { name: title, label: Title }
       - { name: date, label: Date, widget: date }
-      - { name: review, label: Review, widget: object, fields: [
-          { name: overall, label: Overall, widget: number, valueType: int, min: 1, max: 100 },
-          { name: coffee, label: Coffee, widget: number, valueType: int, min: 1, max: 5 },
-          { name: aesthetic, label: Aesthetic, widget: number, valueType: int, min: 1, max: 5 },
-          { name: seating, label: Seating, widget: number, valueType: int, min: 1, max: 5 },
-          { name: price, label: Price, widget: select, options: ["$", "$$", "$$$"] },
-          { name: food, label: Food, widget: boolean },
-          { name: wifi, label: Wi-fi, widget: boolean }
-        ]}
+      - {
+          name: review,
+          label: Review,
+          widget: object,
+          fields:
+            [
+              {
+                name: overall,
+                label: Overall,
+                widget: number,
+                valueType: int,
+                min: 1,
+                max: 100,
+              },
+              {
+                name: coffee,
+                label: Coffee,
+                widget: number,
+                valueType: int,
+                min: 1,
+                max: 5,
+              },
+              {
+                name: aesthetic,
+                label: Aesthetic,
+                widget: number,
+                valueType: int,
+                min: 1,
+                max: 5,
+              },
+              {
+                name: seating,
+                label: Seating,
+                widget: number,
+                valueType: int,
+                min: 1,
+                max: 5,
+              },
+              {
+                name: price,
+                label: Price,
+                widget: select,
+                options: ['$', '$$', '$$$'],
+              },
+              { name: food, label: Food, widget: boolean },
+              { name: wifi, label: Wi-fi, widget: boolean },
+            ],
+        }
       - { name: estate, label: Estate }
       - { name: address, label: Address, widget: text }
       - { name: thumbnail, label: Thumbnail, widget: image }
+      - { name: cover, label: cover, widget: image }
       - { name: body, label: Body, widget: markdown }

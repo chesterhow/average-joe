@@ -1,25 +1,27 @@
 ---
-path: /tiong-hoe-specialty-coffee/
+path: /cafes/tiong-hoe-specialty-coffee/
 title: Tiong Hoe Specialty Coffee
 date: 2018-10-04T16:00:00.000Z
 review:
-  aesthetic: 4
-  coffee: 5
-  food: false
   overall: 75
-  price: $
+  coffee: 5
+  aesthetic: 4
   seating: 2
+  price: $
+  food: false
   wifi: true
 estate: Queenstown
 address: |-
   170 Stirling Road
   #01-1133
   Singapore 140170
-thumbnail: /assets/tiong-hoe-specialty-coffee/tionghoe-thumb.jpg
+thumbnail: /assets/tiong-hoe-specialty-coffee/thumb.jpg
+cover: /assets/tiong-hoe-specialty-coffee/cover.jpg
 ---
+
 Blending in seamlessly among the ground-level HDB shops of Stirling Road, Tiong Hoe Specialty Coffee can be an easy one to miss. However, its humble storefront belies some of the best coffee that I’ve tasted.
 
-In the 1960s, Mr Tan Tiong Hoe founded Tiong Hoe Gim Kee Trading Co. It is now one of Singapore’s oldest coffee wholesalers. In 2014, Tiong Hoe Specialty Coffee was opened to serve their own freshly 
+In the 1960s, Mr Tan Tiong Hoe founded Tiong Hoe Gim Kee Trading Co. It is now one of Singapore’s oldest coffee wholesalers. In 2014, Tiong Hoe Specialty Coffee was opened to serve their own freshly
 roasted beans.
 
 ![](/assets/tiong-hoe-specialty-coffee/1.jpg)
@@ -32,17 +34,17 @@ Tiong Hoe keeps their menu interesting by running what they’ve called, Single 
 
 ### Aesthetic
 
-Tiong Hoe maintains a rustic vibe, with displays showcasing both old and new brewing equipment, and gunny sacks of coffee beans lying around strategically in corners or up on the shelves. Considering their long history as a coffee wholesaler, I find the vintage, warehouse-esque theme they’ve embraced very fitting. The fully glass storefront allows ample natural light into the cafe, which coupled with the warm lighting inside and delicious coffee scents, gives the establishment a very cozy feel. 
+Tiong Hoe maintains a rustic vibe, with displays showcasing both old and new brewing equipment, and gunny sacks of coffee beans lying around strategically in corners or up on the shelves. Considering their long history as a coffee wholesaler, I find the vintage, warehouse-esque theme they’ve embraced very fitting. The fully glass storefront allows ample natural light into the cafe, which coupled with the warm lighting inside and delicious coffee scents, gives the establishment a very cozy feel.
 
 Hot coffee is served in beautiful handmade ceramic cups, each unique and personal. Topped off with a flourish of skilfully created latte art, every drink is a treat for both your tastebuds and your eyes. Needless to say, the combination of natural light shining in and beautifully presented cuppa means that you will have no trouble getting that perfect aesthetic shot to impress your Instagram fans.
 
 ### Seating
 
-Unfortunately, Tiong Hoe’s floorspace is rather small and their seats are very limited. In my estimation, they can seat about only 20 customers, and even then you should be prepared for a bit of a squeeze. 
+Unfortunately, Tiong Hoe’s floorspace is rather small and their seats are very limited. In my estimation, they can seat about only 20 customers, and even then you should be prepared for a bit of a squeeze.
 
 ### Price
 
-At $4.50 for a cappuccino, Tiong Hoe’s coffees are pretty affordable. However, they only accept Grab Pay or cash, so remember to come prepared!
+At \$4.50 for a cappuccino, Tiong Hoe’s coffees are pretty affordable. However, they only accept Grab Pay or cash, so remember to come prepared!
 
 For the home brewers out there, they also sell their own beans at the cafe, and the beans are priced very affordably as well.
 
