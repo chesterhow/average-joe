@@ -17,6 +17,9 @@ address: |-
   Singapore 169355
 thumbnail: /assets/prodigal-cafe/thumb.jpg
 cover: /assets/prodigal-cafe/cover.jpg
+hours: |-
+  Thurs – Tues: 10am – 6pm
+  Wed: Closed
 ---
 
 Tucked away in a little corner of Tai Seng, Prodigal Cafe has been gaining popularity among many café enthusiasts<!--more-->. If you find that the name of this place rings a bell, it might be that you’ve already been acquainted with their sister outlet, Prodigal Roasters, which used to be in Ang Mo Kio. Unfortunately, Prodigal Roasters is no longer in operation as of earlier this year. But fret not! Prodigal Cafe serves the same great coffee, and features a revamped food menu!
@@ -27,7 +30,7 @@ Tucked away in a little corner of Tai Seng, Prodigal Cafe has been gaining popul
   num="1"
 %}
 
-## Coffee
+### Coffee
 
 Prodigal Cafe uses their own roast for the coffee they make, and the coffees are marvellous.
 
@@ -57,7 +60,7 @@ And for those who live on caffeine straight, the café sells bottled cold coffee
   num="4"
 %}
 
-## Aesthetic
+### Aesthetic
 
 Prodigal Cafe’s logo, a cute cartoon depiction of the owner, is sure to make you smile. The huge backlit logo on the storefront is undoubtedly the first thing you’d notice when approaching the cafe.
 
@@ -79,13 +82,13 @@ On one of the walls on the right, I noticed a cheeky quote that had been put up,
 
 The dishes served were very nicely presented, and I particularly liked the natural wood plates used to serve the Coffee Flight (as shown above) and the Coffee Mayo fries (as shown below later).
 
-## Seating
+### Seating
 
 Prodigal Cafe is a cozy space, and this also translates to not having many seats available. The café can seat about 25 people in total, at their tables and at the bar-counter. Although seating is limited, they can accommodate varying group sizes of up to 6 people. There are benches outside as well for waiting or for customers who simply prefer some fresh outdoor air.
 
 We had to wait a short while before we could get a table for 6. The staff were very helpful in easing the wait, by helping to shift 2 customers who were occupying a 6 seater table.
 
-## Price
+### Price
 
 At $5 for a cappuccino and $6 for an affogato, their coffee prices are pretty standard. On the other hand, ranging from $8 - $18, their food menu is on the slightly more pricey side, but the café does not have a service charge and GST. I found that the service was exceptional, even so – when I inquired about their coffee beans, the staff were more than happy to answer my questions and even allowed me behind the counter to find out more about the beans!
 
@@ -96,13 +99,13 @@ At $5 for a cappuccino and $6 for an affogato, their coffee prices are pretty st
 %}
 _Fresh Cut Fries with Coffee Mayo_
 
-## Food
+### Food
 
 Prodigal Cafe’s focus may be on serving great coffee, but they also offer some brunch options, light bites and cakes. We tried the Fresh Cut Fries with Coffee Mayo — thick cut fries seasoned with paprika, cheese and the key ingredient, coffee mayo. I am not too sure what coffee mayo is exactly, but I’m guessing it’s a special kind of mayonnaise created with coffee as one of its ingredients. Whatever the recipe, this interesting dish was an absolute treat.
 
 I’m very keen on trying out their other brunch options on my subsequent visits. Based on some in-depth Instagram investigations, the Grilled Cheese came up as one of their most popular dishes. Their Fried Chicken Waffles is another popular dish that sounds amazing and that I will definitely have to try.
 
-<hr class="text-divider">
+---
 
 {% include post_image.html
   alt="Prodigal Cafe"
@@ -111,28 +114,3 @@ I’m very keen on trying out their other brunch options on my subsequent visits
 %}
 
 Prodigal Cafe’s location in the quiet estate of Tai Seng makes it the perfect place to slow things down and enjoy a moment of sweetness during the hectic week. Their interesting coffee and food menu adds a pop of fun to things, and the wonderful service from the staff goes a long way in making customers feel welcomed.
-
-<div class="info">
-  <div class="info__address">
-    <h6>Address</h6>
-    <p>
-      81 MacPherson Lane<!--
-      --><br>
-      #01-55<!--
-      --><br>
-      Singapore 169355
-    </p>
-  </div>
-  <div class="info__opening">
-    <h6>Opening Hours</h6>
-    <p>
-      Thurs - Tues
-      <br>
-      10:00 - 18:00
-      <br><br>
-      Wed
-      <br>
-      CLOSED
-    </p>
-  </div>
-</div>

@@ -65,6 +65,7 @@ collections:
         }
       - { name: estate, label: Estate }
       - { name: address, label: Address, widget: text }
+      - { name: hours, label: Hours, widget: text }
       - { name: thumbnail, label: Thumbnail, widget: image }
       - { name: cover, label: cover, widget: image }
       - { name: body, label: Body, widget: markdown }

@@ -17,6 +17,9 @@ address: |-
   Singapore 140170
 thumbnail: /assets/tiong-hoe-specialty-coffee/thumb.jpg
 cover: /assets/tiong-hoe-specialty-coffee/cover.jpg
+hours: |-
+  Mon – Fri: 8:30am – 5:30pm
+  Sat & Sun: 9am – 4pm
 ---
 
 Blending in seamlessly among the ground-level HDB shops of Stirling Road, Tiong Hoe Specialty Coffee can be an easy one to miss. However, its humble storefront belies some of the best coffee that I’ve tasted.

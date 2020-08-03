@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import { graphql, PageProps } from 'gatsby';
 import styled from 'styled-components';
+import Rellax from 'rellax';
 
 import SEO from '../components/seo';
 import Layout from '../components/Layout';
 import Card from '../components/Card';
 import Review from '../components/review';
-import Rellax from 'rellax';
 
 const StyledLanding = styled.div`
   position: relative;
@@ -30,11 +30,12 @@ const StyledReview = styled(Review)`
   width: 33rem;
   margin-top: -2rem;
   box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.25);
+  text-align: center;
 `;
 
 const StyledBrowser = styled.div`
   ${props => props.theme.pageMaxWidth};
-  /* margin-top: 3rem; */
+  margin-top: 3rem;
   background: ${props => props.theme.goldPale};
 `;
 
