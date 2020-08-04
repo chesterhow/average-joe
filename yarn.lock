@@ -1847,6 +1847,11 @@
     "@types/prop-types" "*"
     csstype "^3.0.2"
 
+"@types/rellax@^1.7.3":
+  version "1.7.3"
+  resolved "https://registry.yarnpkg.com/@types/rellax/-/rellax-1.7.3.tgz#2e21174ef0a2c9717125a415daee46c353c000b8"
+  integrity sha512-W5I8DS7ZGkA/jPiirTk0kbU9ZttnpjFM2Qaj3sW2aYj4itueOzcU6D+Il6OV+JyzdeHf9P11tcwGu1mlASgJRA==
+
 "@types/rimraf@^2.0.2":
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/@types/rimraf/-/rimraf-2.0.4.tgz#403887b0b53c6100a6c35d2ab24f6ccc042fec46"

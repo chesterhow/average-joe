@@ -1,12 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { graphql, PageProps } from 'gatsby';
 import styled from 'styled-components';
 import Rellax from 'rellax';
 
 import SEO from '../components/seo';
-import Layout from '../components/Layout';
 import Card from '../components/Card';
+import Sort from '../components/Sort';
 import Review from '../components/review';
+import Layout from '../components/Layout';
 
 const StyledLanding = styled.div`
   position: relative;
@@ -49,7 +50,27 @@ const StyledSortBar = styled.div`
 interface IndexPageProps extends PageProps {
   data: {
     allMarkdownRemark: {
-      edges: {};
+      edges: {
+        node: {
+          id: string;
+          frontmatter: {
+            path: string;
+            title: string;
+            date: Date;
+            review: {
+              overall: number;
+              coffee: number;
+              aesthetic: number;
+              seating: number;
+              price: string;
+              food: boolean;
+              wifi: boolean;
+            };
+            estate: string;
+            thumbnail: string;
+          };
+        };
+      }[];
     };
   };
 }
@@ -61,13 +82,38 @@ const IndexPage: React.FC<IndexPageProps> = props => {
     },
   } = props;
 
+  const [sortedPosts, setSortedPosts] = useState(edges);
+
   useEffect(() => {
     new Rellax('.rellax');
   }, []);
 
-  const renderCards = () => {
-    return edges.map(edge => <Card key={edge.node.id} post={edge.node} />);
+  const onSortChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const sortBy = e.target.value;
+
+    const newSortedPosts = [...edges].sort((a, b) => {
+      const diff =
+        b.node.frontmatter.review[sortBy] - a.node.frontmatter.review[sortBy];
+
+      if (diff === 0) {
+        // Use overall score for tiebreaker
+        return (
+          b.node.frontmatter.review.overall - a.node.frontmatter.review.overall
+        );
+      }
+
+      return diff;
+    });
+
+    setSortedPosts(newSortedPosts);
   };
+
+  const renderCards = useCallback(() => {
+    console.log('hi');
+    return sortedPosts.map(edge => (
+      <Card key={edge.node.id} post={edge.node} />
+    ));
+  }, [sortedPosts]);
 
   return (
     <Layout>
@@ -87,7 +133,7 @@ const IndexPage: React.FC<IndexPageProps> = props => {
         data-rellax-zindex="1"
       >
         <StyledSortBar>
-          <span>Sort: Score</span>
+          <Sort onChange={onSortChange} />
         </StyledSortBar>
         {renderCards()}
       </StyledBrowser>
