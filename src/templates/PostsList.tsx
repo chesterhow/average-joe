@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import { graphql, PageProps } from 'gatsby';
+import { graphql, navigate, PageProps } from 'gatsby';
 import styled from 'styled-components';
 import Rellax from 'rellax';
 
@@ -41,13 +41,13 @@ const StyledBrowser = styled.div`
 `;
 
 const StyledSortBar = styled.div`
-  padding: 0.5em 1em;
   color: ${props => props.theme.coral};
   border: 3px solid ${props => props.theme.coral};
-  text-align: right;
+  grid-template-columns: 1fr auto;
+  display: grid;
 `;
 
-interface IndexPageProps extends PageProps {
+interface PostsListProps extends PageProps {
   data: {
     allMarkdownRemark: {
       edges: {
@@ -75,45 +75,25 @@ interface IndexPageProps extends PageProps {
   };
 }
 
-const IndexPage: React.FC<IndexPageProps> = props => {
+const PostsList: React.FC<PostsListProps> = props => {
   const {
     data: {
       allMarkdownRemark: { edges },
     },
+    path,
   } = props;
-
-  const [sortedPosts, setSortedPosts] = useState(edges);
 
   useEffect(() => {
     new Rellax('.rellax');
   }, []);
 
   const onSortChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const sortBy = e.target.value;
-
-    const newSortedPosts = [...edges].sort((a, b) => {
-      const diff =
-        b.node.frontmatter.review[sortBy] - a.node.frontmatter.review[sortBy];
-
-      if (diff === 0) {
-        // Use overall score for tiebreaker
-        return (
-          b.node.frontmatter.review.overall - a.node.frontmatter.review.overall
-        );
-      }
-
-      return diff;
-    });
-
-    setSortedPosts(newSortedPosts);
+    navigate(`/${e.target.value}`);
   };
 
-  const renderCards = useCallback(() => {
-    console.log('hi');
-    return sortedPosts.map(edge => (
-      <Card key={edge.node.id} post={edge.node} />
-    ));
-  }, [sortedPosts]);
+  const renderCards = () => {
+    return edges.map(edge => <Card key={edge.node.id} post={edge.node} />);
+  };
 
   return (
     <Layout>
@@ -133,7 +113,8 @@ const IndexPage: React.FC<IndexPageProps> = props => {
         data-rellax-zindex="1"
       >
         <StyledSortBar>
-          <Sort onChange={onSortChange} />
+          <div></div>
+          <Sort path={path} onChange={onSortChange} />
         </StyledSortBar>
         {renderCards()}
       </StyledBrowser>
@@ -141,12 +122,19 @@ const IndexPage: React.FC<IndexPageProps> = props => {
   );
 };
 
-export default IndexPage;
+export default PostsList;
 
 export const pageQuery = graphql`
-  query {
+  query pageQuery(
+    $skip: Int!
+    $limit: Int!
+    $sortOrder: [SortOrderEnum]!
+    $sortField: [MarkdownRemarkFieldsEnum]!
+  ) {
     allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___review___overall] }
+      sort: { order: $sortOrder, fields: $sortField }
+      limit: $limit
+      skip: $skip
     ) {
       edges {
         node {
