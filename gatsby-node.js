@@ -42,7 +42,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       });
     });
 
-    const postsPerPage = 2;
+    const postsPerPage = 6;
     const numPages = Math.ceil(posts.length / postsPerPage);
 
     Array.from({ length: numPages }).forEach((_, i) => {

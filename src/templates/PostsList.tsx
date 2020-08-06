@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect } from 'react';
 import { graphql, navigate, PageProps } from 'gatsby';
 import styled from 'styled-components';
 import Rellax from 'rellax';
@@ -8,6 +8,7 @@ import Card from '../components/Card';
 import Sort from '../components/Sort';
 import Review from '../components/review';
 import Layout from '../components/Layout';
+import Pagination from '../components/Pagination';
 
 const StyledLanding = styled.div`
   position: relative;
@@ -81,6 +82,7 @@ const PostsList: React.FC<PostsListProps> = props => {
       allMarkdownRemark: { edges },
     },
     path,
+    pageContext: { currentPage, numPages },
   } = props;
 
   useEffect(() => {
@@ -107,6 +109,7 @@ const PostsList: React.FC<PostsListProps> = props => {
         </StyledHero>
         <StyledReview className="rellax" data-rellax-speed="10" />
       </StyledLanding>
+
       <StyledBrowser
         className="rellax"
         data-rellax-speed="0"
@@ -118,6 +121,8 @@ const PostsList: React.FC<PostsListProps> = props => {
         </StyledSortBar>
         {renderCards()}
       </StyledBrowser>
+
+      <Pagination currentPage={currentPage} numPages={numPages} />
     </Layout>
   );
 };
