@@ -64,7 +64,6 @@ const StyledBody = styled.div`
 `;
 
 const PageTemplate: React.FC = props => {
-  console.log('hi');
   const {
     data: {
       mdx: {
