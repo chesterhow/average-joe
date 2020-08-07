@@ -1,4 +1,5 @@
 ---
+type: cafe
 path: /cafes/maxi-coffee-bar/
 title: Maxi Coffee Bar
 date: 2019-08-09

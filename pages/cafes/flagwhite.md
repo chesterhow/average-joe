@@ -1,4 +1,5 @@
 ---
+type: cafe
 path: /cafes/flagwhite/
 title: FlagWhite
 date: 2019-01-26

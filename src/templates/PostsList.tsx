@@ -50,7 +50,7 @@ const StyledSortBar = styled.div`
 
 interface PostsListProps extends PageProps {
   data: {
-    allMarkdownRemark: {
+    allMdx: {
       edges: {
         node: {
           id: string;
@@ -79,7 +79,7 @@ interface PostsListProps extends PageProps {
 const PostsList: React.FC<PostsListProps> = props => {
   const {
     data: {
-      allMarkdownRemark: { edges },
+      allMdx: { edges },
     },
     path,
     pageContext: { currentPage, numPages },
@@ -134,9 +134,10 @@ export const pageQuery = graphql`
     $skip: Int!
     $limit: Int!
     $sortOrder: [SortOrderEnum]!
-    $sortField: [MarkdownRemarkFieldsEnum]!
+    $sortField: [MdxFieldsEnum]!
   ) {
-    allMarkdownRemark(
+    allMdx(
+      filter: { frontmatter: { type: { eq: "cafe" } } }
       sort: { order: $sortOrder, fields: $sortField }
       limit: $limit
       skip: $skip

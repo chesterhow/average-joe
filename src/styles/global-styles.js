@@ -105,6 +105,17 @@ const GlobalStyle = createGlobalStyle`
   a {
     color: ${props => props.theme.black};
   }
+
+  blockquote {
+    margin: 0.8rem 0;
+    padding: 0.15rem 0 0.15rem 1rem;
+    border-left: 0.15rem solid ${props => props.theme.black};
+    font-style: italic;
+    
+    > p {
+      margin: 0;
+    }
+  }
 `;
 
 export default GlobalStyle;

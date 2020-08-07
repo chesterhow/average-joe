@@ -16,8 +16,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `markdown-pages`,
-        path: `${__dirname}/cafes`,
+        name: `pages`,
+        path: `${__dirname}/pages`,
       },
     },
     {
@@ -28,7 +28,6 @@ module.exports = {
         },
       },
     },
-    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -45,5 +44,11 @@ module.exports = {
     },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.md`, `.mdx`],
+      },
+    },
   ],
 };

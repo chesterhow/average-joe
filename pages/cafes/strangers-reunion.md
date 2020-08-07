@@ -1,4 +1,5 @@
 ---
+type: cafe
 path: /cafes/strangers-reunion/
 title: Strangers' Reunion
 review:
@@ -14,8 +15,8 @@ estate: Outram Park
 address: |-
   33-35 Kampong Bahru Road
   Singapore 169355
-thumbnail: /assets/strangers/thumb.jpg
-cover: /assets/strangers/cover.jpg
+thumbnail: /assets/strangers-reunion/thumb.jpg
+cover: /assets/strangers-reunion/cover.jpg
 hours: |-
   Wed – Mon: 9am – 10pm
   Tues: Closed

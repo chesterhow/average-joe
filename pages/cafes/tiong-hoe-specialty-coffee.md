@@ -1,4 +1,5 @@
 ---
+type: cafe
 path: /cafes/tiong-hoe-specialty-coffee/
 title: Tiong Hoe Specialty Coffee
 date: 2018-10-04T16:00:00.000Z

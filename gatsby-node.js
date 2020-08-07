@@ -8,12 +8,13 @@ const path = require(`path`);
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
+  const pageTemplate = path.resolve(`src/templates/PageTemplate.tsx`);
   const postTemplate = path.resolve(`src/templates/PostTemplate.tsx`);
 
   return graphql(
     `
       {
-        allMarkdownRemark(
+        allMdx(
           sort: { order: DESC, fields: [frontmatter___date] }
           limit: 1000
         ) {
@@ -21,6 +22,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             node {
               frontmatter {
                 path
+                type
               }
             }
           }
@@ -33,7 +35,18 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       return;
     }
 
-    const posts = result.data.allMarkdownRemark.edges;
+    const pages = result.data.allMdx.edges;
+    pages
+      .filter(({ node }) => node.frontmatter.type === 'page')
+      .forEach(({ node }) => {
+        createPage({
+          path: node.frontmatter.path,
+          component: pageTemplate,
+          context: {},
+        });
+      });
+
+    const posts = pages.filter(({ node }) => node.frontmatter.type === 'cafe');
     posts.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,

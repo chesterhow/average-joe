@@ -79,45 +79,59 @@ const StyledReviewBreakdown = styled.div`
   }
 `;
 
-const Review = ({ review, className }) => (
-  <StyledReview className={className}>
-    <StyledReviewOverall>
-      <h4 className="review__title">Overall Score</h4>
-      <h1 className="review__score">{review?.overall ?? 100}</h1>
-    </StyledReviewOverall>
+const Review = ({ review, className }) => {
+  if (review == null) {
+    review = {
+      overall: 100,
+      coffee: 5,
+      aesthetic: 5,
+      seating: 5,
+      price: '$',
+      food: true,
+      wifi: true,
+    };
+  }
 
-    <StyledReviewBreakdown>
-      <div className="breakdown__category">
-        <span className="breakdown__label">Coffee</span>
-        <span className="breakdown__score">{review?.coffee ?? 5}/5</span>
-      </div>
-      <div className="breakdown__category">
-        <span className="breakdown__label">Aesthetic</span>
-        <span className="breakdown__score">{review?.aesthetic ?? 5}/5</span>
-      </div>
-      <div className="breakdown__category">
-        <span className="breakdown__label">Seating</span>
-        <span className="breakdown__score">{review?.seating ?? 5}/5</span>
-      </div>
-      <div className="breakdown__category">
-        <span className="breakdown__label">Price</span>
-        <span className="breakdown__score">{review?.price ?? '$'}</span>
-      </div>
-      <div className="breakdown__category">
-        <span className="breakdown__label">Food</span>
-        <span className="breakdown__score">
-          {review ? (review.food ? 'Yes' : 'No') : 'Yes'}
-        </span>
-      </div>
-      <div className="breakdown__category">
-        <span className="breakdown__label">Wi-fi</span>
-        <span className="breakdown__score">
-          {review ? (review.wifi ? 'Yes' : 'No') : 'Yes'}
-        </span>
-      </div>
-    </StyledReviewBreakdown>
-  </StyledReview>
-);
+  return (
+    <StyledReview className={className}>
+      <StyledReviewOverall>
+        <h4 className="review__title">Overall Score</h4>
+        <h1 className="review__score">{review?.overall ?? 100}</h1>
+      </StyledReviewOverall>
+
+      <StyledReviewBreakdown>
+        <div className="breakdown__category">
+          <span className="breakdown__label">Coffee</span>
+          <span className="breakdown__score">{review?.coffee ?? 5}/5</span>
+        </div>
+        <div className="breakdown__category">
+          <span className="breakdown__label">Aesthetic</span>
+          <span className="breakdown__score">{review?.aesthetic ?? 5}/5</span>
+        </div>
+        <div className="breakdown__category">
+          <span className="breakdown__label">Seating</span>
+          <span className="breakdown__score">{review?.seating ?? 5}/5</span>
+        </div>
+        <div className="breakdown__category">
+          <span className="breakdown__label">Price</span>
+          <span className="breakdown__score">{review?.price ?? '$'}</span>
+        </div>
+        <div className="breakdown__category">
+          <span className="breakdown__label">Food</span>
+          <span className="breakdown__score">
+            {review ? (review.food ? 'Yes' : 'No') : 'Yes'}
+          </span>
+        </div>
+        <div className="breakdown__category">
+          <span className="breakdown__label">Wi-fi</span>
+          <span className="breakdown__score">
+            {review ? (review.wifi ? 'Yes' : 'No') : 'Yes'}
+          </span>
+        </div>
+      </StyledReviewBreakdown>
+    </StyledReview>
+  );
+};
 
 Review.propTypes = {
   review: PropTypes.shape({

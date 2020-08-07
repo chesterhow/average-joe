@@ -2,9 +2,11 @@ import React, { useEffect } from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
 import Rellax from 'rellax';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import Layout from '../components/Layout';
 import Review from '../components/review';
+import SEO from '../components/seo';
 
 const StyledPostCover = styled.div`
   ${props => props.theme.pageMaxWidth};
@@ -129,7 +131,7 @@ const formatString = (x: string) => {
 const Template: React.FC = props => {
   const {
     data: {
-      markdownRemark: { frontmatter, html },
+      mdx: { frontmatter, body },
     },
   } = props;
 
@@ -139,6 +141,7 @@ const Template: React.FC = props => {
 
   return (
     <Layout>
+      <SEO title={frontmatter.title} />
       <StyledPostCover className="rellax" data-rellax-speed="-2">
         <img src={frontmatter.cover} alt={frontmatter.title} />
       </StyledPostCover>
@@ -151,7 +154,9 @@ const Template: React.FC = props => {
           <StyledPostTitle>{frontmatter.title}</StyledPostTitle>
           <StyledPostDate>{frontmatter.date}</StyledPostDate>
           <Review review={frontmatter.review} />
-          <StyledPostBody dangerouslySetInnerHTML={{ __html: html }} />
+          <StyledPostBody>
+            <MDXRenderer>{body}</MDXRenderer>
+          </StyledPostBody>
         </StyledPostContentInner>
         <StyledInfoSection>
           <StyledInfo>
@@ -180,8 +185,8 @@ export default Template;
 
 export const pageQuery = graphql`
   query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
+    mdx(frontmatter: { path: { eq: $path } }) {
+      body
       frontmatter {
         path
         title

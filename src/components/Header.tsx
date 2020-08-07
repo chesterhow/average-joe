@@ -30,7 +30,7 @@ const Header = () => (
     </Link>
     <StyledNav>
       <StyledNavLink to="/">reviews</StyledNavLink>
-      <StyledNavLink to="/">about</StyledNavLink>
+      <StyledNavLink to="/about">about</StyledNavLink>
       <StyledNavLink to="/">contact</StyledNavLink>
     </StyledNav>
   </StyledHeader>
