@@ -36,6 +36,7 @@ const StyledReviewOverall = styled.div`
   }
 
   .review__score {
+    text-align: center;
     margin: 0;
     color: ${props => props.theme.gold};
     font-size: 3.815rem;

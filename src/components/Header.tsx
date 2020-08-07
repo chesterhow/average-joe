@@ -31,7 +31,8 @@ const Header = () => (
     <StyledNav>
       <StyledNavLink to="/">reviews</StyledNavLink>
       <StyledNavLink to="/about">about</StyledNavLink>
-      <StyledNavLink to="/">contact</StyledNavLink>
+      <StyledNavLink to="/scoring">scoring</StyledNavLink>
+      <StyledNavLink to="/contact">contact</StyledNavLink>
     </StyledNav>
   </StyledHeader>
 );

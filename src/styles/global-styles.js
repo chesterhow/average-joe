@@ -109,7 +109,7 @@ const GlobalStyle = createGlobalStyle`
   blockquote {
     margin: 0.8rem 0;
     padding: 0.15rem 0 0.15rem 1rem;
-    border-left: 0.15rem solid ${props => props.theme.black};
+    border-left: 0.15rem solid ${props => props.theme.grey};
     font-style: italic;
     
     > p {

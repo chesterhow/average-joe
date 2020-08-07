@@ -32,7 +32,6 @@ const StyledReview = styled(Review)`
   width: 33rem;
   margin-top: -2rem;
   box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.25);
-  text-align: center;
 `;
 
 const StyledBrowser = styled.div`

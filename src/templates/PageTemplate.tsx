@@ -10,7 +10,9 @@ const StyledContent = styled.div`
   ${props => props.theme.contentMaxWidth};
 `;
 
-const StyledTitle = styled.h1``;
+const StyledTitle = styled.h1`
+  margin-top: 0;
+`;
 
 const StyledBody = styled.div`
   text-align: left;
@@ -43,6 +45,21 @@ const StyledBody = styled.div`
       font-size: 1.5rem;
       letter-spacing: 1rem;
     }
+  }
+
+  a {
+    font-family: ${props => props.theme.serif};
+    transition: all 0.2s ease-out;
+    box-shadow: inset 0 -2px 0 ${props => props.theme.coral};
+    text-decoration: none;
+
+    &:hover {
+      color: ${props => props.theme.coral};
+    }
+  }
+
+  p * {
+    font-family: ${props => props.theme.serif};
   }
 `;
 
