@@ -2,13 +2,15 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
+import Logo from '../assets/images/logo.svg';
+
 const StyledHeader = styled.header`
+  ${props => props.theme.pageMaxWidth};
   display: grid;
   grid-template-columns: auto 1fr;
-  padding: 3em 0;
-  ${props => props.theme.pageMaxWidth};
   position: relative;
   height: 145px;
+  padding: 3em 0;
   transform-style: preserve-3d;
 `;
 
@@ -20,8 +22,6 @@ const StyledNavLink = styled(Link)`
   margin-left: 2em;
   text-decoration: none;
 `;
-
-import Logo from '../assets/images/logo.svg';
 
 const Header = () => (
   <StyledHeader>
