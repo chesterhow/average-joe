@@ -41,7 +41,7 @@ const StyledPostContent = styled.div`
 `;
 
 const StyledPostContentInner = styled.div`
-  ${props => props.theme.contentMaxWidth}
+  ${props => props.theme.contentMaxWidth};
 `;
 
 const StyledPostTitle = styled.h1`
@@ -64,6 +64,10 @@ const StyledPostDate = styled.h6`
   font-weight: normal;
   -webkit-font-smoothing: initial;
   -moz-osx-font-smoothing: initial;
+`;
+
+const StyledReview = styled(Review)`
+  margin: 1.5rem auto;
 `;
 
 const StyledPostBody = styled.div`
@@ -173,7 +177,7 @@ const Template: React.FC = props => {
         <StyledPostContentInner>
           <StyledPostTitle>{frontmatter.title}</StyledPostTitle>
           <StyledPostDate>{frontmatter.date}</StyledPostDate>
-          <Review review={frontmatter.review} />
+          <StyledReview review={frontmatter.review} />
           <StyledPostBody>
             <MDXRenderer>{body}</MDXRenderer>
           </StyledPostBody>

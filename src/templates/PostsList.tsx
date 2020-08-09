@@ -21,23 +21,45 @@ const StyledLanding = styled.div`
 const StyledHero = styled.h1`
   display: inline-block;
   margin: 0;
+  max-width: 960px;
+
+  @media (max-width: ${props => props.theme.breakMedium}) {
+    font-size: 2.441rem;
+  }
+
+  @media (max-width: ${props => props.theme.breakSmall}) {
+    font-size: 1.953rem;
+  }
 `;
 
-const StyledHeroGold = styled(StyledHero)`
+const StyledHeroGold = styled.span`
+  font-size: inherit;
   color: ${props => props.theme.gold};
 `;
 
 const StyledReview = styled(Review)`
   justify-self: end;
   width: 33rem;
-  margin-top: -2rem;
+  margin-top: -0.3rem;
   box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.25);
+
+  @media (max-width: ${props => props.theme.breakMedium}) {
+    margin-right: 1.5rem;
+  }
 `;
 
 const StyledBrowser = styled.div`
   ${props => props.theme.pageMaxWidth};
   margin-top: 3rem;
   background: ${props => props.theme.goldPale};
+
+  @media (max-width: ${props => props.theme.breakMedium}) {
+    margin-top: 2rem;
+  }
+
+  @media (max-width: ${props => props.theme.breakSmall}) {
+    margin-top: 1rem;
+  }
 `;
 
 const StyledSortBar = styled.div`
@@ -66,15 +88,7 @@ interface PostsListProps extends PageProps {
             path: string;
             title: string;
             date: Date;
-            review: {
-              overall: number;
-              coffee: number;
-              aesthetic: number;
-              seating: number;
-              price: string;
-              food: boolean;
-              wifi: boolean;
-            };
+            review: Review;
             estate: string;
             thumbnail: string;
           };
@@ -111,9 +125,7 @@ const PostsList: React.FC<PostsListProps> = props => {
       <StyledLanding>
         <StyledHero className="rellax" data-rellax-speed="-4">
           <StyledHeroGold>Everything</StyledHeroGold>
-          &nbsp;you’ve ever wanted
-          <br /> to know about coffeehouses
-          <br /> in Singapore.
+          &nbsp;you’ve ever wanted to know about coffeehouses in Singapore.
         </StyledHero>
         <StyledReview className="rellax" data-rellax-speed="10" />
       </StyledLanding>

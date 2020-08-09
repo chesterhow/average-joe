@@ -16,8 +16,21 @@ const StyledFooterContent = styled.div`
 
 const StyledFooterRow = styled.div`
   display: grid;
-  grid-template-columns: auto max-content max-content;
+  grid-template:
+    'logo list list'
+    / auto max-content max-content;
   gap: 3rem;
+
+  @media (max-width: ${props => props.theme.breakMedium}) {
+    grid-template:
+      'logo logo'
+      'list list';
+    gap: 2rem 0;
+  }
+`;
+
+const StyledFooterLogo = styled.div`
+  grid-area: logo;
 `;
 
 const StyledVerticalList = styled.div`
@@ -28,11 +41,11 @@ const StyledVerticalList = styled.div`
 
 const StyledListHeading = styled.h6`
   margin-top: 0;
-
   color: ${props => props.theme.gold};
 `;
 
 const StyledAnchor = styled.a`
+  grid-area: list;
   margin-top: 1rem;
   font-size: 0.8rem;
   text-decoration: none;
@@ -68,14 +81,14 @@ const Footer: React.FC = () => {
     <StyledFooter>
       <StyledFooterContent>
         <StyledFooterRow>
-          <div>
+          <StyledFooterLogo>
             <Link to="/">
               <Logo />
             </Link>
             <StyledCopyright>
               &copy; Average Joe, {date.getFullYear()}
             </StyledCopyright>
-          </div>
+          </StyledFooterLogo>
 
           <StyledVerticalList>
             <StyledListHeading>navigation</StyledListHeading>

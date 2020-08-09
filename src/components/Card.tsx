@@ -116,6 +116,7 @@ const Pale = styled.span`
 
 interface CardProps {
   post: {};
+  small?: boolean;
 }
 
 const Card: React.FC<CardProps> = props => {
