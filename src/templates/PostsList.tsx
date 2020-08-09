@@ -41,10 +41,19 @@ const StyledBrowser = styled.div`
 `;
 
 const StyledSortBar = styled.div`
-  color: ${props => props.theme.coral};
-  border: 3px solid ${props => props.theme.coral};
-  grid-template-columns: 1fr auto;
   display: grid;
+  grid-template-columns: 1fr auto;
+  border: 3px solid ${props => props.theme.coral};
+  color: ${props => props.theme.coral};
+`;
+
+const StyledCards = styled.div`
+  display: grid;
+
+  @media (max-width: ${props => props.theme.breakMedium}) {
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    border-left: 3px solid ${props => props.theme.coral};
+  }
 `;
 
 interface PostsListProps extends PageProps {
@@ -118,7 +127,7 @@ const PostsList: React.FC<PostsListProps> = props => {
           <div></div>
           <Sort path={path} onChange={onSortChange} />
         </StyledSortBar>
-        {renderCards()}
+        <StyledCards>{renderCards()}</StyledCards>
       </StyledBrowser>
 
       <Pagination currentPage={currentPage} numPages={numPages} />

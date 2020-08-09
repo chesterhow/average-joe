@@ -20,7 +20,7 @@ const theme = {
 
   breakSmaller: '320px',
   breakSmall: '425px',
-  breakMedium: '700px',
+  breakMedium: '768px',
   breakLarge: '1024px',
 
   pageMaxWidth: `

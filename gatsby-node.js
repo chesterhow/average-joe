@@ -23,6 +23,18 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
               frontmatter {
                 path
                 type
+                title
+                review {
+                  overall
+                  coffee
+                  aesthetic
+                  seating
+                  price
+                  food
+                  wifi
+                }
+                estate
+                thumbnail
               }
             }
           }
@@ -35,6 +47,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       return;
     }
 
+    // Create pages
     const pages = result.data.allMdx.edges;
     pages
       .filter(({ node }) => node.frontmatter.type === 'page')
@@ -46,12 +59,21 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         });
       });
 
+    // Create posts
     const posts = pages.filter(({ node }) => node.frontmatter.type === 'cafe');
-    posts.forEach(({ node }) => {
+    posts.forEach(({ node }, index) => {
+      const previous =
+        index === 0 ? posts[posts.length - 1] : posts[index - 1].node;
+      const next =
+        index === posts.length - 1 ? posts[0] : posts[index + 1].node;
+
       createPage({
         path: node.frontmatter.path,
         component: postTemplate,
-        context: {},
+        context: {
+          previous,
+          next,
+        },
       });
     });
 

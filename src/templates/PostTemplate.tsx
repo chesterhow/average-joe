@@ -7,6 +7,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import Layout from '../components/Layout';
 import Review from '../components/review';
 import SEO from '../components/seo';
+import Card from '../components/Card';
 
 const StyledPostCover = styled.div`
   ${props => props.theme.pageMaxWidth};
@@ -102,8 +103,8 @@ const StyledPostBody = styled.div`
 const StyledInfoSection = styled.div`
   ${props => props.theme.pageMaxWidth};
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-top: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  margin: 3rem auto;
 `;
 
 const StyledInfo = styled.div`
@@ -121,6 +122,24 @@ const StyledInfo = styled.div`
   }
 `;
 
+const StyledMoreSection = styled.div`
+  ${props => props.theme.pageMaxWidth};
+
+  > span {
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+  }
+`;
+
+const StyledMoreCards = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  margin-top: 0.5rem;
+  border-top: 3px solid ${props => props.theme.coral};
+  border-left: 3px solid ${props => props.theme.coral};
+`;
+
 const formatString = (x: string) => {
   return x
     .split(`\n\n`)
@@ -133,6 +152,7 @@ const Template: React.FC = props => {
     data: {
       mdx: { frontmatter, body },
     },
+    pageContext: { previous, next },
   } = props;
 
   useEffect(() => {
@@ -176,6 +196,13 @@ const Template: React.FC = props => {
             />
           </StyledInfo>
         </StyledInfoSection>
+        <StyledMoreSection>
+          <span>MORE CAFES</span>
+          <StyledMoreCards>
+            <Card post={previous} small />
+            <Card post={next} small />
+          </StyledMoreCards>
+        </StyledMoreSection>
       </StyledPostContent>
     </Layout>
   );
