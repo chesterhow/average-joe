@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
 
+interface CardElementProps {
+  small?: boolean;
+}
+
 const StyledThumbnail = styled.div`
   position: relative;
   grid-area: thumbnail;
@@ -38,7 +42,7 @@ const StyledTitle = styled.h3`
   }
 `;
 
-const StyledCard = styled(Link)`
+const StyledCard = styled(Link)<CardElementProps>`
   display: grid;
   grid-template:
     'thumbnail content'
@@ -55,14 +59,14 @@ const StyledCard = styled(Link)`
       grid-template:
         'thumbnail' auto
         'content' 1fr;
-      border-left: none;
+      border-top: 3px solid ${props => props.theme.coral};
     `};
 
   @media (max-width: ${props => props.theme.breakMedium}) {
     grid-template:
       'thumbnail' auto
       'content' 1fr;
-    border-left: none;
+    border-top: 3px solid ${props => props.theme.coral};
   }
 
   &:hover {
@@ -76,7 +80,7 @@ const StyledCard = styled(Link)`
   }
 `;
 
-const StyledContent = styled.div`
+const StyledContent = styled.div<CardElementProps>`
   grid-area: content;
   padding: 20px;
   border-left: 3px solid ${props => props.theme.coral};

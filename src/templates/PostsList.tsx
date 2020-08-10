@@ -11,11 +11,11 @@ import Layout from '../components/Layout';
 import Pagination from '../components/Pagination';
 
 const StyledLanding = styled.div`
-  position: relative;
   ${props => props.theme.pageMaxWidth};
-  width: 1200px;
+  position: relative;
   display: grid;
   grid-template-rows: 1fr auto;
+  width: 1200px;
 `;
 
 const StyledHero = styled.h1`
@@ -40,8 +40,7 @@ const StyledHeroGold = styled.span`
 const StyledReview = styled(Review)`
   justify-self: end;
   width: 33rem;
-  margin-top: -0.3rem;
-  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 10px rgba(255, 126, 106, 0.5);
 
   @media (max-width: ${props => props.theme.breakMedium}) {
     margin-right: 1.5rem;
@@ -67,6 +66,10 @@ const StyledSortBar = styled.div`
   grid-template-columns: 1fr auto;
   border: 3px solid ${props => props.theme.coral};
   color: ${props => props.theme.coral};
+
+  @media (max-width: ${props => props.theme.breakMedium}) {
+    margin-bottom: 0.5rem;
+  }
 `;
 
 const StyledCards = styled.div`
@@ -74,7 +77,7 @@ const StyledCards = styled.div`
 
   @media (max-width: ${props => props.theme.breakMedium}) {
     grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-    border-left: 3px solid ${props => props.theme.coral};
+    gap: 0.5rem;
   }
 `;
 
@@ -123,13 +126,16 @@ const PostsList: React.FC<PostsListProps> = props => {
     <Layout>
       <SEO title="Average Joe Coffeehouse Reviews" />
       <StyledLanding>
-        <StyledHero className="rellax" data-rellax-speed="-4">
+        <StyledHero className="rellax" data-rellax-speed="-2">
           <StyledHeroGold>Everything</StyledHeroGold>
           &nbsp;you’ve ever wanted to know about coffeehouses in Singapore.
         </StyledHero>
-        <StyledReview className="rellax" data-rellax-speed="10" />
+        <StyledReview
+          className="rellax"
+          dataRellaxSpeed="1"
+          dataRellaxZindex="1"
+        />
       </StyledLanding>
-
       <StyledBrowser
         className="rellax"
         data-rellax-speed="0"

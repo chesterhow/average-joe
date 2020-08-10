@@ -139,9 +139,8 @@ const StyledMoreSection = styled.div`
 const StyledMoreCards = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 0.5rem;
   margin-top: 0.5rem;
-  border-top: 3px solid ${props => props.theme.coral};
-  border-left: 3px solid ${props => props.theme.coral};
 `;
 
 const formatString = (x: string) => {

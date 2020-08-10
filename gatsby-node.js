@@ -63,9 +63,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     const posts = pages.filter(({ node }) => node.frontmatter.type === 'cafe');
     posts.forEach(({ node }, index) => {
       const previous =
-        index === 0 ? posts[posts.length - 1] : posts[index - 1].node;
+        index === 0 ? posts[posts.length - 1].node : posts[index - 1].node;
       const next =
-        index === posts.length - 1 ? posts[0] : posts[index + 1].node;
+        index === posts.length - 1 ? posts[0].node : posts[index + 1].node;
 
       createPage({
         path: node.frontmatter.path,

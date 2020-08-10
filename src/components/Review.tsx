@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { string } from 'prop-types';
 
 const StyledReview = styled.div`
   display: grid;
@@ -78,12 +79,14 @@ const StyledBreakdownScore = styled.span`
 `;
 
 interface ReviewProps {
-  review: Review;
-  className: string;
+  review?: Review;
+  className?: string;
+  dataRellaxSpeed?: string;
+  dataRellaxZindex?: string;
 }
 
 const Review: React.FC<ReviewProps> = props => {
-  let { review, className } = props;
+  let { review, className, dataRellaxSpeed, dataRellaxZindex } = props;
 
   if (review == null) {
     review = {
@@ -98,7 +101,11 @@ const Review: React.FC<ReviewProps> = props => {
   }
 
   return (
-    <StyledReview className={className}>
+    <StyledReview
+      className={className}
+      data-rellax-speed={dataRellaxSpeed}
+      data-rellax-zindex={dataRellaxZindex}
+    >
       <StyledReviewOverall>
         <h4>Overall Score</h4>
         <h1>{review?.overall ?? 100}</h1>
