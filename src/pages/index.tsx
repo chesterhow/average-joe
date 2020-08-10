@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { graphql, navigate, PageProps } from 'gatsby';
+import React, { useEffect, useState, useCallback } from 'react';
+import { graphql, PageProps } from 'gatsby';
 import styled from 'styled-components';
 import Rellax from 'rellax';
 
@@ -8,7 +8,8 @@ import Card from '../components/Card';
 import Sort from '../components/Sort';
 import Review from '../components/review';
 import Layout from '../components/Layout';
-import Pagination from '../components/Pagination';
+
+const POSTS_PER_PAGE = 6;
 
 const StyledLanding = styled.div`
   ${props => props.theme.pageMaxWidth};
@@ -81,7 +82,27 @@ const StyledCards = styled.div`
   }
 `;
 
-interface PostsListProps extends PageProps {
+const StyledMoreButton = styled.button`
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.25rem 1.5rem;
+  border: 3px solid ${props => props.theme.coral};
+  background: ${props => props.theme.coral};
+  color: ${props => props.theme.goldPale};
+  cursor: pointer;
+  transition: opacity 0.2s ease-out;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+`;
+
+interface IndexPageProps extends PageProps {
   data: {
     allMdx: {
       edges: {
@@ -97,30 +118,59 @@ interface PostsListProps extends PageProps {
           };
         };
       }[];
+      totalCount: number;
     };
   };
 }
 
-const PostsList: React.FC<PostsListProps> = props => {
+const IndexPage: React.FC<IndexPageProps> = props => {
   const {
     data: {
-      allMdx: { edges },
+      allMdx: { edges, totalCount },
     },
     path,
-    pageContext: { currentPage, numPages },
   } = props;
+
+  const [sortedPosts, setSortedPosts] = useState(edges);
+  const [postsShown, setPostsShown] = useState(POSTS_PER_PAGE);
 
   useEffect(() => {
     new Rellax('.rellax');
   }, []);
 
   const onSortChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    navigate(`/${e.target.value}`);
+    const sortField = e.target.value;
+
+    if (sortField === 'latest') {
+      setSortedPosts(edges);
+    } else {
+      const newSortedPosts = [...edges].sort((a, b) => {
+        const diff =
+          b.node.frontmatter.review[sortField] -
+          a.node.frontmatter.review[sortField];
+
+        if (diff === 0) {
+          // Use overall score for tiebreaker
+          return (
+            b.node.frontmatter.review.overall -
+            a.node.frontmatter.review.overall
+          );
+        }
+        return diff;
+      });
+      setSortedPosts(newSortedPosts);
+    }
   };
 
-  const renderCards = () => {
-    return edges.map(edge => <Card key={edge.node.id} post={edge.node} />);
+  const onMoreClick = () => {
+    setPostsShown(postsShown + POSTS_PER_PAGE);
   };
+
+  const renderCards = useCallback(() => {
+    return sortedPosts
+      .slice(0, postsShown)
+      .map(edge => <Card key={edge.node.id} post={edge.node} />);
+  }, [postsShown, sortedPosts]);
 
   return (
     <Layout>
@@ -146,27 +196,21 @@ const PostsList: React.FC<PostsListProps> = props => {
           <Sort path={path} onChange={onSortChange} />
         </StyledSortBar>
         <StyledCards>{renderCards()}</StyledCards>
+        {postsShown < totalCount && (
+          <StyledMoreButton onClick={onMoreClick}>More ☕️</StyledMoreButton>
+        )}
       </StyledBrowser>
-
-      <Pagination currentPage={currentPage} numPages={numPages} />
     </Layout>
   );
 };
 
-export default PostsList;
+export default IndexPage;
 
 export const pageQuery = graphql`
-  query pageQuery(
-    $skip: Int!
-    $limit: Int!
-    $sortOrder: [SortOrderEnum]!
-    $sortField: [MdxFieldsEnum]!
-  ) {
+  query pageQuery {
     allMdx(
       filter: { frontmatter: { type: { eq: "cafe" } } }
-      sort: { order: $sortOrder, fields: $sortField }
-      limit: $limit
-      skip: $skip
+      sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {
         node {
@@ -189,6 +233,7 @@ export const pageQuery = graphql`
           }
         }
       }
+      totalCount
     }
   }
 `;
