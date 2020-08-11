@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
 
@@ -126,13 +125,14 @@ interface CardProps {
 const Card: React.FC<CardProps> = props => {
   const {
     post: {
-      frontmatter: { path, title, estate, thumbnail, review },
+      slug,
+      frontmatter: { title, estate, thumbnail, review },
     },
     small,
   } = props;
 
   return (
-    <StyledCard to={path} small={small}>
+    <StyledCard to={`/${slug}`} small={small}>
       <StyledThumbnail small={small}>
         <img src={thumbnail} alt={title} />
       </StyledThumbnail>
@@ -151,17 +151,6 @@ const Card: React.FC<CardProps> = props => {
       </StyledContent>
     </StyledCard>
   );
-};
-
-Card.propTypes = {
-  post: PropTypes.shape({
-    path: PropTypes.string,
-    title: PropTypes.string,
-    date: PropTypes.string,
-    estate: PropTypes.string,
-    thumbnail: PropTypes.string,
-    review: PropTypes.objectOf(PropTypes.number),
-  }).isRequired,
 };
 
 export default Card;

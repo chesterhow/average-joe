@@ -6,7 +6,7 @@ import Rellax from 'rellax';
 import SEO from '../components/seo';
 import Card from '../components/Card';
 import Sort from '../components/Sort';
-import Review from '../components/review';
+import Review from '../components/Review';
 import Layout from '../components/Layout';
 
 const POSTS_PER_PAGE = 6;
@@ -108,8 +108,8 @@ interface IndexPageProps extends PageProps {
       edges: {
         node: {
           id: string;
+          slug: string;
           frontmatter: {
-            path: string;
             title: string;
             date: Date;
             review: Review;
@@ -215,8 +215,8 @@ export const pageQuery = graphql`
       edges {
         node {
           id
+          slug
           frontmatter {
-            path
             title
             date
             review {
