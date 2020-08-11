@@ -108,8 +108,8 @@ interface IndexPageProps extends PageProps {
       edges: {
         node: {
           id: string;
+          slug: string;
           frontmatter: {
-            path: string;
             title: string;
             date: Date;
             review: Review;
@@ -215,8 +215,8 @@ export const pageQuery = graphql`
       edges {
         node {
           id
+          slug
           frontmatter {
-            path
             title
             date
             review {

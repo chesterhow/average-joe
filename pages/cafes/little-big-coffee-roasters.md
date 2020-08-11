@@ -1,6 +1,5 @@
 ---
 type: cafe
-path: /cafes/little-big-coffee-roasters/
 title: Little Big Coffee Roasters
 date: 2019-09-27
 review:

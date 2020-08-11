@@ -5,6 +5,7 @@
  */
 
 const path = require(`path`);
+const { createFilePath } = require(`gatsby-source-filesystem`);
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
@@ -20,8 +21,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         ) {
           edges {
             node {
+              slug
               frontmatter {
-                path
                 type
                 title
                 review {
@@ -53,9 +54,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       .filter(({ node }) => node.frontmatter.type === 'page')
       .forEach(({ node }) => {
         createPage({
-          path: node.frontmatter.path,
+          path: node.slug,
           component: pageTemplate,
-          context: {},
+          context: {
+            slug: node.slug,
+          },
         });
       });
 
@@ -68,13 +71,27 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         index === posts.length - 1 ? posts[0].node : posts[index + 1].node;
 
       createPage({
-        path: node.frontmatter.path,
+        path: node.slug,
         component: postTemplate,
         context: {
           previous,
           next,
+          slug: node.slug,
         },
       });
     });
   });
+};
+
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions;
+
+  if (node.internal.type === `Mdx`) {
+    const value = createFilePath({ node, getNode });
+    createNodeField({
+      name: `slug`,
+      node,
+      value,
+    });
+  }
 };

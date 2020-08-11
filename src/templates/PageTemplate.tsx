@@ -89,11 +89,10 @@ const PageTemplate: React.FC = props => {
 export default PageTemplate;
 
 export const pageQuery = graphql`
-  query($path: String!) {
-    mdx(frontmatter: { path: { eq: $path } }) {
+  query($slug: String!) {
+    mdx(slug: { eq: $slug }) {
       body
       frontmatter {
-        path
         title
       }
     }

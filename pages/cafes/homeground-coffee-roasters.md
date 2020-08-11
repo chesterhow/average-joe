@@ -1,6 +1,5 @@
 ---
 type: cafe
-path: /cafes/homeground-coffee-roasters/
 title: Homeground Coffee Roasters
 date: 2019-01-04
 review:

@@ -162,6 +162,8 @@ const Template: React.FC = props => {
     pageContext: { previous, next },
   } = props;
 
+  console.log(previous, next);
+
   useEffect(() => {
     new Rellax('.rellax');
   }, []);
@@ -218,11 +220,11 @@ const Template: React.FC = props => {
 export default Template;
 
 export const pageQuery = graphql`
-  query($path: String!) {
-    mdx(frontmatter: { path: { eq: $path } }) {
+  query($slug: String!) {
+    mdx(slug: { eq: $slug }) {
       body
+      slug
       frontmatter {
-        path
         title
         date(formatString: "MMMM DD, YYYY")
         review {
