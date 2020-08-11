@@ -8,30 +8,11 @@ import Layout from '../components/Layout';
 import Review from '../components/Review';
 import SEO from '../components/seo';
 import Card from '../components/Card';
+import Img from 'gatsby-image';
 
 const StyledPostCover = styled.div`
   ${props => props.theme.pageMaxWidth};
   position: relative;
-  overflow: hidden;
-
-  ::before {
-    content: '';
-    display: block;
-    width: 100%;
-    padding-top: calc((2 / 5) * 100%);
-
-    @media (max-width: ${props => props.theme.breakMedium}) {
-      padding-top: calc((9 / 16) * 100%);
-    }
-  }
-
-  img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    transform: translate(-50%, -50%);
-  }
 `;
 
 const StyledPostContent = styled.div`
@@ -77,13 +58,13 @@ const StyledPostBody = styled.div`
     font-family: ${props => props.theme.serif};
   }
 
-  img {
+  .gatsby-resp-image-wrapper {
     display: block;
     width: 100%;
     margin: 1.5rem auto 0.5rem;
   }
 
-  img + em {
+  .gatsby-resp-image-wrapper + em {
     display: block;
     color: ${props => props.theme.grey};
     font-family: ${props => props.theme.sansSerif};
@@ -154,15 +135,28 @@ const formatString = (x: string) => {
     .join(``);
 };
 
-const Template: React.FC = props => {
+const PostTemplate: React.FC = props => {
   const {
     data: {
-      mdx: { frontmatter, body },
+      mdx: {
+        frontmatter: { title, cover, date, review, address, hours },
+        body,
+      },
     },
     pageContext: { previous, next },
   } = props;
 
-  console.log(previous, next);
+  const sources = [
+    {
+      ...cover.childImageSharp.fluid,
+      media: `(max-width: 768px)`,
+      aspectRatio: 16 / 9,
+    },
+    {
+      ...cover.childImageSharp.fluid,
+      aspectRatio: 5 / 2,
+    },
+  ];
 
   useEffect(() => {
     new Rellax('.rellax');
@@ -170,9 +164,9 @@ const Template: React.FC = props => {
 
   return (
     <Layout>
-      <SEO title={frontmatter.title} />
+      <SEO title={title} />
       <StyledPostCover className="rellax" data-rellax-speed="-2">
-        <img src={frontmatter.cover} alt={frontmatter.title} />
+        <Img fluid={sources} alt={title} />
       </StyledPostCover>
       <StyledPostContent
         className="rellax"
@@ -180,9 +174,9 @@ const Template: React.FC = props => {
         data-rellax-zindex="1"
       >
         <StyledPostContentInner>
-          <StyledPostTitle>{frontmatter.title}</StyledPostTitle>
-          <StyledPostDate>{frontmatter.date}</StyledPostDate>
-          <StyledReview review={frontmatter.review} />
+          <StyledPostTitle>{title}</StyledPostTitle>
+          <StyledPostDate>{date}</StyledPostDate>
+          <StyledReview review={review} />
           <StyledPostBody>
             <MDXRenderer>{body}</MDXRenderer>
           </StyledPostBody>
@@ -192,7 +186,7 @@ const Template: React.FC = props => {
             <span>ADDRESS</span>
             <div
               dangerouslySetInnerHTML={{
-                __html: formatString(frontmatter.address),
+                __html: formatString(address),
               }}
             />
           </StyledInfo>
@@ -200,7 +194,7 @@ const Template: React.FC = props => {
             <span>HOURS</span>
             <div
               dangerouslySetInnerHTML={{
-                __html: formatString(frontmatter.hours),
+                __html: formatString(hours),
               }}
             />
           </StyledInfo>
@@ -217,7 +211,7 @@ const Template: React.FC = props => {
   );
 };
 
-export default Template;
+export default PostTemplate;
 
 export const pageQuery = graphql`
   query($slug: String!) {
@@ -237,7 +231,13 @@ export const pageQuery = graphql`
           wifi
         }
         estate
-        cover
+        cover {
+          childImageSharp {
+            fluid(maxWidth: 1000) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         address
         hours
       }

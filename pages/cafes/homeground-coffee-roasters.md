@@ -24,19 +24,19 @@ hours: |-
 
 The eastern side of our island is full of wonderful and amazing things, is probably a sentiment you would have heard from all your east-dwelling friends<!--more-->. And on that list you will definitely find Homeground Coffee Roasters. Homeground occupies a single shophouse unit, a short walk away from 112 Katong mall, and they serve some of the best coffee I’ve ever had. Certainly, the quality brews served at Homeground gives our east-side coffee-lovers legitimate bragging rights about having great coffee in their home domain.
 
-![](/assets/homeground-coffee-roasters-1.jpg)
+![](../../static/assets/homeground-coffee-roasters-1.jpg)
 
 ### Coffee
 
 Homeground Coffee Roasters has made a name for themselves in the industry for their excellent roasting. You might have heard of their well-loved espresso blends — _Vanta_ and _Glow in the Dark_. On my recent visit, I tried the Vanta on white, and wow! What a wonderful cup of coffee that was, really living up to its reputation.
 
-![](/assets/homeground-coffee-roasters-2.jpg)
+![](../../static/assets/homeground-coffee-roasters-2.jpg)
 
 Homeground also serves filter coffee, brewed using a V60 with their own roasted beans. I ordered the Kenyan single origin. It was served together with a small card, providing information about the coffee. I thought it was a nice touch, as it showed the attention to detail about the beans they procure. Just as expected, the coffee was, delicious and well-balanced.
 
 For the home brewers out there, Homeground does sell their beans, which come packaged beautifully in little tins. And if you bring your tin back for a refill, you’ll get a little discount! Saving the environment and the money in your pocket. I think that’s pretty awesome.
 
-![](/assets/homeground-coffee-roasters-3.jpg)
+![](../../static/assets/homeground-coffee-roasters-3.jpg)
 
 ### Aesthetic
 
@@ -44,7 +44,7 @@ The café’s interior is a long and narrow space which they have cleverly devel
 
 Something that really caught my attention was Homeground’s graphic design illustrations. They curate an illustration for each of their collaborations. These beautiful pieces have a very distinct and consistent art style; modern yet whimsical. I find myself always trying to take a closer look. They have some displayed in the café, so you check them out while you’re there. But for those who are really curious and can’t wait, it’s all on their Instagram page as well.
 
-![](/assets/homeground-coffee-roasters-4.jpg)
+![](../../static/assets/homeground-coffee-roasters-4.jpg)
 
 ### Seating
 
@@ -60,6 +60,6 @@ If you like something light to go with your coffee, Homeground does serve pastri
 
 ---
 
-![](/assets/homeground-coffee-roasters-5.jpg)
+![](../../static/assets/homeground-coffee-roasters-5.jpg)
 
 Homeground Coffee Roaster’s casual and intimate setting makes it the ideal place for great conversations. And their excellent coffee makes the journey to the east all the more worth it. Though cafés in shophouses may seem like a recurring trend, there’s just something quite special about this combination. I’ve tried my best to put it into words, but drop by Homeground and you’ll get what I mean.

@@ -6,6 +6,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-sharp`,
+    `gatsby-remark-images`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     {
@@ -33,7 +34,7 @@ module.exports = {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
-          include: `${__dirname}/src/assets/images/`,
+          include: `${__dirname}/src/assets/images`,
         },
       },
     },
@@ -55,6 +56,16 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.md`, `.mdx`],
+        plugins: [`gatsby-remark-relative-images`, `gatsby-remark-images`],
+        gatsbyRemarkPlugins: [
+          `gatsby-remark-relative-images`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
       },
     },
   ],

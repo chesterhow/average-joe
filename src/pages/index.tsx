@@ -229,7 +229,13 @@ export const pageQuery = graphql`
               wifi
             }
             estate
-            thumbnail
+            thumbnail {
+              childImageSharp {
+                fluid(maxWidth: 500) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
