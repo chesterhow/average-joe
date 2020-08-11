@@ -36,11 +36,17 @@ I am no stranger to Tiong Hoe Specialty Coffee, and for a while now, it has been
 
 Tiong Hoe keeps their menu interesting by running what they’ve called, Single Origin Sundays (Yes, S.O.S). Each month, they pick a particular coffee bean to showcase, and on every Sunday of that month, brew their espresso-based coffees using only that bean. Check out their Instagram page to find out what the bean of the month is or you could ask their friendly baristas!
 
+![](/assets/tiong-hoe-specialty-coffee/2.jpg)
+
 ### Aesthetic
 
 Tiong Hoe maintains a rustic vibe, with displays showcasing both old and new brewing equipment, and gunny sacks of coffee beans lying around strategically in corners or up on the shelves. Considering their long history as a coffee wholesaler, I find the vintage, warehouse-esque theme they’ve embraced very fitting. The fully glass storefront allows ample natural light into the cafe, which coupled with the warm lighting inside and delicious coffee scents, gives the establishment a very cozy feel.
 
+![](/assets/tiong-hoe-specialty-coffee/3.jpg)
+
 Hot coffee is served in beautiful handmade ceramic cups, each unique and personal. Topped off with a flourish of skilfully created latte art, every drink is a treat for both your tastebuds and your eyes. Needless to say, the combination of natural light shining in and beautifully presented cuppa means that you will have no trouble getting that perfect aesthetic shot to impress your Instagram fans.
+
+![](/assets/tiong-hoe-specialty-coffee/4.jpg)
 
 ### Seating
 
@@ -48,7 +54,7 @@ Unfortunately, Tiong Hoe’s floorspace is rather small and their seats are very
 
 ### Price
 
-At \$4.50 for a cappuccino, Tiong Hoe’s coffees are pretty affordable. However, they only accept Grab Pay or cash, so remember to come prepared!
+At $4.50 for a cappuccino, Tiong Hoe’s coffees are pretty affordable. However, they only accept Grab Pay or cash, so remember to come prepared!
 
 For the home brewers out there, they also sell their own beans at the cafe, and the beans are priced very affordably as well.
 
@@ -57,5 +63,7 @@ For the home brewers out there, they also sell their own beans at the cafe, and 
 Tiong Hoe’s business revolves almost exclusively around serving excellent coffee, and that is eminent in their menu. The only other non-beverage items on it include a few choices of cakes, so you can satisfy your sweet tooth as you sip your drink.
 
 ---
+
+![](/assets/tiong-hoe-specialty-coffee/5.jpg)
 
 A hidden gem in a quiet corner of Queenstown, Tiong Hoe Specialty Coffee is the perfect coffeehouse to escape the hustle and bustle of our busy everyday lives. If you are looking for a cozy quiet place to wind down, pick up a book, and enjoy a wonderful cup of joe, Tiong Hoe is the place you’ll want to be.

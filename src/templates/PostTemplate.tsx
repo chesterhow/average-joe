@@ -73,6 +73,10 @@ const StyledReview = styled(Review)`
 const StyledPostBody = styled.div`
   text-align: left;
 
+  em {
+    font-family: ${props => props.theme.serif};
+  }
+
   img {
     display: block;
     width: 100%;
