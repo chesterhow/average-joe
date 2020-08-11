@@ -5,7 +5,7 @@ import Rellax from 'rellax';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import Layout from '../components/Layout';
-import Review from '../components/review';
+import Review from '../components/Review';
 import SEO from '../components/seo';
 import Card from '../components/Card';
 

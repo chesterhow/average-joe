@@ -6,7 +6,7 @@ import Rellax from 'rellax';
 import SEO from '../components/seo';
 import Card from '../components/Card';
 import Sort from '../components/Sort';
-import Review from '../components/review';
+import Review from '../components/Review';
 import Layout from '../components/Layout';
 
 const POSTS_PER_PAGE = 6;

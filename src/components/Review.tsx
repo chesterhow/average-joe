@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { string } from 'prop-types';
 
 const StyledReview = styled.div`
   display: grid;
