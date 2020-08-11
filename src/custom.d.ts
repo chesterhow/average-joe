@@ -3,7 +3,7 @@ declare module '*.svg' {
   export default content;
 }
 
-interface Review {
+type Review = {
   overall: number;
   coffee: number;
   aesthetic: number;
@@ -11,4 +11,4 @@ interface Review {
   price: '$' | '$$' | '$$$';
   food: boolean;
   wifi: boolean;
-}
+};

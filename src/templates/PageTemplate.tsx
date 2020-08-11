@@ -63,12 +63,23 @@ const StyledBody = styled.div`
   }
 `;
 
-const PageTemplate: React.FC = props => {
+interface PageTemplateProps {
+  data: {
+    mdx: {
+      body: string;
+      frontmatter: {
+        title: string;
+      };
+    };
+  };
+}
+
+const PageTemplate: React.FC<PageTemplateProps> = props => {
   const {
     data: {
       mdx: {
-        frontmatter: { title },
         body,
+        frontmatter: { title },
       },
     },
   } = props;

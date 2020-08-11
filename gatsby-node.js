@@ -6,6 +6,7 @@
 
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
+const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
@@ -35,7 +36,17 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
                   wifi
                 }
                 estate
-                thumbnail
+                thumbnail {
+                  childImageSharp {
+                    fluid(maxWidth: 500) {
+                      base64
+                      aspectRatio
+                      src
+                      srcSet
+                      sizes
+                    }
+                  }
+                }
               }
             }
           }
@@ -84,6 +95,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 };
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
+  fmImagesToRelative(node);
   const { createNodeField } = actions;
 
   if (node.internal.type === `Mdx`) {

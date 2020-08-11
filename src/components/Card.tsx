@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
+import Img from 'gatsby-image';
 
 interface CardElementProps {
   small?: boolean;
@@ -9,23 +10,7 @@ interface CardElementProps {
 const StyledThumbnail = styled.div`
   position: relative;
   grid-area: thumbnail;
-  overflow: hidden;
   transition: opacity 0.2s ease-out;
-
-  &:before {
-    content: '';
-    display: block;
-    width: 100%;
-    padding-top: calc((2 / 3) * 100%);
-  }
-
-  img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    transform: translate(-50%, -50%);
-  }
 `;
 
 const StyledTitle = styled.h3`
@@ -118,7 +103,15 @@ const Pale = styled.span`
 `;
 
 interface CardProps {
-  post: {};
+  post: {
+    slug: string;
+    frontmatter: {
+      title: string;
+      estate: string;
+      thumbnail: File;
+      review: Review;
+    };
+  };
   small?: boolean;
 }
 
@@ -133,8 +126,14 @@ const Card: React.FC<CardProps> = props => {
 
   return (
     <StyledCard to={`/${slug}`} small={small}>
-      <StyledThumbnail small={small}>
-        <img src={thumbnail} alt={title} />
+      <StyledThumbnail>
+        <Img
+          fluid={{
+            ...thumbnail.childImageSharp.fluid,
+            aspectRatio: 3 / 2,
+          }}
+          alt={title}
+        />
       </StyledThumbnail>
       <StyledContent small={small}>
         <StyledTitle>{title}</StyledTitle>
