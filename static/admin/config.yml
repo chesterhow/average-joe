@@ -1,14 +1,13 @@
 backend:
   name: github
   repo: chesterhow/average-joe
-  branch: revamp
 
 media_folder: static/assets
 public_folder: assets
 
 collections:
   - name: cafes
-    label: cafes
+    label: pages/cafes
     folder: cafes
     create: true
     fields:

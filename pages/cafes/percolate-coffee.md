@@ -16,8 +16,8 @@ address: |-
   136 Bedok North Ave 3
   #01-152
   Singapore 460136
-thumbnail: /assets/percolate-coffee/thumb.jpg
-cover: /assets/percolate-coffee/cover.jpg
+thumbnail: /assets/percolate-coffee-thumb.jpg
+cover: /assets/percolate-coffee-cover.jpg
 hours: |-
   Mon – Fri: 10:30am – 9:30pm
   Sat – Sun: 9am – 9:30pm
@@ -25,29 +25,29 @@ hours: |-
 
 Tucked away in the heartlands of Bedok, in the far east of our little island, is Percolate Coffee<!--more-->. Along the ground-level units of Block 136, its unassuming storefront speaks little of what one can expect inside — a café-oasis offering respite, chill vibes and a quality cup of joe.
 
-![](/assets/percolate-coffee/1.jpg)
+![](/assets/percolate-coffee-1.jpg)
 _Tasting Flight Set_
 
 ### Coffee
 
 Percolate doesn’t roast their own beans, instead they get it from various roasters, both local and international. On my recent visit, they were offering 2 espresso options: one from Homeground Coffee Roasters and the other from Nylon Coffee Roasters. On filter were another 2 options; from Colonna Coffee and The Coffee Collective (both of which are roasted and imported from overseas).
 
-![](/assets/percolate-coffee/2.jpg)
+![](/assets/percolate-coffee-2.jpg)
 _Filter_
 
 While there, I tried their filters. The brews were well-balanced, and thoroughly enjoyable. On another visit, I tried their Tasting Flight Set, which comprises of a shot of espresso and a 5oz white. The espresso was well-calibrated and marked the start of a very lovely afternoon.
 
-![](/assets/percolate-coffee/3.jpg)
+![](/assets/percolate-coffee-3.jpg)
 
 ### Aesthetic
 
 Percolate has a mostly wood furnished interior, making the place look stylish and modern, and the distinctive, diagonal, tri-coloured wooden panelling in the café immediately highlights the uniqueness of the space. Through the green indoor plants and turquoise stools, the hanging artwork and muraled walls, Percolate incorporates a splash of colour, life and vibrance into their café experience.
 
-![](/assets/percolate-coffee/4.jpg)
+![](/assets/percolate-coffee-4.jpg)
 
 The café’s premises occupies 2 units and is divided by a wall along the middle of the space. What is most interesting is how they have very creatively utilised this wall. They could have opted to tear the wall down and open up the space. Instead, a window-like hole was cut into the wall and a long, rectangle table was laid in the middle. I was impressed by their unusual solution as it really added an additional touch of personality to the café.
 
-![](/assets/percolate-coffee/5.jpg)
+![](/assets/percolate-coffee-5.jpg)
 
 ### Seating
 
@@ -59,26 +59,26 @@ Most of the tables are small, but the long table in the middle of the café can 
 
 At $4.50 for a white and $6 for a filter coffee, I would say it is really affordable for such good coffee. Percolate has an all-day food menu which offers dishes priced at $7 - $14.50. They also offer pastries and desserts which are priced at $4 - $13. There is no GST or service charge, and the friendly baristas ensure you have a wonderful dining experience.
 
-![](/assets/percolate-coffee/6.jpg)
+![](/assets/percolate-coffee-6.jpg)
 _“Chicken rice” Couscous_
 
 ### Food
 
 From _“Chicken rice” Couscous_ to _Unagi Soba_, Percolate’s all-day food menu provides a very interesting spread of choices. As I found out, unconventional but delicious, nonetheless.
 
-![](/assets/percolate-coffee/7.jpg)
+![](/assets/percolate-coffee-7.jpg)
 _Unagi Soba_
 
-![](/assets/percolate-coffee/8.jpg)
+![](/assets/percolate-coffee-8.jpg)
 _Black Pepper Beef Couscous_
 
-![](/assets/percolate-coffee/9.jpg)
+![](/assets/percolate-coffee-9.jpg)
 _Prawn Curry Mash_
 
 Percolate offers some very exciting coffee desserts as well. With options like the _Oreo Matcha-gato_ and the _Sea Salt Caramel Affogato_, coffee-lovers with a sweet tooth are in for a treat!
 
 ---
 
-![](/assets/percolate-coffee/10.jpg)
+![](/assets/percolate-coffee-10.jpg)
 
 A unique coffeehouse with personality, Percolate Coffee definitely leaves an impression on you, and a great one at that. Coffee-lovers who live in the vicinity, I am just so envious! If you’ve yet to visit or have not heard of Percolate, I definitely recommend checking them out. There are few reasons that would make me take a trip to the far-east, but it seems I have found another one.
