@@ -8,13 +8,16 @@ import Layout from '../components/Layout';
 import Review from '../components/Review';
 import SEO from '../components/seo';
 import Card from '../components/Card';
+import Img from 'gatsby-image';
+
+const StyledImg = styled(Img)``;
 
 const StyledPostCover = styled.div`
   ${props => props.theme.pageMaxWidth};
   position: relative;
   overflow: hidden;
 
-  ::before {
+  /* ::before {
     content: '';
     display: block;
     width: 100%;
@@ -23,9 +26,9 @@ const StyledPostCover = styled.div`
     @media (max-width: ${props => props.theme.breakMedium}) {
       padding-top: calc((9 / 16) * 100%);
     }
-  }
+  } */
 
-  img {
+  ${StyledImg} {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -170,7 +173,10 @@ const Template: React.FC = props => {
     <Layout>
       <SEO title={frontmatter.title} />
       <StyledPostCover className="rellax" data-rellax-speed="-2">
-        <img src={frontmatter.cover} alt={frontmatter.title} />
+        <StyledImg
+          fluid={frontmatter.cover.childImageSharp.fluid}
+          alt={frontmatter.title}
+        />
       </StyledPostCover>
       <StyledPostContent
         className="rellax"
@@ -206,8 +212,8 @@ const Template: React.FC = props => {
         <StyledMoreSection>
           <span>MORE CAFES</span>
           <StyledMoreCards>
-            <Card post={previous} small />
-            <Card post={next} small />
+            {/* <Card post={previous} small />
+            <Card post={next} small /> */}
           </StyledMoreCards>
         </StyledMoreSection>
       </StyledPostContent>
@@ -218,11 +224,11 @@ const Template: React.FC = props => {
 export default Template;
 
 export const pageQuery = graphql`
-  query($path: String!) {
-    mdx(frontmatter: { path: { eq: $path } }) {
+  query($slug: String!) {
+    mdx(slug: { eq: $slug }) {
       body
+      slug
       frontmatter {
-        path
         title
         date(formatString: "MMMM DD, YYYY")
         review {
@@ -235,7 +241,13 @@ export const pageQuery = graphql`
           wifi
         }
         estate
-        cover
+        cover {
+          childImageSharp {
+            fluid(maxWidth: 1000) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         address
         hours
       }

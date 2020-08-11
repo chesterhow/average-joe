@@ -1,6 +1,6 @@
 ---
 type: cafe
-path: /cafes/prodigal-cafe/
+# path: /cafes/prodigal-cafe/
 title: Prodigal Cafe
 date: 2018-11-04
 review:

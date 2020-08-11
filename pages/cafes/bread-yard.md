@@ -1,6 +1,6 @@
 ---
 type: cafe
-path: /cafes/bread-yard/
+# path: /cafes/bread-yard/
 title: Bread Yard
 date: 2018-12-07
 review:

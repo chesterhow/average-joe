@@ -12,7 +12,6 @@ collections:
     folder: cafes
     create: true
     fields:
-      - { name: path, label: Path }
       - { name: title, label: Title }
       - { name: date, label: Date, widget: date }
       - {

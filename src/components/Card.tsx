@@ -2,10 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
+import Img from 'gatsby-image';
 
 interface CardElementProps {
   small?: boolean;
 }
+
+const StyledImg = styled(Img)``;
 
 const StyledThumbnail = styled.div`
   position: relative;
@@ -13,14 +16,14 @@ const StyledThumbnail = styled.div`
   overflow: hidden;
   transition: opacity 0.2s ease-out;
 
-  &:before {
+  /* &:before {
     content: '';
     display: block;
     width: 100%;
     padding-top: calc((2 / 3) * 100%);
-  }
+  } */
 
-  img {
+  ${StyledImg} {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -126,15 +129,18 @@ interface CardProps {
 const Card: React.FC<CardProps> = props => {
   const {
     post: {
+      slug,
       frontmatter: { path, title, estate, thumbnail, review },
     },
     small,
   } = props;
 
+  console.log(props.post);
+
   return (
-    <StyledCard to={path} small={small}>
+    <StyledCard to={slug} small={small}>
       <StyledThumbnail small={small}>
-        <img src={thumbnail} alt={title} />
+        <StyledImg fluid={thumbnail.childImageSharp.fluid} alt={title} />
       </StyledThumbnail>
       <StyledContent small={small}>
         <StyledTitle>{title}</StyledTitle>

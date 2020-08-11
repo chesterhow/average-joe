@@ -1,6 +1,6 @@
 ---
 type: cafe
-path: /cafes/little-big-coffee-roasters/
+# path: /cafes/little-big-coffee-roasters/
 title: Little Big Coffee Roasters
 date: 2019-09-27
 review:
@@ -16,7 +16,7 @@ address: |-
   8 Biomedical Grove
   #01-06
   Singapore 138665
-thumbnail: /assets/little-big-coffee-roasters/thumb.jpg
+thumbnail: /assets/little-big-coffee-roasters/thumb2.jpg
 cover: /assets/little-big-coffee-roasters/cover.jpg
 hours: |-
   Mon – Fri: 8am – 5pm

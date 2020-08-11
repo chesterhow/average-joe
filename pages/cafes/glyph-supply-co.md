@@ -1,6 +1,6 @@
 ---
 type: cafe
-path: /cafes/glyph-supply-co/
+# path: /cafes/glyph-supply-co/
 title: Glyph Supply Co.
 date: 2019-04-26
 review:

@@ -109,7 +109,6 @@ interface IndexPageProps extends PageProps {
         node: {
           id: string;
           frontmatter: {
-            path: string;
             title: string;
             date: Date;
             review: Review;
@@ -215,8 +214,8 @@ export const pageQuery = graphql`
       edges {
         node {
           id
+          slug
           frontmatter {
-            path
             title
             date
             review {
@@ -229,7 +228,13 @@ export const pageQuery = graphql`
               wifi
             }
             estate
-            thumbnail
+            thumbnail {
+              childImageSharp {
+                fluid(maxWidth: 300) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

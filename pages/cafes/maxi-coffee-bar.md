@@ -1,6 +1,6 @@
 ---
 type: cafe
-path: /cafes/maxi-coffee-bar/
+# path: /cafes/maxi-coffee-bar/
 title: Maxi Coffee Bar
 date: 2019-08-09
 review:

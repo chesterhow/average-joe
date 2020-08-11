@@ -1,6 +1,6 @@
 ---
 type: cafe
-path: /cafes/percolate-coffee/
+# path: /cafes/percolate-coffee/
 title: Percolate Coffee
 date: 2019-03-08
 review:

@@ -5,7 +5,32 @@ module.exports = {
     author: `@chesterhow`,
   },
   plugins: [
+    `gatsby-plugin-sharp`,
+    `gatsby-remark-images`,
+    `gatsby-transformer-sharp`,
+    // {
+    //   resolve: 'gatsby-transformer-remark',
+    //   options: {
+    //     plugins: [
+    //       'gatsby-remark-relative-images',
+    //       {
+    //         resolve: 'gatsby-remark-images',
+    //         options: {
+    //           maxWidth: 100,
+    //         },
+    //       },
+    //     ],
+    //   },
+    // },
     `gatsby-plugin-react-helmet`,
+    {
+      // keep as first gatsby-source-filesystem plugin for gatsby image support
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'assets',
+        path: `${__dirname}/static/assets`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -28,8 +53,22 @@ module.exports = {
         },
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.md`, `.mdx`],
+        gatsbyRemarkPlugins: [
+          `gatsby-remark-relative-images`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              linkImagesToOriginal: false,
+              maxWidth: 1200,
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -44,11 +83,5 @@ module.exports = {
     },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-netlify-cms`,
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        extensions: [`.md`, `.mdx`],
-      },
-    },
   ],
 };

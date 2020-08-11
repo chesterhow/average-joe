@@ -1,6 +1,6 @@
 ---
 type: cafe
-path: /cafes/strangers-reunion/
+# path: /cafes/strangers-reunion/
 title: Strangers' Reunion
 review:
   overall: 76

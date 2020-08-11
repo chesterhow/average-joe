@@ -5,6 +5,7 @@
  */
 
 const path = require(`path`);
+const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
@@ -20,21 +21,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         ) {
           edges {
             node {
+              slug
               frontmatter {
-                path
                 type
-                title
-                review {
-                  overall
-                  coffee
-                  aesthetic
-                  seating
-                  price
-                  food
-                  wifi
-                }
-                estate
-                thumbnail
               }
             }
           }
@@ -53,9 +42,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       .filter(({ node }) => node.frontmatter.type === 'page')
       .forEach(({ node }) => {
         createPage({
-          path: node.frontmatter.path,
+          path: node.slug,
           component: pageTemplate,
-          context: {},
+          context: {
+            slug: node.slug,
+          },
         });
       });
 
@@ -68,13 +59,18 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         index === posts.length - 1 ? posts[0].node : posts[index + 1].node;
 
       createPage({
-        path: node.frontmatter.path,
+        path: node.slug,
         component: postTemplate,
         context: {
           previous,
           next,
+          slug: node.slug,
         },
       });
     });
   });
+};
+
+exports.onCreateNode = ({ node }) => {
+  fmImagesToRelative(node);
 };
