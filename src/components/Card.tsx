@@ -10,7 +10,6 @@ interface CardElementProps {
 const StyledThumbnail = styled.div`
   position: relative;
   grid-area: thumbnail;
-  /* overflow: hidden; */
   transition: opacity 0.2s ease-out;
 `;
 
@@ -104,7 +103,15 @@ const Pale = styled.span`
 `;
 
 interface CardProps {
-  post: {};
+  post: {
+    slug: string;
+    frontmatter: {
+      title: string;
+      estate: string;
+      thumbnail: File;
+      review: Review;
+    };
+  };
   small?: boolean;
 }
 

@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
-import { graphql } from 'gatsby';
-import styled from 'styled-components';
-import Rellax from 'rellax';
+import { graphql, PageProps } from 'gatsby';
+import Img from 'gatsby-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
+import Rellax from 'rellax';
+import styled from 'styled-components';
 
 import Layout from '../components/Layout';
 import Review from '../components/Review';
 import SEO from '../components/seo';
 import Card from '../components/Card';
-import Img from 'gatsby-image';
 
 const StyledPostCover = styled.div`
   ${props => props.theme.pageMaxWidth};
@@ -135,7 +135,23 @@ const formatString = (x: string) => {
     .join(``);
 };
 
-const PostTemplate: React.FC = props => {
+interface PostTemplateProps extends PageProps {
+  data: {
+    mdx: {
+      frontmatter: {
+        title: string;
+        date: Date;
+        review: Review;
+        cover: File;
+        address: string;
+        hours: string;
+      };
+      body: string;
+    };
+  };
+}
+
+const PostTemplate: React.FC<PostTemplateProps> = props => {
   const {
     data: {
       mdx: {
