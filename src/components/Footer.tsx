@@ -102,12 +102,14 @@ const Footer: React.FC = () => {
             <StyledAnchor
               href="https://www.instagram.com/averagejoe.reviews/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               instagram
             </StyledAnchor>
             <StyledAnchor
               href="https://www.facebook.com/averagejoe.sg/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               facebook
             </StyledAnchor>

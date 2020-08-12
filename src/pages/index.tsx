@@ -114,7 +114,7 @@ interface IndexPageProps extends PageProps {
             date: Date;
             review: Review;
             estate: string;
-            thumbnail: string;
+            thumbnail: File;
           };
         };
       }[];

@@ -52,8 +52,8 @@ const Sort: React.FC<SortProps> = props => {
 
   return (
     <StyledSort>
-      <label>Sort: </label>
-      <StyledSelect value={sortBy} onChange={handleChange}>
+      <label htmlFor="sort">Sort: </label>
+      <StyledSelect value={sortBy} onChange={handleChange} id="sort">
         <option value="latest">Latest</option>
         <option value="coffee">Coffee</option>
         <option value="aesthetic">Aesthetic</option>

@@ -104,12 +104,14 @@ const Pale = styled.span`
 
 interface CardProps {
   post: {
+    id: string;
     slug: string;
     frontmatter: {
       title: string;
+      date: Date;
+      review: Review;
       estate: string;
       thumbnail: File;
-      review: Review;
     };
   };
   small?: boolean;

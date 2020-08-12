@@ -3,3 +3,4 @@
  *
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
+require('typeface-lora');

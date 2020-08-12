@@ -33,6 +33,7 @@
     "react-helmet": "^5.2.1",
     "rellax": "^1.12.1",
     "styled-components": "^4.4.1",
+    "typeface-lora": "^0.0.72",
     "typescript": "^3.9.7"
   },
   "devDependencies": {
