@@ -57,8 +57,8 @@ collections:
                 widget: select,
                 options: ['$', '$$', '$$$'],
               },
-              { name: food, label: Food, widget: boolean },
-              { name: wifi, label: Wi-fi, widget: boolean },
+              { name: food, label: Food, widget: boolean, required: false },
+              { name: wifi, label: Wi-fi, widget: boolean, required: false },
             ],
         }
       - { name: estate, label: Estate }
@@ -66,4 +66,4 @@ collections:
       - { name: hours, label: Hours, widget: text }
       - { name: thumbnail, label: Thumbnail, widget: image }
       - { name: cover, label: cover, widget: image }
-      - { name: body, label: Body, widget: markdown }
+      - { name: body, label: Body, widget: markdown, required: false }
