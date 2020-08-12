@@ -7,8 +7,8 @@ public_folder: assets
 
 collections:
   - name: cafes
-    label: pages/cafes
-    folder: cafes
+    label: cafes
+    folder: pages/cafes
     create: true
     fields:
       - { name: title, label: Title }
