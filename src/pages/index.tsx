@@ -8,6 +8,7 @@ import Card from '../components/Card';
 import Sort from '../components/Sort';
 import Review from '../components/Review';
 import Layout from '../components/Layout';
+import Filters from '../components/Filters';
 
 const POSTS_PER_PAGE = 6;
 
@@ -128,9 +129,10 @@ const IndexPage: React.FC<IndexPageProps> = props => {
     data: {
       allMdx: { edges, totalCount },
     },
-    path,
   } = props;
 
+  const [sortField, setSortField] = useState('latest');
+  const [filteredPosts, setFilteredPosts] = useState(edges);
   const [sortedPosts, setSortedPosts] = useState(edges);
   const [postsShown, setPostsShown] = useState(POSTS_PER_PAGE);
 
@@ -138,13 +140,36 @@ const IndexPage: React.FC<IndexPageProps> = props => {
     new Rellax('.rellax');
   }, []);
 
-  const onSortChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const sortField = e.target.value;
+  const onFilterToggle = ({ wifi, food }: { wifi: boolean; food: boolean }) => {
+    const newFilteredPosts = [...edges].filter(a => {
+      let pass = true;
+      if (wifi) {
+        pass = pass && a.node.frontmatter.review.wifi;
+      }
+      if (food) {
+        pass = pass && a.node.frontmatter.review.food;
+      }
+      return pass;
+    });
 
+    setFilteredPosts(newFilteredPosts);
+    sortPosts();
+  };
+
+  const onSortChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setSortField(e.target.value);
+  };
+
+  // Sort posts again when sortField or filteredPosts changes
+  useEffect(() => {
+    sortPosts();
+  }, [sortField, filteredPosts]);
+
+  const sortPosts = () => {
     if (sortField === 'latest') {
-      setSortedPosts(edges);
+      setSortedPosts(filteredPosts);
     } else {
-      const newSortedPosts = [...edges].sort((a, b) => {
+      const newSortedPosts = [...filteredPosts].sort((a, b) => {
         const diff =
           b.node.frontmatter.review[sortField] -
           a.node.frontmatter.review[sortField];
@@ -192,8 +217,8 @@ const IndexPage: React.FC<IndexPageProps> = props => {
         data-rellax-zindex="1"
       >
         <StyledSortBar>
-          <div></div>
-          <Sort path={path} onChange={onSortChange} />
+          <Filters onChange={onFilterToggle} />
+          <Sort onChange={onSortChange} />
         </StyledSortBar>
         <StyledCards>{renderCards()}</StyledCards>
         {postsShown < totalCount && (
