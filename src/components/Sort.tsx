@@ -4,9 +4,9 @@ import ArrowIcon from '../assets/images/arrow-down.svg';
 
 const StyledSort = styled.div`
   position: relative;
+  padding: 0.5rem 1rem;
   border-left: 3px solid ${props => props.theme.coral};
   color: ${props => props.theme.coral};
-  padding: 0.5rem 1rem;
 `;
 
 const StyledSelect = styled.select`

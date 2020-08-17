@@ -5,6 +5,7 @@ const StyledFilters = styled.div`
   display: block;
   width: 100%;
   padding: 0.5rem 1rem;
+  border-left: 3px solid ${props => props.theme.coral};
 `;
 
 const StyledCheckbox = styled.label`
