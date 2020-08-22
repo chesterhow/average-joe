@@ -1,4 +1,5 @@
 ---
+type: cafe
 title: Double Up Coffee
 date: 2020-08-22T03:33:45.119Z
 review:
@@ -8,6 +9,7 @@ review:
   seating: 2
   price: $
   food: true
+  wifi: false
 estate: Bugis
 address: |-
   7 Jln Klapa
@@ -15,21 +17,21 @@ address: |-
 hours: |-
   Mon — Sun: 10am — 6pm
   Tues: Closed
-thumbnail: assets/double-up-coffee-thumb.jpg
-cover: assets/double-up-coffee-cover.jpg
+thumbnail: /assets/double-up-coffee-thumb.jpg
+cover: /assets/double-up-coffee-cover.jpg
 ---
-![](assets/double-up-coffee-1.jpg)
+![](../../static/assets/double-up-coffee-1.jpg)
 
-![](assets/double-up-coffee-2.jpg)
+![](../../static/assets/double-up-coffee-2.jpg)
 
-![](assets/double-up-coffee-3.jpg)
+![](../../static/assets/double-up-coffee-3.jpg)
 
-![](assets/double-up-coffee-4.jpg)
+![](../../static/assets/double-up-coffee-4.jpg)
 
-![](assets/double-up-coffee-5.jpg)
+![](../../static/assets/double-up-coffee-5.jpg)
 
-![](assets/double-up-coffee-6.jpg)
+![](../../static/assets/double-up-coffee-6.jpg)
 
-![](assets/double-up-coffee-7.jpg)
+![](../../static/assets/double-up-coffee-7.jpg)
 
-![](assets/double-up-coffee-8.jpg)
+![](../../static/assets/double-up-coffee-8.jpg)
