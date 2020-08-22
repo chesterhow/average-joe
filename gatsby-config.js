@@ -3,6 +3,7 @@ module.exports = {
     title: `Average Joe Coffeehouse Reviews`,
     description: `Everything you’ve ever wanted to know about coffeehouses in Singapore.`,
     author: `@chesterhow`,
+    siteUrl: `https://averagejoe.reviews`,
   },
   plugins: [
     `gatsby-plugin-sharp`,
@@ -74,5 +75,6 @@ module.exports = {
         trackingId: 'UA-88934230-3',
       },
     },
+    `gatsby-plugin-sitemap`,
   ],
 };
