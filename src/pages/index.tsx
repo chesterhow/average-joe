@@ -1,15 +1,12 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect } from 'react';
 import { graphql, PageProps } from 'gatsby';
 import styled from 'styled-components';
 import Rellax from 'rellax';
 
 import SEO from '../components/seo';
-import Card from '../components/Card';
-import Sort from '../components/Sort';
 import Review from '../components/Review';
 import Layout from '../components/Layout';
-
-const POSTS_PER_PAGE = 6;
+import CafeBrowser from '../components/CafeBrowser';
 
 const StyledLanding = styled.div`
   ${props => props.theme.pageMaxWidth};
@@ -48,60 +45,6 @@ const StyledReview = styled(Review)`
   }
 `;
 
-const StyledBrowser = styled.div`
-  ${props => props.theme.pageMaxWidth};
-  margin-top: 3rem;
-  background: ${props => props.theme.goldPale};
-
-  @media (max-width: ${props => props.theme.breakMedium}) {
-    margin-top: 2rem;
-  }
-
-  @media (max-width: ${props => props.theme.breakSmall}) {
-    margin-top: 1rem;
-  }
-`;
-
-const StyledSortBar = styled.div`
-  display: grid;
-  grid-template-columns: 1fr auto;
-  border: 3px solid ${props => props.theme.coral};
-  color: ${props => props.theme.coral};
-
-  @media (max-width: ${props => props.theme.breakMedium}) {
-    margin-bottom: 0.5rem;
-  }
-`;
-
-const StyledCards = styled.div`
-  display: grid;
-
-  @media (max-width: ${props => props.theme.breakMedium}) {
-    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-    gap: 0.5rem;
-  }
-`;
-
-const StyledMoreButton = styled.button`
-  width: 100%;
-  margin-top: 0.5rem;
-  padding: 0.25rem 1.5rem;
-  border: 3px solid ${props => props.theme.coral};
-  background: ${props => props.theme.coral};
-  color: ${props => props.theme.goldPale};
-  cursor: pointer;
-  transition: opacity 0.2s ease-out;
-
-  &:focus {
-    outline: 0;
-  }
-
-  &:hover,
-  &:focus {
-    opacity: 0.8;
-  }
-`;
-
 interface IndexPageProps extends PageProps {
   data: {
     allMdx: {
@@ -128,49 +71,11 @@ const IndexPage: React.FC<IndexPageProps> = props => {
     data: {
       allMdx: { edges, totalCount },
     },
-    path,
   } = props;
-
-  const [sortedPosts, setSortedPosts] = useState(edges);
-  const [postsShown, setPostsShown] = useState(POSTS_PER_PAGE);
 
   useEffect(() => {
     new Rellax('.rellax');
   }, []);
-
-  const onSortChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const sortField = e.target.value;
-
-    if (sortField === 'latest') {
-      setSortedPosts(edges);
-    } else {
-      const newSortedPosts = [...edges].sort((a, b) => {
-        const diff =
-          b.node.frontmatter.review[sortField] -
-          a.node.frontmatter.review[sortField];
-
-        if (diff === 0) {
-          // Use overall score for tiebreaker
-          return (
-            b.node.frontmatter.review.overall -
-            a.node.frontmatter.review.overall
-          );
-        }
-        return diff;
-      });
-      setSortedPosts(newSortedPosts);
-    }
-  };
-
-  const onMoreClick = () => {
-    setPostsShown(postsShown + POSTS_PER_PAGE);
-  };
-
-  const renderCards = useCallback(() => {
-    return sortedPosts
-      .slice(0, postsShown)
-      .map(edge => <Card key={edge.node.id} post={edge.node} />);
-  }, [postsShown, sortedPosts]);
 
   return (
     <Layout>
@@ -186,20 +91,7 @@ const IndexPage: React.FC<IndexPageProps> = props => {
           dataRellaxZindex="1"
         />
       </StyledLanding>
-      <StyledBrowser
-        className="rellax"
-        data-rellax-speed="0"
-        data-rellax-zindex="1"
-      >
-        <StyledSortBar>
-          <div></div>
-          <Sort path={path} onChange={onSortChange} />
-        </StyledSortBar>
-        <StyledCards>{renderCards()}</StyledCards>
-        {postsShown < totalCount && (
-          <StyledMoreButton onClick={onMoreClick}>More ☕️</StyledMoreButton>
-        )}
-      </StyledBrowser>
+      <CafeBrowser edges={edges} totalCount={totalCount} />
     </Layout>
   );
 };

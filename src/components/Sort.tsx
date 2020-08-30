@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import ArrowIcon from '../assets/images/arrow-down.svg';
 
 const StyledSort = styled.div`
   position: relative;
+  padding: 0.5rem 1rem;
   border-left: 3px solid ${props => props.theme.coral};
   color: ${props => props.theme.coral};
-  padding: 0.5em 1em;
+
+  @media (max-width: ${props => props.theme.breakSmall}) {
+    border-left: none;
+    text-align: right;
+  }
 `;
 
 const StyledSelect = styled.select`
@@ -32,28 +37,16 @@ const StyledArrowIcon = styled(ArrowIcon)`
 `;
 
 interface SortProps {
-  path: string;
   onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
 }
 
 const Sort: React.FC<SortProps> = props => {
-  const { path, onChange } = props;
-
-  const getFromPath = () => {
-    return path.split('/')[1];
-  };
-
-  const [sortBy, setSortBy] = useState(getFromPath());
-
-  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setSortBy(e.target.value);
-    onChange(e);
-  };
+  const { onChange } = props;
 
   return (
     <StyledSort>
       <label htmlFor="sort">Sort: </label>
-      <StyledSelect value={sortBy} onChange={handleChange} id="sort">
+      <StyledSelect onChange={onChange} id="sort">
         <option value="latest">Latest</option>
         <option value="coffee">Coffee</option>
         <option value="aesthetic">Aesthetic</option>
