@@ -7,6 +7,11 @@ const StyledSort = styled.div`
   padding: 0.5rem 1rem;
   border-left: 3px solid ${props => props.theme.coral};
   color: ${props => props.theme.coral};
+
+  @media (max-width: ${props => props.theme.breakSmall}) {
+    border-left: none;
+    text-align: right;
+  }
 `;
 
 const StyledSelect = styled.select`

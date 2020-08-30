@@ -30,6 +30,10 @@ const StyledSortBar = styled.div`
   @media (max-width: ${props => props.theme.breakMedium}) {
     margin-bottom: 0.5rem;
   }
+
+  @media (max-width: ${props => props.theme.breakSmall}) {
+    display: block;
+  }
 `;
 
 const StyledCards = styled.div`
@@ -150,7 +154,7 @@ const CafeBrowser: React.FC<CafeBrowserProps> = props => {
       data-rellax-zindex="1"
     >
       <StyledSortBar>
-        <div></div>
+        <div className="filler" />
         <Filters onChange={onFilterToggle} />
         <Sort onChange={onSortChange} />
       </StyledSortBar>
