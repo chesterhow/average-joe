@@ -52,12 +52,12 @@ const StyledReview = styled(Review)`
 `;
 
 type StyledPostBodyProps = {
-  masonry: boolean;
+  columns: boolean;
 };
 
 const StyledPostBody = styled.div<StyledPostBodyProps>`
   ${props =>
-    props.masonry ? props.theme.pageMaxWidth : props.theme.contentMaxWidth};
+    props.columns ? props.theme.pageMaxWidth : props.theme.contentMaxWidth};
   text-align: left;
 
   em {
@@ -151,7 +151,7 @@ interface PostTemplateProps extends PageProps {
         cover: File;
         address: string;
         hours: string;
-        masonry: boolean;
+        columns: boolean;
       };
       body: string;
     };
@@ -162,7 +162,7 @@ const PostTemplate: React.FC<PostTemplateProps> = props => {
   const {
     data: {
       mdx: {
-        frontmatter: { title, cover, date, review, address, hours, masonry },
+        frontmatter: { title, cover, date, review, address, hours, columns },
         body,
       },
     },
@@ -201,7 +201,7 @@ const PostTemplate: React.FC<PostTemplateProps> = props => {
           <StyledPostDate>{date}</StyledPostDate>
           <StyledReview review={review} />
         </StyledPostContentInner>
-        <StyledPostBody masonry={masonry}>
+        <StyledPostBody columns={columns}>
           <MDXRenderer>{body}</MDXRenderer>
         </StyledPostBody>
         <StyledInfoSection>
@@ -263,7 +263,7 @@ export const pageQuery = graphql`
         }
         address
         hours
-        masonry
+        columns
       }
     }
   }

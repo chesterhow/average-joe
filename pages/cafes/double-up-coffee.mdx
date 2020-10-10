@@ -19,27 +19,26 @@ hours: |-
   Tues: Closed
 thumbnail: /assets/double-up-coffee-thumb.jpg
 cover: /assets/double-up-coffee-cover.jpg
-masonry: true
+columns: true
 ---
 
-import Masonry from '../../src/components/Masonry.tsx';
+import Column from '../../src/components/Column.tsx';
 
-<Masonry>
+<Column left={true}>
 
   ![](../../static/assets/double-up-coffee-1.jpg)
+  ![](../../static/assets/double-up-coffee-5.jpg)
+  ![](../../static/assets/double-up-coffee-3.jpg)
+  ![](../../static/assets/double-up-coffee-8.jpg)
+
+</Column>
+<Column left={false}>
 
   ![](../../static/assets/double-up-coffee-2.jpg)
-
-  ![](../../static/assets/double-up-coffee-3.jpg)
-
-  ![](../../static/assets/double-up-coffee-4.jpg)
-
-  ![](../../static/assets/double-up-coffee-5.jpg)
-
   ![](../../static/assets/double-up-coffee-6.jpg)
-
+  ![](../../static/assets/double-up-coffee-4.jpg)
   ![](../../static/assets/double-up-coffee-7.jpg)
 
-  ![](../../static/assets/double-up-coffee-8.jpg)
-</Masonry>
+</Column>
+
 
