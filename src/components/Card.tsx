@@ -14,6 +14,7 @@ const StyledThumbnail = styled.div`
 `;
 
 const StyledTitle = styled.h3`
+  flex-grow: 1;
   margin: 0;
   color: ${props => props.theme.coral};
   overflow: hidden;
@@ -66,6 +67,8 @@ const StyledCard = styled(Link)<CardElementProps>`
 
 const StyledContent = styled.div<CardElementProps>`
   grid-area: content;
+  display: flex;
+  flex-direction: column;
   padding: 20px;
   border-left: 3px solid ${props => props.theme.coral};
   overflow: auto;
