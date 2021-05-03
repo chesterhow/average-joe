@@ -28,6 +28,7 @@
     "gatsby-remark-relative-images": "^0.3.0",
     "gatsby-source-filesystem": "^2.1.39",
     "gatsby-transformer-sharp": "^2.3.6",
+    "geolib": "^3.3.1",
     "netlify-cms-app": "^2.9.7",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",

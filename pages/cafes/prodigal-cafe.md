@@ -14,12 +14,15 @@ estate: Tai Seng
 address: |-
   81 MacPherson Lane
   #01-55
-  Singapore 169355
+  Singapore 360081
 thumbnail: /assets/prodigal-cafe-thumb.jpg
 cover: /assets/prodigal-cafe-cover.jpg
 hours: |-
   Thurs – Tues: 10am – 6pm
   Wed: Closed
+coords:
+  latitude: 1.3321694
+  longitude: 103.8862967
 ---
 
 Tucked away in a little corner of Tai Seng, Prodigal Cafe has been gaining popularity among many café enthusiasts<!--more-->. If you find that the name of this place rings a bell, it might be that you’ve already been acquainted with their sister outlet, Prodigal Roasters, which used to be in Ang Mo Kio. Unfortunately, Prodigal Roasters is no longer in operation as of earlier this year. But fret not! Prodigal Cafe serves the same great coffee, and features a revamped food menu!

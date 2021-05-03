@@ -20,6 +20,9 @@ cover: /assets/tiong-hoe-specialty-coffee-cover.jpg
 hours: |-
   Mon – Fri: 8:30am – 5:30pm
   Sat & Sun: 9am – 4pm
+coords:
+  latitude: 1.2909092
+  longitude: 103.8031076
 ---
 
 Blending in seamlessly among the ground-level HDB shops of Stirling Road, Tiong Hoe Specialty Coffee can be an easy one to miss. However, its humble storefront belies some of the best coffee that I’ve tasted.

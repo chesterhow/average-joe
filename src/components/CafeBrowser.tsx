@@ -1,5 +1,6 @@
 import React, { useCallback, useState, useEffect } from 'react';
 import styled from 'styled-components';
+import { getDistance } from 'geolib';
 
 import Card from './Card';
 import Sort from './Sort';
@@ -33,6 +34,19 @@ const StyledSortBar = styled.div`
 
   @media (max-width: ${props => props.theme.breakSmall}) {
     display: block;
+  }
+`;
+
+const StyledWarning = styled.div`
+  padding: 0.3rem;
+  border-bottom: 3px solid ${props => props.theme.coral};
+  background: ${props => props.theme.black};
+  color: ${props => props.theme.white};
+  text-align: center;
+
+  @media (max-width: ${props => props.theme.breakMedium}) {
+    margin: -0.5rem 0 0.5rem;
+    border: none;
   }
 `;
 
@@ -76,6 +90,10 @@ interface CafeBrowserProps {
         review: Review;
         estate: string;
         thumbnail: File;
+        coords: {
+          latitude: number;
+          longitude: number;
+        };
       };
     };
   }[];
@@ -89,6 +107,23 @@ const CafeBrowser: React.FC<CafeBrowserProps> = props => {
   const [filteredPosts, setFilteredPosts] = useState(edges);
   const [sortedPosts, setSortedPosts] = useState(edges);
   const [postsShown, setPostsShown] = useState(POSTS_PER_PAGE);
+  const [userLocation, setUserLocation] = useState<GeolocationPosition | null>(
+    null
+  );
+  const [shouldGetLocation, setShouldGetLocation] = useState<boolean>(false);
+  const [deniedLocation, setDeniedLocation] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (shouldGetLocation) {
+      navigator.geolocation.getCurrentPosition(
+        position => setUserLocation(position),
+        error => {
+          console.error(error);
+          setDeniedLocation(true);
+        }
+      );
+    }
+  }, [shouldGetLocation]);
 
   const onMoreClick = () => {
     setPostsShown(postsShown + POSTS_PER_PAGE);
@@ -117,6 +152,8 @@ const CafeBrowser: React.FC<CafeBrowserProps> = props => {
   const sortPosts = () => {
     if (sortField === 'latest') {
       setSortedPosts(filteredPosts);
+    } else if (sortField === 'near me') {
+      setShouldGetLocation(true);
     } else {
       const newSortedPosts = [...filteredPosts].sort((a, b) => {
         const diff =
@@ -141,6 +178,47 @@ const CafeBrowser: React.FC<CafeBrowserProps> = props => {
     sortPosts();
   }, [sortField, filteredPosts]);
 
+  useEffect(() => {
+    if (sortField === 'near me') {
+      const postsWithDistance = filteredPosts.map(edge => {
+        if (userLocation === null) {
+          return {
+            ...edge,
+            node: {
+              ...edge.node,
+              distance: -1,
+            },
+          };
+        }
+
+        const userCoords = {
+          latitude: userLocation.coords.latitude,
+          longitude: userLocation.coords.longitude,
+        };
+
+        const cafeCoords = {
+          latitude: edge.node.frontmatter.coords?.latitude || 0,
+          longitude: edge.node.frontmatter.coords?.longitude || 0,
+        };
+
+        const distance = getDistance(userCoords, cafeCoords);
+
+        return {
+          ...edge,
+          node: {
+            ...edge.node,
+            distance,
+          },
+        };
+      });
+
+      const sorted = postsWithDistance.sort(
+        (prevPost, nextPost) => prevPost.node.distance - nextPost.node.distance
+      );
+      setSortedPosts(sorted);
+    }
+  }, [userLocation, sortField, filteredPosts]);
+
   const renderCards = useCallback(() => {
     return sortedPosts
       .slice(0, postsShown)
@@ -158,6 +236,11 @@ const CafeBrowser: React.FC<CafeBrowserProps> = props => {
         <Filters onChange={onFilterToggle} />
         <Sort onChange={onSortChange} />
       </StyledSortBar>
+      {sortField === 'near me' && deniedLocation && (
+        <StyledWarning>
+          💡 Location access needed to find cafes near you
+        </StyledWarning>
+      )}
       <StyledCards>{renderCards()}</StyledCards>
       {postsShown < totalCount && (
         <StyledMoreButton onClick={onMoreClick}>More ☕️</StyledMoreButton>

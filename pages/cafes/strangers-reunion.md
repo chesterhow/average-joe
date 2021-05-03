@@ -19,6 +19,9 @@ cover: /assets/strangers-reunion-cover.jpg
 hours: |-
   Wed – Mon: 9am – 10pm
   Tues: Closed
+coords:
+  latitude: 1.2769075
+  longitude: 103.8363802
 ---
 
 Just a stone’s throw away from Outram Park MRT station lies Strangers’ Reunion<!--more-->. The café was opened by Ryan Kieran Tan, who is well-known to have many national and international barista championship titles under his belt. With accolades like these, you know you’re in for some good coffee.

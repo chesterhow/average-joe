@@ -48,6 +48,7 @@ const Sort: React.FC<SortProps> = props => {
       <label htmlFor="sort">Sort: </label>
       <StyledSelect onChange={onChange} id="sort">
         <option value="latest">Latest</option>
+        <option value="near me">Near me</option>
         <option value="coffee">Coffee</option>
         <option value="aesthetic">Aesthetic</option>
         <option value="seating">Seating</option>

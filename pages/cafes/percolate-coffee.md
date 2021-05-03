@@ -20,6 +20,9 @@ cover: /assets/percolate-coffee-cover.jpg
 hours: |-
   Mon – Fri: 10:30am – 9:30pm
   Sat – Sun: 9am – 9:30pm
+coords:
+  latitude: 1.3281550
+  longitude: 103.9352208
 ---
 
 Tucked away in the heartlands of Bedok, in the far east of our little island, is Percolate Coffee<!--more-->. Along the ground-level units of Block 136, its unassuming storefront speaks little of what one can expect inside — a café-oasis offering respite, chill vibes and a quality cup of joe.

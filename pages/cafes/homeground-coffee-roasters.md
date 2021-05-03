@@ -20,6 +20,9 @@ hours: |-
   Mon – Fri: 8am – 5pm
   Sat – Sun: 9am – 6pm
   Wed: Closed
+coords:
+  latitude: 1.3064029
+  longitude: 103.9047884
 ---
 
 The eastern side of our island is full of wonderful and amazing things, is probably a sentiment you would have heard from all your east-dwelling friends<!--more-->. And on that list you will definitely find Homeground Coffee Roasters. Homeground occupies a single shophouse unit, a short walk away from 112 Katong mall, and they serve some of the best coffee I’ve ever had. Certainly, the quality brews served at Homeground gives our east-side coffee-lovers legitimate bragging rights about having great coffee in their home domain.

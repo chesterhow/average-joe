@@ -58,6 +58,10 @@ interface IndexPageProps extends PageProps {
             review: Review;
             estate: string;
             thumbnail: File;
+            coords: {
+              latitude: number;
+              longitude: number;
+            };
           };
         };
       }[];
@@ -127,6 +131,10 @@ export const pageQuery = graphql`
                   ...GatsbyImageSharpFluid
                 }
               }
+            }
+            coords {
+              latitude
+              longitude
             }
           }
         }
