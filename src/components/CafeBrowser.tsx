@@ -37,6 +37,19 @@ const StyledSortBar = styled.div`
   }
 `;
 
+const StyledWarning = styled.div`
+  padding: 0.3rem;
+  border-bottom: 3px solid ${props => props.theme.coral};
+  background: ${props => props.theme.black};
+  color: ${props => props.theme.white};
+  text-align: center;
+
+  @media (max-width: ${props => props.theme.breakMedium}) {
+    margin: -0.5rem 0 0.5rem;
+    border: none;
+  }
+`;
+
 const StyledCards = styled.div`
   display: grid;
 
@@ -98,12 +111,16 @@ const CafeBrowser: React.FC<CafeBrowserProps> = props => {
     null
   );
   const [shouldGetLocation, setShouldGetLocation] = useState<boolean>(false);
+  const [deniedLocation, setDeniedLocation] = useState<boolean>(false);
 
   useEffect(() => {
     if (shouldGetLocation) {
       navigator.geolocation.getCurrentPosition(
         position => setUserLocation(position),
-        console.error
+        error => {
+          console.error(error);
+          setDeniedLocation(true);
+        }
       );
     }
   }, [shouldGetLocation]);
@@ -219,6 +236,11 @@ const CafeBrowser: React.FC<CafeBrowserProps> = props => {
         <Filters onChange={onFilterToggle} />
         <Sort onChange={onSortChange} />
       </StyledSortBar>
+      {sortField === 'near me' && deniedLocation && (
+        <StyledWarning>
+          💡 Location access needed to find cafes near you
+        </StyledWarning>
+      )}
       <StyledCards>{renderCards()}</StyledCards>
       {postsShown < totalCount && (
         <StyledMoreButton onClick={onMoreClick}>More ☕️</StyledMoreButton>
