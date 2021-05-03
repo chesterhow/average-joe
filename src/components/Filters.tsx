@@ -19,6 +19,7 @@ const StyledCheckbox = styled.label`
   padding-right: 1rem;
   line-height: 1;
   cursor: pointer;
+  white-space: nowrap;
 
   span {
     padding-left: 0.4rem;
