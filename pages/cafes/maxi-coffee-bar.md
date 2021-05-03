@@ -21,6 +21,9 @@ hours: |-
   Mon – Fri: 8am – 5pm
   Sat: 9:30am – 6pm
   Sun: Closed
+coords:
+  latitude: 1.2823369
+  longitude: 103.8463263
 ---
 
 Look closely, or you might just miss it… Of all the cafes in the CBD area, Maxi Coffee Bar is perhaps the tiniest of them all<!--more-->. Named after the owner’s pet dog, Maxi, the cafe is situated in Emerald Garden along the conserved shophouses of Telok Ayer.

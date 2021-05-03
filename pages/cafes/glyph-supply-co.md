@@ -20,6 +20,9 @@ cover: /assets/glyph-supply-co-cover.jpg
 hours: |-
   Mon – Fri: 8:30am – 7:30pm
   Sat – Sun: 10am – 7:30pm
+coords:
+  latitude: 1.3001927
+  longitude: 103.8373625
 ---
 
 In town, where the malls are huge and the crowds are thronging, shopping can feel like a sport<!--more-->. After an exhausting day for both us and our wallets, what we really long for is a good and affordable cup of coffee. For the longest time, that in itself has proven to be a huge challenge, but not any more! Among the slew of new shops in the recently remodelled TripleOne Somerset, is Glyph Supply Co. — the newest café and roaster in town.

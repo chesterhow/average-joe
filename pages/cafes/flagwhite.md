@@ -20,6 +20,9 @@ hours: |-
   Mon – Fri: 10am – 9pm
   Sat – Sun: 9am – 9pm
   Tues: Closed
+coords:
+  latitude: 1.3408741
+  longitude: 103.7724602
 ---
 
 When I heard that a new café had opened up in Beauty World, my very own neighbourhood, I couldnʼt wait to check it out<!--more-->. I rallied my gang, headed over, and we found ourselves absolutely wowed by what we saw. FlagWhite has everything you could ask for in a café: great coffee, plenty of food choices and itʼs not too crowded, even on weekends! For now, at least.

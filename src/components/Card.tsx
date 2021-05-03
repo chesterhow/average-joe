@@ -116,6 +116,7 @@ interface CardProps {
       estate: string;
       thumbnail: File;
     };
+    distance?: number;
   };
   small?: boolean;
 }
@@ -125,9 +126,20 @@ const Card: React.FC<CardProps> = props => {
     post: {
       slug,
       frontmatter: { title, estate, thumbnail, review },
+      distance,
     },
     small,
   } = props;
+
+  const getDistanceString = () => {
+    if (distance) {
+      if (distance >= 1000) {
+        return `${(Math.round(distance / 100) / 10).toFixed(1)} km`;
+      } else {
+        return `${Math.round(distance / 100) * 100} m`;
+      }
+    }
+  };
 
   return (
     <StyledCard to={`/${slug}`} small={small}>
@@ -142,7 +154,10 @@ const Card: React.FC<CardProps> = props => {
       </StyledThumbnail>
       <StyledContent small={small}>
         <StyledTitle>{title}</StyledTitle>
-        <StyledEstate>{estate}</StyledEstate>
+        <StyledEstate>
+          {estate}
+          {distance && ` \u00B7 ${getDistanceString()}`}
+        </StyledEstate>
         <StyledRating>
           {review.price}
           <Pale>{'$'.repeat(3 - review.price.length)}</Pale>

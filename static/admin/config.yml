@@ -67,3 +67,13 @@ collections:
       - { name: thumbnail, label: Thumbnail, widget: image }
       - { name: cover, label: cover, widget: image }
       - { name: body, label: Body, widget: markdown, required: false }
+      - {
+          nam: coords,
+          label: Coords,
+          widget: object,
+          fields:
+            [
+              { name: latitude, widget: number, valueType: float },
+              { name: longitude, widget: number, valueType: float },
+            ],
+        }

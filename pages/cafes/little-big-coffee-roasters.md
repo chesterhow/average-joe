@@ -20,6 +20,9 @@ cover: /assets/little-big-coffee-roasters-cover.jpg
 hours: |-
   Mon – Fri: 8am – 5pm
   Sat – Sun: Closed
+coords:
+  latitude: 1.3022458
+  longitude: 103.7931755
 ---
 
 Hidden away in the heart of the Singapore’s biomedical hub, Biopolis, lies Little Big Coffee Roasters.<!--more--> Previously known as Drury Lane Coffee Roasters, the cafe has been faithfully serving and providing good yet affordable coffee to all; a definite favourite of many in the area.
