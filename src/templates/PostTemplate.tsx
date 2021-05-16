@@ -195,6 +195,10 @@ const PostTemplate: React.FC<PostTemplateProps> = props => {
   }, []);
 
   const openMapApp = (addr: string) => {
+    if (typeof navigator == 'undefined') {
+      return;
+    }
+
     const isAppleOS = navigator.platform.match(/(iPhone|iPod|iPad)/i) !== null;
 
     // Open Apple Maps if OS is iOS
