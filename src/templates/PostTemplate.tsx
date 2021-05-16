@@ -117,6 +117,15 @@ const StyledInfo = styled.div`
   }
 `;
 
+const StyledAddress = styled.a`
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: ${props => props.theme.coral};
+  }
+`;
+
 const StyledMoreSection = styled.div`
   ${props => props.theme.pageMaxWidth};
 
@@ -185,6 +194,22 @@ const PostTemplate: React.FC<PostTemplateProps> = props => {
     new Rellax('.rellax');
   }, []);
 
+  const openMapApp = (addr: string) => {
+    if (typeof navigator == 'undefined') {
+      return;
+    }
+
+    const isAppleOS = navigator.platform.match(/(iPhone|iPod|iPad)/i) !== null;
+
+    // Open Apple Maps if OS is iOS
+    if (isAppleOS) {
+      return `maps:?daddr=${addr}`;
+    }
+
+    // Open Google Maps app/web on other platforms
+    return `https://www.google.com/maps/dir/?api=1&destination=${addr}`;
+  };
+
   return (
     <Layout>
       <SEO title={title} />
@@ -207,7 +232,9 @@ const PostTemplate: React.FC<PostTemplateProps> = props => {
         <StyledInfoSection>
           <StyledInfo>
             <span>ADDRESS</span>
-            <div
+            <StyledAddress
+              href={openMapApp(address)}
+              target="_system"
               dangerouslySetInnerHTML={{
                 __html: formatString(address),
               }}
