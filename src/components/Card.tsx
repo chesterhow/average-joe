@@ -111,10 +111,10 @@ interface CardProps {
     slug: string;
     frontmatter: {
       title: string;
-      date: Date;
-      review: Review;
+      date?: Date;
+      review?: Review;
       estate: string;
-      thumbnail: File;
+      thumbnail?: File;
     };
     distance?: number;
   };
@@ -143,30 +143,34 @@ const Card: React.FC<CardProps> = props => {
 
   return (
     <StyledCard to={`/${slug}`} small={small}>
-      <StyledThumbnail>
-        <Img
-          fluid={{
-            ...thumbnail.childImageSharp.fluid,
-            aspectRatio: 3 / 2,
-          }}
-          alt={title}
-        />
-      </StyledThumbnail>
+      {thumbnail && (
+        <StyledThumbnail>
+          <Img
+            fluid={{
+              ...thumbnail.childImageSharp.fluid,
+              aspectRatio: 3 / 2,
+            }}
+            alt={title}
+          />
+        </StyledThumbnail>
+      )}
       <StyledContent small={small}>
         <StyledTitle>{title}</StyledTitle>
         <StyledEstate>
           {estate}
           {distance && ` \u00B7 ${getDistanceString()}`}
         </StyledEstate>
-        <StyledRating>
-          {review.price}
-          <Pale>{'$'.repeat(3 - review.price.length)}</Pale>
-          {review.wifi && ' · Wi-Fi'}
-          {review.food && ' · Food'}
-          <br />
-          Coffee {review.coffee}/5 &middot; Aesthetic {review.aesthetic}/5
-          &middot; Seating {review.seating}/5
-        </StyledRating>
+        {review && (
+          <StyledRating>
+            {review.price}
+            <Pale>{'$'.repeat(3 - review.price.length)}</Pale>
+            {review.wifi && ' · Wi-Fi'}
+            {review.food && ' · Food'}
+            <br />
+            Coffee {review.coffee}/5 &middot; Aesthetic {review.aesthetic}/5
+            &middot; Seating {review.seating}/5
+          </StyledRating>
+        )}
       </StyledContent>
     </StyledCard>
   );
