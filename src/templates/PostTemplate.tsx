@@ -15,6 +15,24 @@ const StyledPostCover = styled.div`
   position: relative;
 `;
 
+const StyledNoThumbnail = styled.div`
+  width: 100%;
+  padding-bottom: calc(100% * 2 / 5);
+  background: ${props => props.theme.black};
+
+  @media (max-width: ${props => props.theme.breakMedium}) {
+    padding-bottom: calc(100% * 9 / 16);
+  }
+
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+  }
+`;
+
 const StyledPostContent = styled.div`
   margin-bottom: 2rem;
   text-align: center;
@@ -52,7 +70,7 @@ const StyledReview = styled(Review)`
 `;
 
 type StyledPostBodyProps = {
-  columns: boolean;
+  columns?: boolean;
 };
 
 const StyledPostBody = styled.div<StyledPostBodyProps>`
@@ -150,22 +168,45 @@ const formatString = (x: string) => {
     .join(``);
 };
 
-interface PostTemplateProps extends PageProps {
-  data: {
-    mdx: {
-      frontmatter: {
-        title: string;
-        date: Date;
-        review: Review;
-        cover: File;
-        address: string;
-        hours: string;
-        columns: boolean;
-      };
-      body: string;
+interface PageQueryProps {
+  mdx: {
+    frontmatter: {
+      title: string;
+      date?: Date;
+      review?: Review;
+      cover?: File;
+      address: string;
+      hours: string;
+      columns?: boolean;
+    };
+    body: string;
+  };
+}
+
+interface PageContextProps {
+  previous: {
+    slug: string;
+    frontmatter: {
+      type: string;
+      title: string;
+      review?: Review;
+      thumbnail?: File;
+      estate: string;
+    };
+  };
+  next: {
+    slug: string;
+    frontmatter: {
+      type: string;
+      title: string;
+      review?: Review;
+      thumbnail?: File;
+      estate: string;
     };
   };
 }
+
+type PostTemplateProps = PageProps<PageQueryProps, PageContextProps>;
 
 const PostTemplate: React.FC<PostTemplateProps> = props => {
   const {
@@ -180,12 +221,12 @@ const PostTemplate: React.FC<PostTemplateProps> = props => {
 
   const sources = [
     {
-      ...cover.childImageSharp.fluid,
+      ...cover?.childImageSharp.fluid,
       media: `(max-width: 768px)`,
       aspectRatio: 16 / 9,
     },
     {
-      ...cover.childImageSharp.fluid,
+      ...cover?.childImageSharp.fluid,
       aspectRatio: 5 / 2,
     },
   ];
@@ -214,7 +255,13 @@ const PostTemplate: React.FC<PostTemplateProps> = props => {
     <Layout>
       <SEO title={title} />
       <StyledPostCover className="rellax" data-rellax-speed="-2">
-        <Img fluid={sources} alt={title} />
+        {cover ? (
+          <Img fluid={sources} alt={title} />
+        ) : (
+          <StyledNoThumbnail>
+            <h1>☕️</h1>
+          </StyledNoThumbnail>
+        )}
       </StyledPostCover>
       <StyledPostContent
         className="rellax"
@@ -223,7 +270,7 @@ const PostTemplate: React.FC<PostTemplateProps> = props => {
       >
         <StyledPostContentInner>
           <StyledPostTitle>{title}</StyledPostTitle>
-          <StyledPostDate>{date}</StyledPostDate>
+          <StyledPostDate>{date ?? 'Unreviewed'}</StyledPostDate>
           <StyledReview review={review} />
         </StyledPostContentInner>
         <StyledPostBody columns={columns}>

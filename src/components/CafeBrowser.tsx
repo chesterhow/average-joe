@@ -86,10 +86,10 @@ interface CafeBrowserProps {
       slug: string;
       frontmatter: {
         title: string;
-        date: Date;
-        review: Review;
+        date?: Date;
+        review?: Review;
         estate: string;
-        thumbnail: File;
+        thumbnail?: File;
         coords: {
           latitude: number;
           longitude: number;
@@ -129,14 +129,17 @@ const CafeBrowser: React.FC<CafeBrowserProps> = props => {
     setPostsShown(postsShown + POSTS_PER_PAGE);
   };
 
-  const onFilterToggle = ({ wifi, food }: { wifi: boolean; food: boolean }) => {
+  const onFilterToggle = (reviewed: boolean, wifi: boolean, food: boolean) => {
     const newFilteredPosts = [...edges].filter(a => {
       let pass = true;
+      if (reviewed) {
+        pass = pass && a.node.frontmatter.review != null;
+      }
       if (wifi) {
-        pass = pass && a.node.frontmatter.review.wifi;
+        pass = pass && (a.node.frontmatter.review?.wifi ?? false);
       }
       if (food) {
-        pass = pass && a.node.frontmatter.review.food;
+        pass = pass && (a.node.frontmatter.review?.food ?? false);
       }
       return pass;
     });
@@ -149,13 +152,19 @@ const CafeBrowser: React.FC<CafeBrowserProps> = props => {
     setSortField(e.target.value);
   };
 
-  const sortPosts = () => {
+  const sortPosts = useCallback(() => {
     if (sortField === 'latest') {
       setSortedPosts(filteredPosts);
     } else if (sortField === 'near me') {
       setShouldGetLocation(true);
     } else {
       const newSortedPosts = [...filteredPosts].sort((a, b) => {
+        if (a.node.frontmatter.review == null) {
+          return 1;
+        }
+        if (b.node.frontmatter.review == null) {
+          return -1;
+        }
         const diff =
           b.node.frontmatter.review[sortField] -
           a.node.frontmatter.review[sortField];
@@ -171,12 +180,12 @@ const CafeBrowser: React.FC<CafeBrowserProps> = props => {
       });
       setSortedPosts(newSortedPosts);
     }
-  };
+  }, [filteredPosts, sortField]);
 
   // Sort posts again when sortField or filteredPosts changes
   useEffect(() => {
     sortPosts();
-  }, [sortField, filteredPosts]);
+  }, [sortField, filteredPosts, sortPosts]);
 
   useEffect(() => {
     if (sortField === 'near me') {

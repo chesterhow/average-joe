@@ -3,14 +3,24 @@ import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 
-interface CardElementProps {
-  small?: boolean;
-}
-
 const StyledThumbnail = styled.div`
   position: relative;
   grid-area: thumbnail;
   transition: opacity 0.2s ease-out;
+`;
+
+const StyledNoThumbnail = styled.div`
+  width: 100%;
+  padding-bottom: calc(100% * 2 / 3);
+  background: ${props => props.theme.black};
+
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+  }
 `;
 
 const StyledTitle = styled.h3`
@@ -27,6 +37,10 @@ const StyledTitle = styled.h3`
   }
 `;
 
+interface CardElementProps {
+  $small?: boolean;
+}
+
 const StyledCard = styled(Link)<CardElementProps>`
   display: grid;
   grid-template:
@@ -39,7 +53,7 @@ const StyledCard = styled(Link)<CardElementProps>`
   text-decoration: none;
 
   ${props =>
-    props.small &&
+    props.$small &&
     css`
       grid-template:
         'thumbnail' auto
@@ -75,7 +89,7 @@ const StyledContent = styled.div<CardElementProps>`
   text-align: left;
 
   ${props =>
-    props.small &&
+    props.$small &&
     css`
       border-left: none;
       border-top: 3px solid ${props => props.theme.coral};
@@ -102,19 +116,19 @@ const StyledRating = styled.span`
 `;
 
 const Pale = styled.span`
+  opacity: 0.5;
   color: ${props => props.theme.goldLight};
 `;
 
 interface CardProps {
   post: {
-    id: string;
     slug: string;
     frontmatter: {
       title: string;
-      date: Date;
-      review: Review;
+      date?: Date;
+      review?: Review;
       estate: string;
-      thumbnail: File;
+      thumbnail?: File;
     };
     distance?: number;
   };
@@ -142,31 +156,45 @@ const Card: React.FC<CardProps> = props => {
   };
 
   return (
-    <StyledCard to={`/${slug}`} small={small}>
+    <StyledCard to={`/${slug}`} $small={small}>
       <StyledThumbnail>
-        <Img
-          fluid={{
-            ...thumbnail.childImageSharp.fluid,
-            aspectRatio: 3 / 2,
-          }}
-          alt={title}
-        />
+        {thumbnail ? (
+          <Img
+            fluid={{
+              ...thumbnail.childImageSharp.fluid,
+              aspectRatio: 3 / 2,
+            }}
+            alt={title}
+          />
+        ) : (
+          <StyledNoThumbnail>
+            <h1>☕️</h1>
+          </StyledNoThumbnail>
+        )}
       </StyledThumbnail>
-      <StyledContent small={small}>
+      <StyledContent $small={small}>
         <StyledTitle>{title}</StyledTitle>
         <StyledEstate>
           {estate}
           {distance && ` \u00B7 ${getDistanceString()}`}
         </StyledEstate>
-        <StyledRating>
-          {review.price}
-          <Pale>{'$'.repeat(3 - review.price.length)}</Pale>
-          {review.wifi && ' · Wi-Fi'}
-          {review.food && ' · Food'}
-          <br />
-          Coffee {review.coffee}/5 &middot; Aesthetic {review.aesthetic}/5
-          &middot; Seating {review.seating}/5
-        </StyledRating>
+        {review ? (
+          <StyledRating>
+            {review.price}
+            <Pale>{'$'.repeat(3 - review.price.length)}</Pale>
+            {review.wifi && ' · Wi-Fi'}
+            {review.food && ' · Food'}
+            <br />
+            Coffee {review.coffee}/5 &middot; Aesthetic {review.aesthetic}/5
+            &middot; Seating {review.seating}/5
+          </StyledRating>
+        ) : (
+          <StyledRating>
+            -
+            <br />
+            <br />
+          </StyledRating>
+        )}
       </StyledContent>
     </StyledCard>
   );

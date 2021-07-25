@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { string } from 'prop-types';
 
 const StyledReview = styled.div`
   display: grid;
@@ -83,12 +82,14 @@ interface ReviewProps {
   className?: string;
   dataRellaxSpeed?: string;
   dataRellaxZindex?: string;
+  isSample?: boolean;
 }
 
 const Review: React.FC<ReviewProps> = props => {
-  let { review, className, dataRellaxSpeed, dataRellaxZindex } = props;
+  const { className, dataRellaxSpeed, dataRellaxZindex, isSample } = props;
+  let { review } = props;
 
-  if (review == null) {
+  if (isSample) {
     review = {
       overall: 100,
       coffee: 5,
@@ -108,38 +109,40 @@ const Review: React.FC<ReviewProps> = props => {
     >
       <StyledReviewOverall>
         <h4>Overall Score</h4>
-        <h1>{review?.overall ?? 100}</h1>
+        <h1>{review?.overall ?? '-'}</h1>
       </StyledReviewOverall>
 
       <StyledReviewBreakdown>
         <StyledBreakdownCategory>
           <span>Coffee</span>
-          <StyledBreakdownScore>{review?.coffee ?? 5}/5</StyledBreakdownScore>
+          <StyledBreakdownScore>{review?.coffee ?? '-'}/5</StyledBreakdownScore>
         </StyledBreakdownCategory>
         <StyledBreakdownCategory>
           <span>Aesthetic</span>
           <StyledBreakdownScore>
-            {review?.aesthetic ?? 5}/5
+            {review?.aesthetic ?? '-'}/5
           </StyledBreakdownScore>
         </StyledBreakdownCategory>
         <StyledBreakdownCategory>
           <span>Seating</span>
-          <StyledBreakdownScore>{review?.seating ?? 5}/5</StyledBreakdownScore>
+          <StyledBreakdownScore>
+            {review?.seating ?? '-'}/5
+          </StyledBreakdownScore>
         </StyledBreakdownCategory>
         <StyledBreakdownCategory>
           <span>Price</span>
-          <StyledBreakdownScore>{review?.price ?? '$'}</StyledBreakdownScore>
+          <StyledBreakdownScore>{review?.price ?? '-'}</StyledBreakdownScore>
         </StyledBreakdownCategory>
         <StyledBreakdownCategory>
           <span>Food</span>
           <StyledBreakdownScore>
-            {review ? (review.food ? 'Yes' : 'No') : 'Yes'}
+            {review ? (review.food ? 'Yes' : 'No') : '-'}
           </StyledBreakdownScore>
         </StyledBreakdownCategory>
         <StyledBreakdownCategory>
           <span>Wi-fi</span>
           <StyledBreakdownScore>
-            {review ? (review.wifi ? 'Yes' : 'No') : 'Yes'}
+            {review ? (review.wifi ? 'Yes' : 'No') : '-'}
           </StyledBreakdownScore>
         </StyledBreakdownCategory>
       </StyledReviewBreakdown>
