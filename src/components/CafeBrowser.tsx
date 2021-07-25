@@ -86,10 +86,10 @@ interface CafeBrowserProps {
       slug: string;
       frontmatter: {
         title: string;
-        date: Date;
-        review: Review;
+        date?: Date;
+        review?: Review;
         estate: string;
-        thumbnail: File;
+        thumbnail?: File;
         coords: {
           latitude: number;
           longitude: number;
@@ -136,10 +136,10 @@ const CafeBrowser: React.FC<CafeBrowserProps> = props => {
         pass = pass && a.node.frontmatter.review != null;
       }
       if (wifi) {
-        pass = pass && a.node.frontmatter.review?.wifi;
+        pass = pass && (a.node.frontmatter.review?.wifi ?? false);
       }
       if (food) {
-        pass = pass && a.node.frontmatter.review?.food;
+        pass = pass && (a.node.frontmatter.review?.food ?? false);
       }
       return pass;
     });
@@ -150,7 +150,6 @@ const CafeBrowser: React.FC<CafeBrowserProps> = props => {
 
   const onSortChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSortField(e.target.value);
-    // TODO: toggle reviewed on certain sort options
   };
 
   const sortPosts = useCallback(() => {
@@ -160,6 +159,12 @@ const CafeBrowser: React.FC<CafeBrowserProps> = props => {
       setShouldGetLocation(true);
     } else {
       const newSortedPosts = [...filteredPosts].sort((a, b) => {
+        if (a.node.frontmatter.review == null) {
+          return 1;
+        }
+        if (b.node.frontmatter.review == null) {
+          return -1;
+        }
         const diff =
           b.node.frontmatter.review[sortField] -
           a.node.frontmatter.review[sortField];

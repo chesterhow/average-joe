@@ -3,10 +3,6 @@ import styled, { css } from 'styled-components';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 
-interface CardElementProps {
-  small?: boolean;
-}
-
 const StyledThumbnail = styled.div`
   position: relative;
   grid-area: thumbnail;
@@ -41,6 +37,10 @@ const StyledTitle = styled.h3`
   }
 `;
 
+interface CardElementProps {
+  $small?: boolean;
+}
+
 const StyledCard = styled(Link)<CardElementProps>`
   display: grid;
   grid-template:
@@ -53,7 +53,7 @@ const StyledCard = styled(Link)<CardElementProps>`
   text-decoration: none;
 
   ${props =>
-    props.small &&
+    props.$small &&
     css`
       grid-template:
         'thumbnail' auto
@@ -89,7 +89,7 @@ const StyledContent = styled.div<CardElementProps>`
   text-align: left;
 
   ${props =>
-    props.small &&
+    props.$small &&
     css`
       border-left: none;
       border-top: 3px solid ${props => props.theme.coral};
@@ -156,7 +156,7 @@ const Card: React.FC<CardProps> = props => {
   };
 
   return (
-    <StyledCard to={`/${slug}`} small={small}>
+    <StyledCard to={`/${slug}`} $small={small}>
       <StyledThumbnail>
         {thumbnail ? (
           <Img
@@ -172,7 +172,7 @@ const Card: React.FC<CardProps> = props => {
           </StyledNoThumbnail>
         )}
       </StyledThumbnail>
-      <StyledContent small={small}>
+      <StyledContent $small={small}>
         <StyledTitle>{title}</StyledTitle>
         <StyledEstate>
           {estate}
