@@ -12,11 +12,12 @@ collections:
     create: true
     fields:
       - { name: title, label: Title }
-      - { name: date, label: Date, widget: date }
+      - { name: date, label: Date, widget: date, required: false }
       - {
           name: review,
           label: Review,
           widget: object,
+          required: false,
           fields:
             [
               {
@@ -64,8 +65,8 @@ collections:
       - { name: estate, label: Estate }
       - { name: address, label: Address, widget: text }
       - { name: hours, label: Hours, widget: text }
-      - { name: thumbnail, label: Thumbnail, widget: image }
-      - { name: cover, label: cover, widget: image }
+      - { name: thumbnail, label: Thumbnail, widget: image, required: false }
+      - { name: cover, label: cover, widget: image, required: false }
       - { name: body, label: Body, widget: markdown, required: false }
       - {
           nam: coords,

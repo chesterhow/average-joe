@@ -13,6 +13,20 @@ const StyledThumbnail = styled.div`
   transition: opacity 0.2s ease-out;
 `;
 
+const StyledNoThumbnail = styled.div`
+  width: 100%;
+  padding-bottom: calc(100% * 2 / 3);
+  background: ${props => props.theme.black};
+
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+  }
+`;
+
 const StyledTitle = styled.h3`
   flex-grow: 1;
   margin: 0;
@@ -107,7 +121,6 @@ const Pale = styled.span`
 
 interface CardProps {
   post: {
-    id: string;
     slug: string;
     frontmatter: {
       title: string;
@@ -143,8 +156,8 @@ const Card: React.FC<CardProps> = props => {
 
   return (
     <StyledCard to={`/${slug}`} small={small}>
-      {thumbnail && (
-        <StyledThumbnail>
+      <StyledThumbnail>
+        {thumbnail ? (
           <Img
             fluid={{
               ...thumbnail.childImageSharp.fluid,
@@ -152,15 +165,19 @@ const Card: React.FC<CardProps> = props => {
             }}
             alt={title}
           />
-        </StyledThumbnail>
-      )}
+        ) : (
+          <StyledNoThumbnail>
+            <h1>☕️</h1>
+          </StyledNoThumbnail>
+        )}
+      </StyledThumbnail>
       <StyledContent small={small}>
         <StyledTitle>{title}</StyledTitle>
         <StyledEstate>
           {estate}
           {distance && ` \u00B7 ${getDistanceString()}`}
         </StyledEstate>
-        {review && (
+        {review ? (
           <StyledRating>
             {review.price}
             <Pale>{'$'.repeat(3 - review.price.length)}</Pale>
@@ -169,6 +186,12 @@ const Card: React.FC<CardProps> = props => {
             <br />
             Coffee {review.coffee}/5 &middot; Aesthetic {review.aesthetic}/5
             &middot; Seating {review.seating}/5
+          </StyledRating>
+        ) : (
+          <StyledRating>
+            -
+            <br />
+            <br />
           </StyledRating>
         )}
       </StyledContent>

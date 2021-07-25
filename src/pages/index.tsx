@@ -93,6 +93,7 @@ const IndexPage: React.FC<IndexPageProps> = props => {
           className="rellax"
           dataRellaxSpeed="1"
           dataRellaxZindex="1"
+          isSample
         />
       </StyledLanding>
       <CafeBrowser edges={edges} totalCount={totalCount} />
