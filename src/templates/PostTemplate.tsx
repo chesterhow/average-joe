@@ -219,8 +219,6 @@ const PostTemplate: React.FC<PostTemplateProps> = props => {
     pageContext: { previous, next },
   } = props;
 
-  console.log(props);
-
   const sources = [
     {
       ...cover?.childImageSharp.fluid,

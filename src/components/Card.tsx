@@ -116,6 +116,7 @@ const StyledRating = styled.span`
 `;
 
 const Pale = styled.span`
+  opacity: 0.5;
   color: ${props => props.theme.goldLight};
 `;
 

@@ -129,14 +129,17 @@ const CafeBrowser: React.FC<CafeBrowserProps> = props => {
     setPostsShown(postsShown + POSTS_PER_PAGE);
   };
 
-  const onFilterToggle = ({ wifi, food }: { wifi: boolean; food: boolean }) => {
+  const onFilterToggle = (reviewed: boolean, wifi: boolean, food: boolean) => {
     const newFilteredPosts = [...edges].filter(a => {
       let pass = true;
+      if (reviewed) {
+        pass = pass && a.node.frontmatter.review != null;
+      }
       if (wifi) {
-        pass = pass && a.node.frontmatter.review.wifi;
+        pass = pass && a.node.frontmatter.review?.wifi;
       }
       if (food) {
-        pass = pass && a.node.frontmatter.review.food;
+        pass = pass && a.node.frontmatter.review?.food;
       }
       return pass;
     });
@@ -147,9 +150,10 @@ const CafeBrowser: React.FC<CafeBrowserProps> = props => {
 
   const onSortChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSortField(e.target.value);
+    // TODO: toggle reviewed on certain sort options
   };
 
-  const sortPosts = () => {
+  const sortPosts = useCallback(() => {
     if (sortField === 'latest') {
       setSortedPosts(filteredPosts);
     } else if (sortField === 'near me') {
@@ -171,12 +175,12 @@ const CafeBrowser: React.FC<CafeBrowserProps> = props => {
       });
       setSortedPosts(newSortedPosts);
     }
-  };
+  }, [filteredPosts, sortField]);
 
   // Sort posts again when sortField or filteredPosts changes
   useEffect(() => {
     sortPosts();
-  }, [sortField, filteredPosts]);
+  }, [sortField, filteredPosts, sortPosts]);
 
   useEffect(() => {
     if (sortField === 'near me') {

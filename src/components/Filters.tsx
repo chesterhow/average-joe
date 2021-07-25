@@ -69,24 +69,35 @@ const StyledCheckbox = styled.label`
 `;
 
 interface FiltersProps {
-  onChange: ({ wifi, food }: { wifi: boolean; food: boolean }) => void;
+  onChange: (reviewed: boolean, wifi: boolean, food: boolean) => void;
 }
 
 const Filters: React.FC<FiltersProps> = props => {
   const { onChange } = props;
 
+  const reviewedCheckbox = useRef<HTMLInputElement>(null);
   const wifiCheckbox = useRef<HTMLInputElement>(null);
   const foodCheckbox = useRef<HTMLInputElement>(null);
 
   const handleToggle = () => {
-    onChange({
-      wifi: wifiCheckbox.current?.checked ?? false,
-      food: foodCheckbox.current?.checked ?? false,
-    });
+    onChange(
+      reviewedCheckbox.current?.checked ?? false,
+      wifiCheckbox.current?.checked ?? false,
+      foodCheckbox.current?.checked ?? false
+    );
   };
 
   return (
     <StyledFilters>
+      <StyledCheckbox htmlFor="reviewed">
+        <input
+          id="reviewed"
+          type="checkbox"
+          ref={reviewedCheckbox}
+          onChange={handleToggle}
+        />
+        <span>Reviewed</span>
+      </StyledCheckbox>
       <StyledCheckbox htmlFor="wifi">
         <input
           id="wifi"
