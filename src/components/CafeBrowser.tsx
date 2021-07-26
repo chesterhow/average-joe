@@ -6,7 +6,7 @@ import Card from './Card';
 import Sort from './Sort';
 import Filters from './Filters';
 
-const POSTS_PER_PAGE = 6;
+const POSTS_PER_PAGE = 10;
 
 const StyledBrowser = styled.div`
   ${props => props.theme.pageMaxWidth};

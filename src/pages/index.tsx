@@ -47,7 +47,27 @@ const StyledReview = styled(Review)`
 
 interface IndexPageProps extends PageProps {
   data: {
-    allMdx: {
+    withDate: {
+      edges: {
+        node: {
+          id: string;
+          slug: string;
+          frontmatter: {
+            title: string;
+            date: Date;
+            review: Review;
+            estate: string;
+            thumbnail: File;
+            coords: {
+              latitude: number;
+              longitude: number;
+            };
+          };
+        };
+      }[];
+      totalCount: number;
+    };
+    withoutDate: {
       edges: {
         node: {
           id: string;
@@ -72,9 +92,7 @@ interface IndexPageProps extends PageProps {
 
 const IndexPage: React.FC<IndexPageProps> = props => {
   const {
-    data: {
-      allMdx: { edges, totalCount },
-    },
+    data: { withDate, withoutDate },
   } = props;
 
   useEffect(() => {
@@ -96,7 +114,10 @@ const IndexPage: React.FC<IndexPageProps> = props => {
           isSample
         />
       </StyledLanding>
-      <CafeBrowser edges={edges} totalCount={totalCount} />
+      <CafeBrowser
+        edges={withDate.edges.concat(withoutDate.edges)}
+        totalCount={withDate.totalCount + withoutDate.totalCount}
+      />
     </Layout>
   );
 };
@@ -105,9 +126,46 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query pageQuery {
-    allMdx(
-      filter: { frontmatter: { type: { eq: "cafe" } } }
+    withDate: allMdx(
+      filter: { frontmatter: { type: { eq: "cafe" }, date: { ne: null } } }
       sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
+      edges {
+        node {
+          id
+          slug
+          frontmatter {
+            title
+            date
+            review {
+              overall
+              coffee
+              aesthetic
+              seating
+              price
+              food
+              wifi
+            }
+            estate
+            thumbnail {
+              childImageSharp {
+                fluid(maxWidth: 500) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            coords {
+              latitude
+              longitude
+            }
+          }
+        }
+      }
+      totalCount
+    }
+    withoutDate: allMdx(
+      filter: { frontmatter: { type: { eq: "cafe" }, date: { eq: null } } }
+      sort: { order: ASC, fields: [frontmatter___thumbnail___id] }
     ) {
       edges {
         node {
