@@ -1,6 +1,15 @@
 ---
 type: cafe
 title: Apartment
+date: 2021-07-26
+review:
+  overall: 80
+  coffee: 5
+  aesthetic: 5
+  seating: 2
+  price: $
+  food: true
+  wifi: false
 estate: Lavender
 address: |-
   161 Lavender St
@@ -9,7 +18,31 @@ address: |-
 hours: |-
   Tues — Sun: 11am — 4pm
   Mon: Closed
+columns: true
+thumbnail: /assets/apartment-thumb.jpg
+cover: /assets/apartment-cover.jpg
 coords:
   latitude: 1.3129484
   longitude: 103.8607897
 ---
+
+import Column from '../../src/components/Column.tsx';
+
+<Column left={true}>
+
+  ![](../../static/assets/apartment-2.jpg)
+  ![](../../static/assets/apartment-8.jpg)
+  ![](../../static/assets/apartment-7.jpg)
+    ![](../../static/assets/apartment-5.jpg)
+
+
+</Column>
+<Column left={false}>
+
+  ![](../../static/assets/apartment-4.jpg)
+  ![](../../static/assets/apartment-9.jpg)
+  ![](../../static/assets/apartment-6.jpg)
+  ![](../../static/assets/apartment-1.jpg)
+  ![](../../static/assets/apartment-3.jpg)
+
+</Column>
