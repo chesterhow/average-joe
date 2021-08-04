@@ -4,6 +4,7 @@ module.exports = {
     description: `Everything you’ve ever wanted to know about coffeehouses in Singapore.`,
     author: `@chesterhow`,
     siteUrl: `https://averagejoe.reviews`,
+    image: `/assets/og.png`,
   },
   plugins: [
     `gatsby-plugin-sharp`,
