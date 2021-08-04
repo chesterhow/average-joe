@@ -35,7 +35,7 @@ const SEO: React.FC<Props> = props => {
   );
 
   const pageTitle =
-    title == null ? siteMetadata.title : `${title} | $site.siteMetadata.title}`;
+    title == null ? siteMetadata.title : `${title} | ${siteMetadata.title}`;
   const metaDescription = description || siteMetadata.description;
 
   return (
