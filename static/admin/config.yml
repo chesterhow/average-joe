@@ -69,7 +69,7 @@ collections:
       - { name: cover, label: cover, widget: image, required: false }
       - { name: body, label: Body, widget: markdown, required: false }
       - {
-          nam: coords,
+          name: coords,
           label: Coords,
           widget: object,
           fields:
