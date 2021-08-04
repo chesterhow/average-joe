@@ -1,8 +1,3 @@
-declare module '*.svg' {
-  const content: any;
-  export default content;
-}
-
 type Review = {
   overall: number;
   coffee: number;

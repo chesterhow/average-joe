@@ -101,7 +101,7 @@ const IndexPage: React.FC<IndexPageProps> = props => {
 
   return (
     <Layout>
-      <SEO title="Average Joe Coffeehouse Reviews" />
+      <SEO />
       <StyledLanding>
         <StyledHero className="rellax" data-rellax-speed="-2">
           <StyledHeroGold>Everything</StyledHeroGold>
