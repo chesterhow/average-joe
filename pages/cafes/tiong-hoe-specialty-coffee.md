@@ -18,8 +18,8 @@ address: |-
 thumbnail: /assets/tiong-hoe-specialty-coffee-thumb.jpg
 cover: /assets/tiong-hoe-specialty-coffee-cover.jpg
 hours: |-
-  Mon – Fri: 8:30am – 5:30pm
-  Sat & Sun: 9am – 4pm
+  Mon – Fri: 8:30am – 5:20pm
+  Sat & Sun: 9am – 3.50pm
 coords:
   latitude: 1.2909092
   longitude: 103.8031076

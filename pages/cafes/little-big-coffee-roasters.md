@@ -3,8 +3,8 @@ type: cafe
 title: Little Big Coffee Roasters
 date: 2019-09-27
 review:
-  overall: 63
-  coffee: 3
+  overall: 69
+  coffee: 4
   aesthetic: 3
   seating: 2
   price: $
